@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Train_Your_Eyes_iOS
 //
-//  Created by Vijay Karani on 10/14/18.
+//  Created by Trisha Karani on 10/14/18.
 //  Copyright © 2018 Eyes123Train. All rights reserved.
 //
 
@@ -15,7 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        let navigationController: UINavigationController? = (self.window?.rootViewController as? UINavigationController)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if UserDefaults.standard.bool(forKey: "TermsAccepted") {
+            navigationController?.pushViewController(storyboard.instantiateViewController(withIdentifier: "AcceptedTermsViewController"), animated: false)
+        }
+        else {
+            navigationController?.pushViewController(storyboard.instantiateViewController(withIdentifier: "FirstTimeUserViewController"), animated: false)
+        }
+        
         return true
     }
 

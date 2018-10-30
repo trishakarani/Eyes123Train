@@ -14,7 +14,13 @@
 		2C09BE2A21745B02006C2A93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C09BE2821745B02006C2A93 /* LaunchScreen.storyboard */; };
 		2C09BE3521745B02006C2A93 /* Train_Your_Eyes_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C09BE3421745B02006C2A93 /* Train_Your_Eyes_iOSTests.swift */; };
 		2C09BE4021745B02006C2A93 /* Train_Your_Eyes_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C09BE3F21745B02006C2A93 /* Train_Your_Eyes_iOSUITests.swift */; };
-		2C4D2C1E217BD540004C0367 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D2C1D217BD540004C0367 /* MainPageViewController.swift */; };
+		2C2CB0A52186CF8700D7F77E /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2CB0A42186CF8700D7F77E /* MainScreenViewController.swift */; };
+		2C2CB0A72186E7A800D7F77E /* OptokineticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2CB0A62186E7A800D7F77E /* OptokineticViewController.swift */; };
+		2C2CB0A92186E7BA00D7F77E /* MovingBallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2CB0A82186E7BA00D7F77E /* MovingBallViewController.swift */; };
+		2C2CB0AB2186E7F800D7F77E /* MyopiaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2CB0AA2186E7F800D7F77E /* MyopiaViewController.swift */; };
+		2C2CB0AD2186F42B00D7F77E /* HitMovingObjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2CB0AC2186F42B00D7F77E /* HitMovingObjectViewController.swift */; };
+		2C3EC83C2188427D004AD3FF /* MainScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3EC83B2188427D004AD3FF /* MainScreenTableViewCell.swift */; };
+		2C4D2C1E217BD540004C0367 /* VisionCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D2C1D217BD540004C0367 /* VisionCheckViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +54,13 @@
 		2C09BE3B21745B02006C2A93 /* Train_Your_Eyes_iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Train_Your_Eyes_iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C09BE3F21745B02006C2A93 /* Train_Your_Eyes_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Train_Your_Eyes_iOSUITests.swift; sourceTree = "<group>"; };
 		2C09BE4121745B02006C2A93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2C4D2C1D217BD540004C0367 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
+		2C2CB0A42186CF8700D7F77E /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		2C2CB0A62186E7A800D7F77E /* OptokineticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptokineticViewController.swift; sourceTree = "<group>"; };
+		2C2CB0A82186E7BA00D7F77E /* MovingBallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingBallViewController.swift; sourceTree = "<group>"; };
+		2C2CB0AA2186E7F800D7F77E /* MyopiaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyopiaViewController.swift; sourceTree = "<group>"; };
+		2C2CB0AC2186F42B00D7F77E /* HitMovingObjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitMovingObjectViewController.swift; sourceTree = "<group>"; };
+		2C3EC83B2188427D004AD3FF /* MainScreenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenTableViewCell.swift; sourceTree = "<group>"; };
+		2C4D2C1D217BD540004C0367 /* VisionCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionCheckViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +113,7 @@
 			children = (
 				2C4D2C1C217B02E1004C0367 /* Controller */,
 				2C4D2C1B217B02DB004C0367 /* View */,
-				2C4D2C1A217B02D1004C0367 /* Model */,
+				2C4D2C1A217B02D1004C0367 /* Models */,
 				2C09BE1F21745B01006C2A93 /* AppDelegate.swift */,
 				2C09BE2621745B02006C2A93 /* Assets.xcassets */,
 				2C09BE2821745B02006C2A93 /* LaunchScreen.storyboard */,
@@ -128,11 +140,11 @@
 			path = Train_Your_Eyes_iOSUITests;
 			sourceTree = "<group>";
 		};
-		2C4D2C1A217B02D1004C0367 /* Model */ = {
+		2C4D2C1A217B02D1004C0367 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		2C4D2C1B217B02DB004C0367 /* View */ = {
@@ -147,7 +159,13 @@
 			isa = PBXGroup;
 			children = (
 				2C09BE2121745B01006C2A93 /* ViewController.swift */,
-				2C4D2C1D217BD540004C0367 /* MainPageViewController.swift */,
+				2C2CB0A42186CF8700D7F77E /* MainScreenViewController.swift */,
+				2C3EC83B2188427D004AD3FF /* MainScreenTableViewCell.swift */,
+				2C2CB0A62186E7A800D7F77E /* OptokineticViewController.swift */,
+				2C2CB0A82186E7BA00D7F77E /* MovingBallViewController.swift */,
+				2C4D2C1D217BD540004C0367 /* VisionCheckViewController.swift */,
+				2C2CB0AA2186E7F800D7F77E /* MyopiaViewController.swift */,
+				2C2CB0AC2186F42B00D7F77E /* HitMovingObjectViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -284,7 +302,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C09BE2221745B01006C2A93 /* ViewController.swift in Sources */,
-				2C4D2C1E217BD540004C0367 /* MainPageViewController.swift in Sources */,
+				2C2CB0AD2186F42B00D7F77E /* HitMovingObjectViewController.swift in Sources */,
+				2C2CB0A92186E7BA00D7F77E /* MovingBallViewController.swift in Sources */,
+				2C2CB0A52186CF8700D7F77E /* MainScreenViewController.swift in Sources */,
+				2C4D2C1E217BD540004C0367 /* VisionCheckViewController.swift in Sources */,
+				2C3EC83C2188427D004AD3FF /* MainScreenTableViewCell.swift in Sources */,
+				2C2CB0AB2186E7F800D7F77E /* MyopiaViewController.swift in Sources */,
+				2C2CB0A72186E7A800D7F77E /* OptokineticViewController.swift in Sources */,
 				2C09BE2021745B01006C2A93 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

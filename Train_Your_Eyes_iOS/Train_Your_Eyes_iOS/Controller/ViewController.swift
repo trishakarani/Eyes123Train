@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Train_Your_Eyes_iOS
 //
-//  Created by Vijay Karani on 10/14/18.
+//  Created by Trisha Karani on 10/14/18.
 //  Copyright © 2018 Eyes123Train. All rights reserved.
 //
 
@@ -13,12 +13,18 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var agreementTerms: UITextView!
     
+    @IBOutlet weak var acceptButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         addAgreementTerms()
     }
 
+    @IBAction func acceptButtonPressed(_ sender: UIButton) {
+        UserDefaults.standard.set(true, forKey: "TermsAccepted")
+    }
+    
     func addAgreementTerms() {
         let attrs = [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .body)]
         let attrString = NSAttributedString(string: agreementString, attributes: attrs)

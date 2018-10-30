@@ -2,13 +2,13 @@
 //  MainPageViewController.swift
 //  Train_Your_Eyes_iOS
 //
-//  Created by Vijay Karani on 10/20/18.
+//  Created by Trisha Karani on 10/20/18.
 //  Copyright © 2018 Eyes123Train. All rights reserved.
 //
 
 import UIKit
 
-class MainPageViewController: UIViewController {
+class VisionCheckViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

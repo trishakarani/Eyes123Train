@@ -2,7 +2,7 @@
 //  MainScreenViewController.swift
 //  Train_Your_Eyes_iOS
 //
-//  Created by Vijay Karani on 10/28/18.
+//  Created by Trisha Karani on 10/28/18.
 //  Copyright © 2018 Eyes123Train. All rights reserved.
 //
 
@@ -10,9 +10,13 @@ import UIKit
 
 class MainScreenViewController: UITableViewController {
 
+    let mainPageArray = ["Vision Check", "OptoKinetic", "Lazy Eye Exercise", "Myopia Exercise", "Hit Moving Object"]
+    let imageArray = ["visionCheck", "optoKinetic", "lazyEye", "myopiaEye", "hitMark"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.tableView?.rowHeight = 80.0
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -22,26 +26,45 @@ class MainScreenViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 0
+//    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return mainPageArray.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MainMenuCell", for: indexPath) as! MainScreenTableViewCell
+        
+        cell.accessoryType = .none
+        cell.menuImage?.image = UIImage(named: imageArray[indexPath.row])
+        cell.menuName?.text = mainPageArray[indexPath.row]
+        
         return cell
     }
-    */
 
+    //MARK: - Table view Delegate Methods
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        switch indexPath.row {
+        case 0:
+            performSegue(withIdentifier: "gotoVisionCheck", sender: self)
+        case 1:
+            performSegue(withIdentifier: "gotoOptoKinetic", sender: self)
+        case 2:
+            performSegue(withIdentifier: "gotoMovingBall", sender: self)
+        case 3:
+            performSegue(withIdentifier: "gotoMyopiaExercise", sender: self)
+        case 4:
+            performSegue(withIdentifier: "gotoHitMovingObject", sender: self)
+        default:
+            performSegue(withIdentifier: "gotoOptoKinetic", sender: self)
+        }
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

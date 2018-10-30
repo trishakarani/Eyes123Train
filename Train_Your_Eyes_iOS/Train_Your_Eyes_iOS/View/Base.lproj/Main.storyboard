@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.23.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.23.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WlZ-WI-uoo">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,97 +9,329 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Train Your Eyes-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Train_Your_Eyes_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstTimeUserViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Train_Your_Eyes_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Eyes123Train.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ED8-uI-00j">
-                                <rect key="frame" x="0.0" y="20" width="414" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydM-uG-dZt">
-                                <rect key="frame" x="0.0" y="691" width="414" height="45"/>
-                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="5fL-r8-oIu"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eYl-hd-W7Z">
-                                <rect key="frame" x="0.0" y="87" width="375" height="81"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="This is a research oriented application. It is not meant for any diagnostic or treatment of any diseases." translatesAutoresizingMaskIntoConstraints="NO" id="eYl-hd-W7Z">
+                                <rect key="frame" x="20" y="70" width="374" height="466"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">This is a legally binding agreement. Please read it carefully. By clicking "I Accept", or installing or using the Eyes123Train for iOS software and/or any updates to such software provided by eyes123train.com, you:</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Order Form Supplement for Eyes123 Train" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBR-Ss-ybF">
-                                <rect key="frame" x="0.0" y="56" width="375" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xEW-BT-NXe">
-                                <rect key="frame" x="0.0" y="164" width="375" height="144"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">agree to the following terms on behalf of eyes123Train customer with which you are employed, affiliated or associated (the "Customer")</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OJ2-ZL-E0H">
-                                <rect key="frame" x="0.0" y="316" width="375" height="144"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">If you do not have such authority, are not an authorized User, or do not agree to these terms, you may not install or use the software.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYe-qk-9rW">
-                                <rect key="frame" x="146" y="698" width="123" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYe-qk-9rW">
+                                <rect key="frame" x="107" y="606" width="200" height="60"/>
                                 <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="I Accept">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="SFg-bY-qBp"/>
+                                    <constraint firstAttribute="width" constant="200" id="l4o-gm-K0e"/>
+                                </constraints>
+                                <state key="normal" title="I Accept"/>
                                 <connections>
-                                    <segue destination="xbq-XD-1XN" kind="show" id="E6E-3g-ETh"/>
+                                    <action selector="acceptButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bk1-ZW-ohc"/>
+                                    <segue destination="jOm-D3-lMd" kind="show" identifier="gotoMainScreen" id="pNY-Bg-wJu"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HYe-qk-9rW" secondAttribute="bottom" constant="70" id="A9M-CF-LaB"/>
+                            <constraint firstItem="eYl-hd-W7Z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="fCM-91-dTW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eYl-hd-W7Z" secondAttribute="bottom" constant="200" id="hAP-gN-fKg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eYl-hd-W7Z" secondAttribute="trailing" constant="20" id="r6r-1J-5EZ"/>
+                            <constraint firstItem="HYe-qk-9rW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sgs-1C-Jbv"/>
+                            <constraint firstItem="eYl-hd-W7Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zKI-RY-518"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Train Your Eyes" id="fAX-Pp-qys"/>
+                    <connections>
+                        <outlet property="acceptButton" destination="HYe-qk-9rW" id="IoU-AA-NLZ"/>
+                        <outlet property="agreementTerms" destination="eYl-hd-W7Z" id="x62-ae-dWh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="132.06521739130434"/>
+            <point key="canvasLocation" x="958" y="-492"/>
         </scene>
-        <!--Main Page View Controller-->
-        <scene sceneID="bQS-4w-Rdr">
+        <!--Train Your Eyes-->
+        <scene sceneID="FM7-zU-gF9">
             <objects>
-                <viewController id="xbq-XD-1XN" customClass="MainPageViewController" customModule="Train_Your_Eyes_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1SE-wg-vFU">
+                <tableViewController storyboardIdentifier="AcceptedTermsViewController" id="jOm-D3-lMd" customClass="MainScreenViewController" customModule="Train_Your_Eyes_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mcH-Fy-OZk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="s59-Tg-MaH"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="A0j-ac-3zF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainMenuCell" rowHeight="85" id="jnP-l6-wdv" customClass="MainScreenTableViewCell" customModule="Train_Your_Eyes_iOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="85"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jnP-l6-wdv" id="46s-bi-1gE">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="84.666666666666671"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JoS-ki-YmA">
+                                            <rect key="frame" x="162.33333333333337" y="5" width="241.66666666666663" height="74.666666666666671"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nfn-wI-8fc">
+                                            <rect key="frame" x="10" y="10" width="144.33333333333334" height="64.666666666666671"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="Nfn-wI-8fc" secondAttribute="height" multiplier="212:95" id="OHG-Yz-83g"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="JoS-ki-YmA" firstAttribute="leading" secondItem="Nfn-wI-8fc" secondAttribute="trailing" constant="8" id="6ki-kv-eex"/>
+                                        <constraint firstItem="JoS-ki-YmA" firstAttribute="top" secondItem="46s-bi-1gE" secondAttribute="top" constant="5" id="9qv-eR-C2u"/>
+                                        <constraint firstAttribute="bottom" secondItem="Nfn-wI-8fc" secondAttribute="bottom" constant="10" id="amJ-f7-Ga6"/>
+                                        <constraint firstItem="Nfn-wI-8fc" firstAttribute="leading" secondItem="46s-bi-1gE" secondAttribute="leading" constant="10" id="dMi-kp-cZG"/>
+                                        <constraint firstAttribute="bottom" secondItem="JoS-ki-YmA" secondAttribute="bottom" constant="5" id="eya-nu-nSs"/>
+                                        <constraint firstAttribute="trailing" secondItem="JoS-ki-YmA" secondAttribute="trailing" constant="10" id="hBU-pY-5uf"/>
+                                        <constraint firstItem="Nfn-wI-8fc" firstAttribute="top" secondItem="46s-bi-1gE" secondAttribute="top" constant="10" id="lKg-Yw-yQ9"/>
+                                        <constraint firstItem="JoS-ki-YmA" firstAttribute="leading" secondItem="Nfn-wI-8fc" secondAttribute="trailing" constant="8" id="mMH-18-GnB"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="menuImage" destination="Nfn-wI-8fc" id="a1c-JR-OiQ"/>
+                                    <outlet property="menuName" destination="JoS-ki-YmA" id="EUN-ZF-e9y"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jOm-D3-lMd" id="jg0-Sz-dRs"/>
+                            <outlet property="delegate" destination="jOm-D3-lMd" id="eh1-1F-xQp"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Train Your Eyes" id="058-ZN-7bj"/>
+                    <connections>
+                        <segue destination="yMY-QB-aSf" kind="show" identifier="gotoMovingBall" id="aTF-9B-Db5"/>
+                        <segue destination="I4x-5W-ji8" kind="show" identifier="gotoOptoKinetic" id="RFk-uP-uiy"/>
+                        <segue destination="yvH-KP-BrI" kind="show" identifier="gotoHitMovingObject" id="hrL-rW-tFo"/>
+                        <segue destination="UkS-Xt-HBG" kind="show" identifier="gotoMyopiaExercise" id="5eP-Ob-2Jw"/>
+                        <segue destination="EP7-sW-AIK" kind="show" identifier="gotoVisionCheck" id="QGH-wk-BbM"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vMN-hf-6ZW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="967" y="133"/>
+            <point key="canvasLocation" x="958" y="269"/>
+        </scene>
+        <!--Moving Ball Focus-->
+        <scene sceneID="W3E-5r-jsr">
+            <objects>
+                <viewController id="yMY-QB-aSf" customClass="MovingBallViewController" customModule="Train_Your_Eyes_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PsH-hu-RMk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="nwZ-ju-Cnj"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Moving Ball Focus" id="Kpd-N9-Oga"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HMj-ds-iAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2638" y="115"/>
+        </scene>
+        <!--OptoKinetic Focus-->
+        <scene sceneID="heS-Yr-VzA">
+            <objects>
+                <viewController id="I4x-5W-ji8" customClass="OptokineticViewController" customModule="Train_Your_Eyes_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="py1-JL-KPD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Zhx-CK-bgn"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="OptoKinetic Focus" id="TWT-FC-sSM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mvy-l5-0NG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2632" y="-641"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YEX-Ii-w32">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WlZ-WI-uoo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BoC-4X-zhh">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rCT-bj-hET" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="132.06521739130434"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Uqg-Ih-JCa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YEZ-wC-4Ue" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pId-nc-6Wt">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jOm-D3-lMd" kind="relationship" relationship="rootViewController" id="xix-vh-KQ7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BH4-Go-1Ij" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1593" y="-307"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CAa-Cc-dqP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ad4-bR-HKe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oFD-ek-bZL">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="I4x-5W-ji8" kind="relationship" relationship="rootViewController" id="aNz-Br-fgv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Un9-5N-9Cb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2755" y="-642"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QfU-Kk-tx6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mdz-sa-IGU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MRB-pv-WXx">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yMY-QB-aSf" kind="relationship" relationship="rootViewController" id="uNn-JD-dOz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gWp-US-JiJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2754" y="115"/>
+        </scene>
+        <!--Hit Moving Object-->
+        <scene sceneID="Bge-Ix-vgL">
+            <objects>
+                <viewController id="yvH-KP-BrI" customClass="HitMovingObjectViewController" customModule="Train_Your_Eyes_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hiR-N0-Xbo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="bPf-IE-nSZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Hit Moving Object" id="XCA-sJ-dho"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yhr-pb-YGU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1959" y="915"/>
+        </scene>
+        <!--Myopia Eye Exercise-->
+        <scene sceneID="kKW-E6-jyP">
+            <objects>
+                <viewController id="UkS-Xt-HBG" customClass="MyopiaViewController" customModule="Train_Your_Eyes_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f97-cp-pSX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="xPr-LT-wOQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Myopia Eye Exercise" id="PTk-bM-FIS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="31s-cu-u36" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2826.0869565217395" y="909.78260869565224"/>
+        </scene>
+        <!--Vision Check-->
+        <scene sceneID="1Y4-sf-wMV">
+            <objects>
+                <viewController id="EP7-sW-AIK" customClass="VisionCheckViewController" customModule="Train_Your_Eyes_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A1D-aJ-A5B">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="OKp-I8-Ozn"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Vision Check" id="Ecw-PS-Pug"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J1J-pR-vcK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3713.04347826087" y="900.00000000000011"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JFe-ub-i5q">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vOP-B2-BJB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zRj-Uz-I46">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EP7-sW-AIK" kind="relationship" relationship="rootViewController" id="iEb-2N-bro"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bCS-eg-eSC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3823.188405797102" y="900.00000000000011"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uxi-b2-dV0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qgk-wo-lSv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CjS-XY-uPg">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UkS-Xt-HBG" kind="relationship" relationship="rootViewController" id="3Hg-fY-9Qw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="reQ-cG-XGs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2928.985507246377" y="909.78260869565224"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cwr-3a-mcQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NJS-En-clA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3Fq-Uh-0Ux">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yvH-KP-BrI" kind="relationship" relationship="rootViewController" id="HRC-JZ-hmS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9cF-m1-5oT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2033" y="915"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="QGH-wk-BbM"/>
+        <segue reference="5eP-Ob-2Jw"/>
+        <segue reference="hrL-rW-tFo"/>
+        <segue reference="RFk-uP-uiy"/>
+        <segue reference="aTF-9B-Db5"/>
+        <segue reference="pNY-Bg-wJu"/>
+    </inferredMetricsTieBreakers>
 </document>

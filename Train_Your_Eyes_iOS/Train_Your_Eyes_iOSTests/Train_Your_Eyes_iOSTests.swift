@@ -2,7 +2,7 @@
 //  Train_Your_Eyes_iOSTests.swift
 //  Train_Your_Eyes_iOSTests
 //
-//  Created by Vijay Karani on 10/14/18.
+//  Created by Trisha Karani on 10/14/18.
 //  Copyright © 2018 Eyes123Train. All rights reserved.
 //
 
