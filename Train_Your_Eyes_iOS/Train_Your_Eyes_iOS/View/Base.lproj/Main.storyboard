@@ -129,14 +129,36 @@
                     <view key="view" contentMode="scaleToFill" id="PsH-hu-RMk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uet-ic-Ima">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uet-ic-Ima" firstAttribute="top" secondItem="nwZ-ju-Cnj" secondAttribute="top" id="BB4-Bv-OVi"/>
+                            <constraint firstItem="uet-ic-Ima" firstAttribute="bottom" secondItem="nwZ-ju-Cnj" secondAttribute="bottom" id="Pjg-3O-Skh"/>
+                            <constraint firstItem="uet-ic-Ima" firstAttribute="trailing" secondItem="nwZ-ju-Cnj" secondAttribute="trailing" id="Ssi-JL-0Zc"/>
+                            <constraint firstItem="uet-ic-Ima" firstAttribute="leading" secondItem="nwZ-ju-Cnj" secondAttribute="leading" id="rcQ-4S-CNR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nwZ-ju-Cnj"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Moving Ball Focus" id="Kpd-N9-Oga"/>
+                    <navigationItem key="navigationItem" title="Moving Ball Focus" id="Kpd-N9-Oga">
+                        <barButtonItem key="rightBarButtonItem" title="C" id="lOq-ry-RFr">
+                            <color key="tintColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="colorButtonPressed:" destination="yMY-QB-aSf" id="utp-Vj-WI4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="colorButton" destination="lOq-ry-RFr" id="6iV-bn-aYF"/>
+                        <outlet property="stackView" destination="uet-ic-Ima" id="2h4-Be-daf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HMj-ds-iAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2638" y="115"/>
+            <point key="canvasLocation" x="2637.68115942029" y="114.94565217391305"/>
         </scene>
         <!--OptoKinetic Focus-->
         <scene sceneID="heS-Yr-VzA">
@@ -145,14 +167,38 @@
                     <view key="view" contentMode="scaleToFill" id="py1-JL-KPD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Wzt-oY-dmj">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Wzt-oY-dmj" firstAttribute="leading" secondItem="Zhx-CK-bgn" secondAttribute="leading" id="3fB-Aq-y29"/>
+                            <constraint firstItem="Wzt-oY-dmj" firstAttribute="top" secondItem="Zhx-CK-bgn" secondAttribute="top" id="cy4-GP-eDI"/>
+                            <constraint firstAttribute="bottom" secondItem="Wzt-oY-dmj" secondAttribute="bottom" id="ehf-jF-iLe"/>
+                            <constraint firstItem="Wzt-oY-dmj" firstAttribute="trailing" secondItem="Zhx-CK-bgn" secondAttribute="trailing" id="iYq-5n-M5A"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Zhx-CK-bgn"/>
                     </view>
-                    <navigationItem key="navigationItem" title="OptoKinetic Focus" id="TWT-FC-sSM"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="OptoKinetic Focus" id="TWT-FC-sSM">
+                        <barButtonItem key="rightBarButtonItem" title="C" width="40" id="1va-zv-Brb">
+                            <color key="tintColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="colorButtonPressed:" destination="I4x-5W-ji8" id="kcb-Fy-HM6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="colorButton" destination="1va-zv-Brb" id="PI4-ek-HPQ"/>
+                        <outlet property="stackView" destination="Wzt-oY-dmj" id="6r7-61-cYW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mvy-l5-0NG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2632" y="-641"/>
+            <point key="canvasLocation" x="2630.434782608696" y="-641.57608695652175"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YEX-Ii-w32">
@@ -185,25 +231,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BH4-Go-1Ij" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1593" y="-307"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="CAa-Cc-dqP">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ad4-bR-HKe" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oFD-ek-bZL">
-                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="I4x-5W-ji8" kind="relationship" relationship="rootViewController" id="aNz-Br-fgv"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Un9-5N-9Cb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2755" y="-642"/>
+            <point key="canvasLocation" x="1649" y="-1390"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QfU-Kk-tx6">
@@ -328,10 +356,9 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="QGH-wk-BbM"/>
-        <segue reference="5eP-Ob-2Jw"/>
-        <segue reference="hrL-rW-tFo"/>
-        <segue reference="RFk-uP-uiy"/>
+        <segue reference="3Hg-fY-9Qw"/>
+        <segue reference="HRC-JZ-hmS"/>
         <segue reference="aTF-9B-Db5"/>
-        <segue reference="pNY-Bg-wJu"/>
+        <segue reference="xix-vh-KQ7"/>
     </inferredMetricsTieBreakers>
 </document>
