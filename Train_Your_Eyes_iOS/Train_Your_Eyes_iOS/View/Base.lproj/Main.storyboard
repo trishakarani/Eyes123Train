@@ -167,18 +167,7 @@
                     <view key="view" contentMode="scaleToFill" id="py1-JL-KPD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Wzt-oY-dmj">
-                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
-                            </stackView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Wzt-oY-dmj" firstAttribute="leading" secondItem="Zhx-CK-bgn" secondAttribute="leading" id="3fB-Aq-y29"/>
-                            <constraint firstItem="Wzt-oY-dmj" firstAttribute="top" secondItem="Zhx-CK-bgn" secondAttribute="top" id="cy4-GP-eDI"/>
-                            <constraint firstAttribute="bottom" secondItem="Wzt-oY-dmj" secondAttribute="bottom" id="ehf-jF-iLe"/>
-                            <constraint firstItem="Wzt-oY-dmj" firstAttribute="trailing" secondItem="Zhx-CK-bgn" secondAttribute="trailing" id="iYq-5n-M5A"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Zhx-CK-bgn"/>
                     </view>
                     <toolbarItems/>
@@ -193,7 +182,6 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="colorButton" destination="1va-zv-Brb" id="PI4-ek-HPQ"/>
-                        <outlet property="stackView" destination="Wzt-oY-dmj" id="6r7-61-cYW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mvy-l5-0NG" userLabel="First Responder" sceneMemberID="firstResponder"/>
