@@ -10,99 +10,376 @@ import UIKit
 
 class MovingBallViewController: UIViewController {
 
-    @IBOutlet weak var stackView: UIStackView!
-
     @IBOutlet weak var colorButton: UIBarButtonItem!
     
     var optoKColorStatus : Bool = false
-    var buttonArray: [UIButton] = [UIButton]()
-
+    var bottomButtonArray: [UIButton] = [UIButton]()
+    var topButtonArray: [UIButton] = [UIButton]()
+    var leftButtonArray: [UIButton] = [UIButton]()
+    var rightButtonArray: [UIButton] = [UIButton]()
+    var angularViewArray: [UIView] = [UIView]()
+    var numButtons: Int = 0
+    var timer = Timer()
+    var timerAnimationValue: Int = 0
+    var timerActionCtr : Int = 0
+    var isPortraitMode : Bool = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupView()
     }
     
+    @objc func buttonAction(sender: UIButton!) {
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        timer.invalidate()
+    }
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    func setupView() {
-        if UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft || UIDevice.current.orientation == UIDeviceOrientation.landscapeRight {
-            setupLandscapeModeView()
-        }
-        else {
-            setupPortraitModeView()
-        }
-    }
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
     @IBAction func colorButtonPressed(_ sender: UIBarButtonItem) {
         optoKColorStatus = !optoKColorStatus
         setupColorButton()
     }
     
-    func setupLandscapeModeView() {
+    func setupView() {
+        numButtons = Int((self.view.frame.height+100) / 50)
+        numButtons = 30
+        setupButtons(btnCount: numButtons)
+        if UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft || UIDevice.current.orientation == UIDeviceOrientation.landscapeRight {
+            setupLandscapeModeView()
+            isPortraitMode = false
+        }
+        else {
+            setupPortraitModeView()
+            isPortraitMode = true
+        }
+        eyeExerciseMotion()
     }
     
     func setupPortraitModeView() {
-        stackView.axis = .vertical
-        stackView.alignment = .top
-        stackView.distribution = .equalSpacing
-        stackView.spacing = 15
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-
-        print("Stack View size \(size) from super view size \(stackView.frame.size)")
-
-        let numBtns = Int(stackView.frame.height / 50)
-        
-        for btnIdx in 0..<numBtns {
-            let yValue = btnIdx * 50
-            let scrnButton = makeButton(yValue: yValue)
-            buttonArray.append(scrnButton)
-            stackView.addArrangedSubview(scrnButton)
-            
-            stackView.addConstraint(NSLayoutConstraint(item: scrnButton, attribute: NSLayoutConstraint.Attribute.leading, relatedBy: NSLayoutConstraint.Relation.equal, toItem: stackView, attribute: NSLayoutConstraint.Attribute.leading, multiplier: 1.0, constant: 0.0))
-            stackView.addConstraint(NSLayoutConstraint(item: scrnButton, attribute: NSLayoutConstraint.Attribute.trailing, relatedBy: NSLayoutConstraint.Relation.equal, toItem: stackView, attribute: NSLayoutConstraint.Attribute.trailing, multiplier: 1.0, constant: 0.0))
+        for _ in 0..<numButtons {
+            let yBtmRightViewValue = Int(self.view.frame.height)
+            let btmRightView = makeAngularButton(yValue: yBtmRightViewValue)
+            angularViewArray.append(btmRightView)
+            self.view.addSubview(btmRightView)
         }
-        
-        self.view.addSubview(stackView)
-
-//        stackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-//        stackView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
     }
-
+    
+    func setupLandscapeModeView() {
+        for _ in 0..<numButtons {
+            let yBtmRightViewValue = Int(self.view.frame.height)
+            let btmRightView = makeLandscapeAngularButton(yValue: yBtmRightViewValue)
+            angularViewArray.append(btmRightView)
+            self.view.addSubview(btmRightView)
+        }
+    }
+    
+    func setupButtons(btnCount: Int) {
+        for _ in 0..<btnCount {
+            let yDelayValue = Int(self.view.frame.height)
+            let delayButton = makeButton(yValue: yDelayValue)
+            bottomButtonArray.append(delayButton)
+            self.view.addSubview(delayButton)
+            
+            let yTopButtonsValue = 0
+            let topButton = makeButton(yValue: yTopButtonsValue)
+            topButtonArray.append(topButton)
+            self.view.addSubview(topButton)
+            
+            let xLeftButtonValue = -50
+            let leftButton = makeVerticalButton(xValue: xLeftButtonValue)
+            leftButtonArray.append(leftButton)
+            self.view.addSubview(leftButton)
+            
+            let xRightButtonValue = Int(self.view.frame.width)
+            let rightButton = makeVerticalButton(xValue: xRightButtonValue)
+            rightButtonArray.append(rightButton)
+            self.view.addSubview(rightButton)
+        }
+    }
+    
+    func clearView() {
+        for subUIView in self.view.subviews as [UIView] {
+            subUIView.removeFromSuperview()
+        }
+        self.view.removeFromSuperview()
+        
+        angularViewArray.removeAll()
+        bottomButtonArray.removeAll()
+        topButtonArray.removeAll()
+        leftButtonArray.removeAll()
+        rightButtonArray.removeAll()
+    }
+    
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         print("Will Transition to size \(size) from super view size \(self.view.frame.size)")
         
-        if (size.width > self.view.frame.size.width) {
-            print("Landscape")
-        } else {
-            print("Portrait")
+        var isModeChangedPortrait: Bool = true
+        if UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft || UIDevice.current.orientation == UIDeviceOrientation.landscapeRight {
+            isModeChangedPortrait = false
+        }
+        
+        if isPortraitMode != isModeChangedPortrait {
+            stopAnimations()
+            clearView()
+            setupView()
         }
     }
     
     func makeButton(yValue: Int) -> UIButton {
-        let myButton = UIButton(type: UIButton.ButtonType.system)
-//        myButton.frame = CGRect(x: 0, y: yValue, width: 25, height: 20)
-        myButton.backgroundColor = UIColor.black
-        myButton.translatesAutoresizingMaskIntoConstraints = false
-        myButton.heightAnchor.constraint(lessThanOrEqualToConstant: 15)
-//        myButton.heightAnchor.constraint(equalToConstant: 120.0).isActive = true
-//        myButton.widthAnchor.constraint(equalToConstant: 120.0).isActive = true
-
-        return myButton
+        let button = UIButton()
+        button.frame = CGRect(x: 0, y: Double(yValue), width: Double(self.view.frame.size.width), height: 25)
+        button.backgroundColor = UIColor.black
+        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        return button
     }
-
+    
+    func makeVerticalButton(xValue: Int) -> UIButton {
+        let button = UIButton()
+        button.frame = CGRect(x: Double(xValue), y: 0, width: 25, height: Double(self.view.frame.size.height))
+        button.backgroundColor = UIColor.black
+        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        return button
+    }
+    
+    func makeAngularButton(yValue: Int) -> UIView {
+        let square = UIView()
+        square.frame = CGRect(x: Int(self.view.frame.width), y: Int(self.view.frame.height), width: 25, height: Int(self.view.frame.height))
+        square.backgroundColor = UIColor.black
+        
+        return square
+    }
+    
+    func makeLandscapeAngularButton(yValue: Int) -> UIView {
+        let square = UIView()
+        square.frame = CGRect(x: Int(self.view.frame.width), y: Int(self.view.frame.height), width: 25, height: Int(self.view.frame.width))
+        square.backgroundColor = UIColor.black
+        
+        return square
+    }
+    
     func setupColorButton() {
-        for btn in buttonArray {
-            btn.backgroundColor = optoKColorStatus ? UIColor.red : UIColor.black
+        for btnIdx in 0..<numButtons {
+            let btnColor: UIColor = optoKColorStatus ? UIColor.red : UIColor.black
+            bottomButtonArray[btnIdx].backgroundColor = btnColor
+            topButtonArray[btnIdx].backgroundColor = btnColor
+            leftButtonArray[btnIdx].backgroundColor = btnColor
+            rightButtonArray[btnIdx].backgroundColor = btnColor
+            angularViewArray[btnIdx].backgroundColor = btnColor
         }
         colorButton.tintColor = optoKColorStatus ? UIColor.black : UIColor.red
+    }
+    
+    @objc func timerAction() {
+        print("Timer Action \(timerActionCtr)")
+        eyeExerciseMotion()
+    }
+    
+    func eyeExerciseMotion() {
+        switch timerActionCtr {
+        case 0:
+            stopAnimations()
+            animateButtonsRightOneAtTime()
+            timerActionCtr += 1
+        case 1:
+            stopAnimations()
+            animateButtons45DegOneAtTime(start: CGPoint(x: Int(self.view.frame.width),y: 0), end: CGPoint(x: 0, y: Int(self.view.frame.height)))
+            timerActionCtr += 1
+        case 2:
+            stopAnimations()
+            animateButtonsBottomOneAtTime()
+            timerActionCtr += 1
+        case 3:
+            stopAnimations()
+            animateButtons45DegOneAtTime(start: CGPoint(x: Int(self.view.frame.width),y: Int(self.view.frame.height)), end: CGPoint(x: 0, y: 0))
+            timerActionCtr += 1
+        case 4:
+            stopAnimations()
+            animateButtonsLeftOneAtTime()
+            timerActionCtr += 1
+        case 5:
+            stopAnimations()
+            animateButtons45DegOneAtTime(start: CGPoint(x: 0,y: Int(self.view.frame.height)), end: CGPoint(x: Int(self.view.frame.width), y: 0))
+            timerActionCtr += 1
+        case 6:
+            stopAnimations()
+            animateButtonsTopOneAtTime()
+            timerActionCtr += 1
+        case 7:
+            stopAnimations()
+            animateButtons45DegOneAtTime(start: CGPoint(x: 0,y: 0), end: CGPoint(x: Int(self.view.frame.width), y: Int(self.view.frame.height)))
+            timerActionCtr = 0
+        default:
+            stopAnimations()
+            animateButtonsRightOneAtTime()
+            timerActionCtr = 0
+        }
+        startTimer()
+    }
+    
+    // MARK: - Animate Motion Top and Bottom
+    func moveToTop(view: UIView) {
+        view.center.y = (0 - view.center.y - 50)
+    }
+    func startAtBottom(view: UIView) {
+        view.center.y = self.view.frame.height + 50
+    }
+    
+    func moveToBottom(view: UIView) {
+        view.center.y = (self.view.frame.height - view.center.y + 50)
+    }
+    func startAtTop(view: UIView) {
+        view.center.y = -50
+    }
+    
+    func animateButtonsTopOneAtTime() {
+        var duration: Double = 30.0
+        timerAnimationValue = 55
+        for btnIdx in 0..<numButtons {
+            let delayBtn : Double = 1.0 * Double(btnIdx)
+            if UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft || UIDevice.current.orientation == UIDeviceOrientation.landscapeRight {
+                duration = 20.0
+                timerAnimationValue = 50
+            }
+            
+            UIView.animate(withDuration: Double(duration), delay: Double(delayBtn), options: [.curveLinear, .repeat] , animations: {
+                UIView.setAnimationRepeatCount(2)
+                self.moveToTop(view: self.bottomButtonArray[btnIdx])
+            }) { (finished) in
+                self.startAtBottom(view: self.bottomButtonArray[btnIdx])
+            }
+        }
+    }
+    
+    func animateButtonsBottomOneAtTime() {
+        var duration: Double = 30.0
+        for btnIdx in 0..<numButtons {
+            let delayBtn : Double = 2.0 * Double(btnIdx)
+            timerAnimationValue = 95
+            if UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft || UIDevice.current.orientation == UIDeviceOrientation.landscapeRight {
+                duration = 20.0
+                timerAnimationValue = 62
+            }
+            
+            UIView.animate(withDuration: Double(duration), delay: Double(delayBtn), options: [.curveLinear, .repeat] , animations: {
+                UIView.setAnimationRepeatCount(2)
+                self.moveToBottom(view: self.topButtonArray[btnIdx])
+            }) { (finished) in
+                self.startAtTop(view: self.topButtonArray[btnIdx])
+            }
+        }
+    }
+    
+    // MARK: - Animation Left and Right
+    func moveToLeft(view: UIView) {
+        view.center.x = (0 - view.center.x - 50)
+    }
+    func startAtRight(view: UIView) {
+        view.center.x = self.view.frame.width + 50
+    }
+    
+    func moveToRight(view: UIView) {
+        view.center.x = (self.view.frame.width - view.center.x + 50)
+    }
+    func startAtLeft(view: UIView) {
+        view.center.x = -50
+    }
+    
+    func animateButtonsRightOneAtTime() {
+        var duration: Double = 20.0
+        for btnIdx in 0..<numButtons {
+            var delayBtn : Double = 2.0 * Double(btnIdx)
+            timerAnimationValue = 75
+            if UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft || UIDevice.current.orientation == UIDeviceOrientation.landscapeRight {
+                delayBtn = 2.0 * Double(btnIdx)
+                timerAnimationValue = 75
+                duration = 30.0
+            }
+            
+            UIView.animate(withDuration: Double(duration), delay: Double(delayBtn), options: [.curveLinear, .repeat] , animations: {
+                UIView.setAnimationRepeatCount(2)
+                self.moveToRight(view: self.leftButtonArray[btnIdx])
+            }) { (finished) in
+                self.startAtLeft(view: self.leftButtonArray[btnIdx])
+            }
+        }
+    }
+    
+    func animateButtonsLeftOneAtTime() {
+        var duration: Double = 20.0
+        for btnIdx in 0..<numButtons {
+            let delayBtn : Double = 1.0 * Double(btnIdx)
+            timerAnimationValue = 45
+            if UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft || UIDevice.current.orientation == UIDeviceOrientation.landscapeRight {
+                duration = 30.0
+            }
+            UIView.animate(withDuration: Double(duration), delay: Double(delayBtn), options: [.curveLinear, .repeat] , animations: {
+                UIView.setAnimationRepeatCount(2)
+                self.moveToLeft(view: self.rightButtonArray[btnIdx])
+            }) { (finished) in
+                self.startAtRight(view: self.rightButtonArray[btnIdx])
+            }
+        }
+    }
+    
+    // MARK: - Animate Motion 45 degree
+    func move45DegTop(view: UIView) {
+        view.center.y = (0 - view.center.y - 50)
+    }
+    func start45DegBottom(view: UIView) {
+        view.center.y = self.view.frame.height + 50
+    }
+    
+    func move45DegBottom(view: UIView) {
+        view.center.y = (self.view.frame.height - view.center.y + 50)
+    }
+    func start45DegTop(view: UIView) {
+        view.center.y = -50
+    }
+    
+    func animateButtons45DegOneAtTime(start: CGPoint, end: CGPoint) {
+        let duration: Double = 30.0
+        for btnIdx in 0..<numButtons {
+            let path = UIBezierPath()
+            path.move(to: start)
+            path.addLine(to: end)
+            
+            // create the animation
+            let anim = CAKeyframeAnimation(keyPath: "position")
+            anim.path = path.cgPath
+            anim.rotationMode = CAAnimationRotationMode.rotateAuto
+            anim.repeatCount = 2
+            anim.duration = duration
+            let delay = (btnIdx * 2)
+            anim.beginTime = CACurrentMediaTime() + Double(delay)
+            
+            // add the animation
+            angularViewArray[btnIdx].layer.add(anim, forKey: "animate position along path")
+        }
+        timerAnimationValue = 95
+    }
+    
+    func stopAnimations() {
+        self.view.layer.removeAllAnimations()
+    }
+    
+    func startTimer() {
+        timer = Timer.scheduledTimer(timeInterval: Double(timerAnimationValue), target: self, selector: #selector(timerAction), userInfo: nil, repeats: false)
     }
 }

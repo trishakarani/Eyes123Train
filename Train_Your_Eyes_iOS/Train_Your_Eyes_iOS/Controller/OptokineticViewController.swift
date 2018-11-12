@@ -21,6 +21,7 @@ class OptokineticViewController: UIViewController {
     var timer = Timer()
     var timerAnimationValue: Int = 0
     var timerActionCtr : Int = 0
+    var isPortraitMode : Bool = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,20 +52,40 @@ class OptokineticViewController: UIViewController {
     }
 
     func setupView() {
+        numButtons = Int((self.view.frame.height+100) / 50)
+        numButtons = 30
+        setupButtons(btnCount: numButtons)
         if UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft || UIDevice.current.orientation == UIDeviceOrientation.landscapeRight {
             setupLandscapeModeView()
+            isPortraitMode = false
         }
         else {
             setupPortraitModeView()
+            isPortraitMode = true
         }
-        animateButtonsRightOneAtTime()
-        startTimer()
+        eyeExerciseMotion()
     }
     
     func setupPortraitModeView() {
-        numButtons = Int((self.view.frame.height+100) / 50)
-        numButtons = 30
         for _ in 0..<numButtons {
+            let yBtmRightViewValue = Int(self.view.frame.height)
+            let btmRightView = makeAngularButton(yValue: yBtmRightViewValue)
+            angularViewArray.append(btmRightView)
+            self.view.addSubview(btmRightView)
+        }
+    }
+    
+    func setupLandscapeModeView() {
+        for _ in 0..<numButtons {
+            let yBtmRightViewValue = Int(self.view.frame.height)
+            let btmRightView = makeLandscapeAngularButton(yValue: yBtmRightViewValue)
+            angularViewArray.append(btmRightView)
+            self.view.addSubview(btmRightView)
+        }
+    }
+    
+    func setupButtons(btnCount: Int) {
+        for _ in 0..<btnCount {
             let yDelayValue = Int(self.view.frame.height)
             let delayButton = makeButton(yValue: yDelayValue)
             bottomButtonArray.append(delayButton)
@@ -79,30 +100,40 @@ class OptokineticViewController: UIViewController {
             let leftButton = makeVerticalButton(xValue: xLeftButtonValue)
             leftButtonArray.append(leftButton)
             self.view.addSubview(leftButton)
-
+            
             let xRightButtonValue = Int(self.view.frame.width)
             let rightButton = makeVerticalButton(xValue: xRightButtonValue)
             rightButtonArray.append(rightButton)
             self.view.addSubview(rightButton)
-
-            let yBtmRightViewValue = Int(self.view.frame.height)
-            let btmRightView = makeAngularButton(yValue: yBtmRightViewValue)
-            angularViewArray.append(btmRightView)
-            self.view.addSubview(btmRightView)
         }
     }
     
-    func setupLandscapeModeView() {
+    func clearView() {
+        for subUIView in self.view.subviews as [UIView] {
+            subUIView.removeFromSuperview()
+        }
+        self.view.removeFromSuperview()
+        
+        angularViewArray.removeAll()
+        bottomButtonArray.removeAll()
+        topButtonArray.removeAll()
+        leftButtonArray.removeAll()
+        rightButtonArray.removeAll()
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         print("Will Transition to size \(size) from super view size \(self.view.frame.size)")
         
-        if (size.width > self.view.frame.size.width) {
-            print("Landscape")
-        } else {
-            print("Portrait")
+        var isModeChangedPortrait: Bool = true
+        if UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft || UIDevice.current.orientation == UIDeviceOrientation.landscapeRight {
+            isModeChangedPortrait = false
+        }
+        
+        if isPortraitMode != isModeChangedPortrait {
+            stopAnimations()
+            clearView()
+            setupView()
         }
     }
     
@@ -133,6 +164,15 @@ class OptokineticViewController: UIViewController {
 
         return square
     }
+
+    func makeLandscapeAngularButton(yValue: Int) -> UIView {
+        let square = UIView()
+        square.frame = CGRect(x: Int(self.view.frame.width), y: Int(self.view.frame.height), width: 25, height: Int(self.view.frame.width))
+        square.backgroundColor = UIColor.black
+        
+        return square
+    }
+
     func setupColorButton() {
         for btnIdx in 0..<numButtons {
             let btnColor: UIColor = optoKColorStatus ? UIColor.red : UIColor.black
@@ -147,35 +187,43 @@ class OptokineticViewController: UIViewController {
 
     @objc func timerAction() {
         print("Timer Action \(timerActionCtr)")
+        eyeExerciseMotion()
+    }
+    
+    func eyeExerciseMotion() {
         switch timerActionCtr {
         case 0:
             stopAnimations()
-            animateButtons45DegOneAtTime(start: CGPoint(x: Int(self.view.frame.width),y: 0), end: CGPoint(x: 0, y: Int(self.view.frame.height)))
+            animateButtonsRightOneAtTime()
             timerActionCtr += 1
         case 1:
             stopAnimations()
-            animateButtonsBottomOneAtTime()
+            animateButtons45DegOneAtTime(start: CGPoint(x: Int(self.view.frame.width),y: 0), end: CGPoint(x: 0, y: Int(self.view.frame.height)))
             timerActionCtr += 1
         case 2:
             stopAnimations()
-            animateButtons45DegOneAtTime(start: CGPoint(x: Int(self.view.frame.width),y: Int(self.view.frame.height)), end: CGPoint(x: 0, y: 0))
+            animateButtonsBottomOneAtTime()
             timerActionCtr += 1
         case 3:
             stopAnimations()
-            animateButtonsLeftOneAtTime()
+            animateButtons45DegOneAtTime(start: CGPoint(x: Int(self.view.frame.width),y: Int(self.view.frame.height)), end: CGPoint(x: 0, y: 0))
             timerActionCtr += 1
         case 4:
             stopAnimations()
-            animateButtons45DegOneAtTime(start: CGPoint(x: 0,y: Int(self.view.frame.height)), end: CGPoint(x: Int(self.view.frame.width), y: 0))
+            animateButtonsLeftOneAtTime()
             timerActionCtr += 1
         case 5:
             stopAnimations()
-            animateButtonsTopOneAtTime()
+            animateButtons45DegOneAtTime(start: CGPoint(x: 0,y: Int(self.view.frame.height)), end: CGPoint(x: Int(self.view.frame.width), y: 0))
             timerActionCtr += 1
         case 6:
             stopAnimations()
-            animateButtons45DegOneAtTime(start: CGPoint(x: 0,y: 0), end: CGPoint(x: Int(self.view.frame.width), y: Int(self.view.frame.height)))
+            animateButtonsTopOneAtTime()
             timerActionCtr += 1
+        case 7:
+            stopAnimations()
+            animateButtons45DegOneAtTime(start: CGPoint(x: 0,y: 0), end: CGPoint(x: Int(self.view.frame.width), y: Int(self.view.frame.height)))
+            timerActionCtr = 0
         default:
             stopAnimations()
             animateButtonsRightOneAtTime()
@@ -200,9 +248,15 @@ class OptokineticViewController: UIViewController {
     }
 
     func animateButtonsTopOneAtTime() {
-        let duration: Double = 30.0
+        var duration: Double = 30.0
+        timerAnimationValue = 55
         for btnIdx in 0..<numButtons {
             let delayBtn : Double = 1.0 * Double(btnIdx)
+            if UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft || UIDevice.current.orientation == UIDeviceOrientation.landscapeRight {
+                duration = 20.0
+                timerAnimationValue = 50
+            }
+            
             UIView.animate(withDuration: Double(duration), delay: Double(delayBtn), options: [.curveLinear, .repeat] , animations: {
                 UIView.setAnimationRepeatCount(2)
                 self.moveToTop(view: self.bottomButtonArray[btnIdx])
@@ -210,13 +264,18 @@ class OptokineticViewController: UIViewController {
                 self.startAtBottom(view: self.bottomButtonArray[btnIdx])
             }
         }
-        timerAnimationValue = 55
     }
     
     func animateButtonsBottomOneAtTime() {
-        let duration: Double = 30.0
+        var duration: Double = 30.0
         for btnIdx in 0..<numButtons {
             let delayBtn : Double = 2.0 * Double(btnIdx)
+            timerAnimationValue = 95
+            if UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft || UIDevice.current.orientation == UIDeviceOrientation.landscapeRight {
+                duration = 20.0
+                timerAnimationValue = 62
+            }
+            
             UIView.animate(withDuration: Double(duration), delay: Double(delayBtn), options: [.curveLinear, .repeat] , animations: {
                 UIView.setAnimationRepeatCount(2)
                 self.moveToBottom(view: self.topButtonArray[btnIdx])
@@ -224,7 +283,6 @@ class OptokineticViewController: UIViewController {
                 self.startAtTop(view: self.topButtonArray[btnIdx])
             }
         }
-        timerAnimationValue = 95
     }
     
     // MARK: - Animation Left and Right
@@ -243,9 +301,16 @@ class OptokineticViewController: UIViewController {
     }
     
     func animateButtonsRightOneAtTime() {
-        let duration: Double = 20.0
+        var duration: Double = 20.0
         for btnIdx in 0..<numButtons {
-            let delayBtn : Double = 2.0 * Double(btnIdx)
+            var delayBtn : Double = 2.0 * Double(btnIdx)
+            timerAnimationValue = 75
+            if UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft || UIDevice.current.orientation == UIDeviceOrientation.landscapeRight {
+                delayBtn = 2.0 * Double(btnIdx)
+                timerAnimationValue = 75
+                duration = 30.0
+            }
+            
             UIView.animate(withDuration: Double(duration), delay: Double(delayBtn), options: [.curveLinear, .repeat] , animations: {
                 UIView.setAnimationRepeatCount(2)
                 self.moveToRight(view: self.leftButtonArray[btnIdx])
@@ -253,13 +318,16 @@ class OptokineticViewController: UIViewController {
                 self.startAtLeft(view: self.leftButtonArray[btnIdx])
             }
         }
-        timerAnimationValue = 75
     }
     
     func animateButtonsLeftOneAtTime() {
-        let duration: Double = 20.0
+        var duration: Double = 20.0
         for btnIdx in 0..<numButtons {
             let delayBtn : Double = 1.0 * Double(btnIdx)
+            timerAnimationValue = 45
+            if UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft || UIDevice.current.orientation == UIDeviceOrientation.landscapeRight {
+                duration = 30.0
+            }
             UIView.animate(withDuration: Double(duration), delay: Double(delayBtn), options: [.curveLinear, .repeat] , animations: {
                 UIView.setAnimationRepeatCount(2)
                 self.moveToLeft(view: self.rightButtonArray[btnIdx])
@@ -267,7 +335,6 @@ class OptokineticViewController: UIViewController {
                 self.startAtRight(view: self.rightButtonArray[btnIdx])
             }
         }
-        timerAnimationValue = 45
     }
 
     // MARK: - Animate Motion 45 degree

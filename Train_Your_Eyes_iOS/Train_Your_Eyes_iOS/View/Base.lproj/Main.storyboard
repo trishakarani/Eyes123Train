@@ -129,18 +129,7 @@
                     <view key="view" contentMode="scaleToFill" id="PsH-hu-RMk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uet-ic-Ima">
-                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
-                            </stackView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="uet-ic-Ima" firstAttribute="top" secondItem="nwZ-ju-Cnj" secondAttribute="top" id="BB4-Bv-OVi"/>
-                            <constraint firstItem="uet-ic-Ima" firstAttribute="bottom" secondItem="nwZ-ju-Cnj" secondAttribute="bottom" id="Pjg-3O-Skh"/>
-                            <constraint firstItem="uet-ic-Ima" firstAttribute="trailing" secondItem="nwZ-ju-Cnj" secondAttribute="trailing" id="Ssi-JL-0Zc"/>
-                            <constraint firstItem="uet-ic-Ima" firstAttribute="leading" secondItem="nwZ-ju-Cnj" secondAttribute="leading" id="rcQ-4S-CNR"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nwZ-ju-Cnj"/>
                     </view>
                     <navigationItem key="navigationItem" title="Moving Ball Focus" id="Kpd-N9-Oga">
@@ -153,7 +142,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="colorButton" destination="lOq-ry-RFr" id="6iV-bn-aYF"/>
-                        <outlet property="stackView" destination="uet-ic-Ima" id="2h4-Be-daf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HMj-ds-iAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -246,14 +234,25 @@
                     <view key="view" contentMode="scaleToFill" id="hiR-N0-Xbo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="deepocean" translatesAutoresizingMaskIntoConstraints="NO" id="bxM-rP-521">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bxM-rP-521" firstAttribute="leading" secondItem="bPf-IE-nSZ" secondAttribute="leading" id="AWz-il-NtM"/>
+                            <constraint firstItem="bxM-rP-521" firstAttribute="bottom" secondItem="bPf-IE-nSZ" secondAttribute="bottom" id="Mb5-NC-MY8"/>
+                            <constraint firstItem="bxM-rP-521" firstAttribute="top" secondItem="bPf-IE-nSZ" secondAttribute="top" id="Q7h-Hl-2p4"/>
+                            <constraint firstItem="bxM-rP-521" firstAttribute="trailing" secondItem="bPf-IE-nSZ" secondAttribute="trailing" id="nvG-S8-QqL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bPf-IE-nSZ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Hit Moving Object" id="XCA-sJ-dho"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yhr-pb-YGU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1959" y="915"/>
+            <point key="canvasLocation" x="1957.9710144927537" y="914.67391304347836"/>
         </scene>
         <!--Myopia Eye Exercise-->
         <scene sceneID="kKW-E6-jyP">
@@ -342,6 +341,9 @@
             <point key="canvasLocation" x="2033" y="915"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="deepocean" width="512" height="512"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="QGH-wk-BbM"/>
         <segue reference="3Hg-fY-9Qw"/>
