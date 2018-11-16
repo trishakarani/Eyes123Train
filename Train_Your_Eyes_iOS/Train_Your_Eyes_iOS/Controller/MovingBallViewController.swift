@@ -24,6 +24,7 @@ class MovingBallViewController: UIViewController {
     var timerActionCtr : Int = 0
     var isPortraitMode : Bool = true
     var squareView = UIView()
+    var squareViewAnimationId: Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -387,36 +388,16 @@ class MovingBallViewController: UIViewController {
         self.view.addSubview(squareView)
         
         // now create a bezier path that defines our curve
-//        let circleAnim = CAKeyframeAnimation(keyPath: "position3")
-//        let circlePath = createCircleAnimationPath(startX: Int(endPoint.x), startY: Int(endPoint.y))
-//        let centerX = self.view.frame.width/2
-//        let centerY = self.view.frame.height/2
-//        let radius = CGFloat((self.view.frame.width - 100)/2)
-        //let path3 = circlePathWithCenter(center: CGPoint(x: centerX, y: centerY), radius: radius)
-//        circleAnim.path = circlePath.cgPath
-//        circleAnim.rotationMode = CAAnimationRotationMode.rotateAuto
-//        circleAnim.repeatCount = Float.infinity
-//        circleAnim.duration = 40.0
-
-        let endPoint = CGPoint(x: 50, y: 200)
-        let rectAnim = CAKeyframeAnimation(keyPath: "position")
-        let rectPath = createRectangleAnimationPath(startX: Int(endPoint.x), startY: Int(endPoint.y))
-        rectAnim.path = rectPath.cgPath
-        rectAnim.rotationMode = CAAnimationRotationMode.rotateAuto
-        rectAnim.repeatCount = Float.infinity
-        rectAnim.duration = 40.0
-
-        // create a new CAKeyframeAnimation that animates the objects position
-//        let sinePath = createSineWaveAnimationPath(startX: 20, startY: 20)
-//        let sineAnim = CAKeyframeAnimation(keyPath: "position1")
-//        sineAnim.path = sinePath.cgPath
-//        sineAnim.rotationMode = CAAnimationRotationMode.rotateAuto
-//        sineAnim.repeatCount = Float.infinity
-//        sineAnim.delegate = self as? CAAnimationDelegate
-//        sineAnim.duration = 40.0
+        let sinePath = createSineWaveAnimationPath(startX: 20, startY: 20)
+        let sineAnim = CAKeyframeAnimation(keyPath: "position")
+        sineAnim.path = sinePath.cgPath
+        sineAnim.rotationMode = CAAnimationRotationMode.rotateAuto
+        sineAnim.repeatCount = 2
+        sineAnim.delegate = self
+        sineAnim.duration = 60.0
 
         // we add the animation to the squares 'layer' property
-        squareView.layer.add(rectAnim, forKey: "animate position along path")
+        squareView.layer.add(sineAnim, forKey: "animate position along path")
     }
     
     func circlePathWithCenter(center: CGPoint, radius: CGFloat) -> UIBezierPath {
@@ -457,7 +438,8 @@ class MovingBallViewController: UIViewController {
         path.addLine(to: CGPoint(x: startX, y: (bottomY-topY)/2))
         path.addLine(to: CGPoint(x: startX, y: bottomY))
         path.addLine(to: CGPoint(x: startX, y: startY))
-        
+        path.addLine(to: CGPoint(x: endX, y: startY))
+
         return path
     }
     
@@ -514,5 +496,46 @@ class MovingBallViewController: UIViewController {
     
     func startTimer() {
         timer = Timer.scheduledTimer(timeInterval: Double(timerAnimationValue), target: self, selector: #selector(timerAction), userInfo: nil, repeats: false)
+    }
+}
+
+extension MovingBallViewController: CAAnimationDelegate {
+    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+        switch squareViewAnimationId {
+        case 0:
+            let sinePath = createSineWaveAnimationPath(startX: 20, startY: 20)
+            let sineAnim = CAKeyframeAnimation(keyPath: "position")
+            sineAnim.path = sinePath.cgPath
+            sineAnim.rotationMode = CAAnimationRotationMode.rotateAuto
+            sineAnim.repeatCount = 2
+            sineAnim.delegate = self
+            sineAnim.duration = 60.0
+            squareView.layer.add(sineAnim, forKey: "animate position along path")
+            squareViewAnimationId += 1
+        case 1:
+            let endPoint = CGPoint(x: 50, y: 200)
+            let rectAnim = CAKeyframeAnimation(keyPath: "position")
+            let rectPath = createRectangleAnimationPath(startX: Int(endPoint.x), startY: Int(endPoint.y))
+            rectAnim.path = rectPath.cgPath
+            rectAnim.rotationMode = CAAnimationRotationMode.rotateAuto
+            rectAnim.repeatCount = 2
+            rectAnim.delegate = self
+            rectAnim.duration = 60.0
+            squareView.layer.add(rectAnim, forKey: "animate position along path")
+            squareViewAnimationId += 1
+        case 2:
+            let circleAnim = CAKeyframeAnimation(keyPath: "position")
+            let endPoint = CGPoint(x: 50, y: 200)
+            let circlePath = createCircleAnimationPath(startX: Int(endPoint.x), startY: Int(endPoint.y))
+            circleAnim.path = circlePath.cgPath
+            circleAnim.rotationMode = CAAnimationRotationMode.rotateAuto
+            circleAnim.repeatCount = 2
+            circleAnim.delegate = self
+            circleAnim.duration = 20.0
+            squareView.layer.add(circleAnim, forKey: "animate position along path")
+            squareViewAnimationId = 0
+        default:
+            squareViewAnimationId = 0
+        }
     }
 }
