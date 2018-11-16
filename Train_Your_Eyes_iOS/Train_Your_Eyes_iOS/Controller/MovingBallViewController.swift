@@ -23,6 +23,7 @@ class MovingBallViewController: UIViewController {
     var timerAnimationValue: Int = 0
     var timerActionCtr : Int = 0
     var isPortraitMode : Bool = true
+    var squareView = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +66,7 @@ class MovingBallViewController: UIViewController {
             isPortraitMode = true
         }
         eyeExerciseMotion()
+        animateMovingBall()
     }
     
     func setupPortraitModeView() {
@@ -184,6 +186,7 @@ class MovingBallViewController: UIViewController {
             angularViewArray[btnIdx].backgroundColor = btnColor
         }
         colorButton.tintColor = optoKColorStatus ? UIColor.black : UIColor.red
+        squareView.backgroundColor = optoKColorStatus ? UIColor.black : UIColor.red
     }
     
     @objc func timerAction() {
@@ -375,6 +378,136 @@ class MovingBallViewController: UIViewController {
         timerAnimationValue = 95
     }
     
+    //MARK: Animate moving ball in the frame
+    func animateMovingBall() {
+        squareView.frame = CGRect(x: 55, y: 300, width: 20, height: 20)
+        squareView.backgroundColor = UIColor.red
+        
+        // add the square to the screen
+        self.view.addSubview(squareView)
+        
+        // now create a bezier path that defines our curve
+//        let circleAnim = CAKeyframeAnimation(keyPath: "position3")
+//        let circlePath = createCircleAnimationPath(startX: Int(endPoint.x), startY: Int(endPoint.y))
+//        let centerX = self.view.frame.width/2
+//        let centerY = self.view.frame.height/2
+//        let radius = CGFloat((self.view.frame.width - 100)/2)
+        //let path3 = circlePathWithCenter(center: CGPoint(x: centerX, y: centerY), radius: radius)
+//        circleAnim.path = circlePath.cgPath
+//        circleAnim.rotationMode = CAAnimationRotationMode.rotateAuto
+//        circleAnim.repeatCount = Float.infinity
+//        circleAnim.duration = 40.0
+
+        let endPoint = CGPoint(x: 50, y: 200)
+        let rectAnim = CAKeyframeAnimation(keyPath: "position")
+        let rectPath = createRectangleAnimationPath(startX: Int(endPoint.x), startY: Int(endPoint.y))
+        rectAnim.path = rectPath.cgPath
+        rectAnim.rotationMode = CAAnimationRotationMode.rotateAuto
+        rectAnim.repeatCount = Float.infinity
+        rectAnim.duration = 40.0
+
+        // create a new CAKeyframeAnimation that animates the objects position
+//        let sinePath = createSineWaveAnimationPath(startX: 20, startY: 20)
+//        let sineAnim = CAKeyframeAnimation(keyPath: "position1")
+//        sineAnim.path = sinePath.cgPath
+//        sineAnim.rotationMode = CAAnimationRotationMode.rotateAuto
+//        sineAnim.repeatCount = Float.infinity
+//        sineAnim.delegate = self as? CAAnimationDelegate
+//        sineAnim.duration = 40.0
+
+        // we add the animation to the squares 'layer' property
+        squareView.layer.add(rectAnim, forKey: "animate position along path")
+    }
+    
+    func circlePathWithCenter(center: CGPoint, radius: CGFloat) -> UIBezierPath {
+        let circlePath = UIBezierPath()
+        circlePath.addArc(withCenter: center, radius: radius, startAngle: -CGFloat(Double.pi), endAngle: -CGFloat(Double.pi/2), clockwise: true)
+        circlePath.addArc(withCenter: center, radius: radius, startAngle: -CGFloat(Double.pi/2), endAngle: 0, clockwise: true)
+        circlePath.addArc(withCenter: center, radius: radius, startAngle: 0, endAngle: CGFloat(Double.pi/2), clockwise: true)
+        circlePath.addArc(withCenter: center, radius: radius, startAngle: CGFloat(Double.pi/2), endAngle: CGFloat(Double.pi), clockwise: true)
+        circlePath.close()
+
+        return circlePath
+    }
+
+
+    func createRectangleAnimationPath(startX: Int, startY: Int) -> UIBezierPath {
+        let path = UIBezierPath()
+        
+        let endX = Int(self.view.frame.width) - startX
+        let topY = 100
+        let bottomY = Int(self.view.frame.height) - topY
+        
+        path.move(to: CGPoint(x: startX, y: startY))
+        
+        path.addLine(to: CGPoint(x: startX, y: topY))
+        path.addLine(to: CGPoint(x: (endX-startX)/2, y: topY))
+        path.addLine(to: CGPoint(x: endX, y: topY))
+        path.addLine(to: CGPoint(x: endX, y: (bottomY - topY)/2))
+        path.addLine(to: CGPoint(x: startX, y: (bottomY - topY)/2))
+        path.addLine(to: CGPoint(x: endX, y: bottomY))
+        path.addLine(to: CGPoint(x: (endX-startX)/2, y: bottomY))
+        path.addLine(to: CGPoint(x: startX, y: bottomY))
+        path.addLine(to: CGPoint(x: (endX-startX)/2, y: (bottomY-topY)/2))
+        path.addLine(to: CGPoint(x: endX, y: topY))
+        path.addLine(to: CGPoint(x: endX, y: (bottomY-topY)/2))
+        path.addLine(to: CGPoint(x: endX, y: bottomY))
+        path.addLine(to: CGPoint(x: (endX-startX)/2, y: (bottomY-topY)/2))
+        path.addLine(to: CGPoint(x: startX, y: topY))
+        path.addLine(to: CGPoint(x: startX, y: (bottomY-topY)/2))
+        path.addLine(to: CGPoint(x: startX, y: bottomY))
+        path.addLine(to: CGPoint(x: startX, y: startY))
+        
+        return path
+    }
+    
+    func createCircleAnimationPath(startX: Int, startY: Int) -> UIBezierPath {
+        return UIBezierPath(ovalIn: circleFrame(startX: startX, startY: startY))
+    }
+    func circleFrame(startX: Int, startY: Int) -> CGRect {
+        let circleRadius = (Int(self.view.frame.width) - (2 * startX)) / 2
+        let circleFrame = CGRect(x: startX, y: startY, width: 2 * circleRadius, height: 2 * circleRadius)
+        return circleFrame
+    }
+    
+    func createSineWaveAnimationPath(startX: Int, startY: Int) -> UIBezierPath {
+        let path = UIBezierPath()
+
+        let graphWidth: CGFloat = 0.8   // Graph is 80% of the width of the view
+        let amplitude: CGFloat = 0.3   // Amplitude of sine wave is 30% of view height
+        
+        let width: Double = Double(self.view.frame.width) - Double(2 * startX)
+        let height: Double = Double(self.view.frame.height) - Double(2 * startY)
+        let originX = width * (1 - Double(graphWidth)) / 2
+        let origin = CGPoint(x: originX, y: Double(height) * 0.50)
+        path.move(to: origin)
+        
+        for angle in stride(from: 5.0, through: 360.0, by: 5.0) {
+            let x = origin.x + CGFloat(angle/360.0) * CGFloat(width) * graphWidth
+            let y = origin.y - CGFloat(sin(angle/180.0 * Double.pi)) * CGFloat(height) * amplitude
+            path.addLine(to: CGPoint(x: x, y: y))
+        }
+        let endX = origin.x + CGFloat(width) * graphWidth
+        for angle in stride(from: 5.0, through: 360.0, by: 5.0) {
+            let x = endX - CGFloat(angle/360.0) * CGFloat(width) * graphWidth
+            let y = origin.y - CGFloat(sin(angle/180.0 * Double.pi)) * CGFloat(height) * amplitude
+            path.addLine(to: CGPoint(x: x, y: y))
+        }
+        
+        for angle in stride(from: 5.0, through: 360.0, by: 5.0) {
+            let x = origin.x + CGFloat(angle/360.0) * CGFloat(width) * graphWidth
+            let y = origin.y + CGFloat(sin(angle/180.0 * Double.pi)) * CGFloat(height) * amplitude
+            path.addLine(to: CGPoint(x: x, y: y))
+        }
+        for angle in stride(from: 5.0, through: 360.0, by: 5.0) {
+            let x = endX - CGFloat(angle/360.0) * CGFloat(width) * graphWidth
+            let y = origin.y + CGFloat(sin(angle/180.0 * Double.pi)) * CGFloat(height) * amplitude
+            path.addLine(to: CGPoint(x: x, y: y))
+        }
+        
+        return path
+    }
+
     func stopAnimations() {
         self.view.layer.removeAllAnimations()
     }
