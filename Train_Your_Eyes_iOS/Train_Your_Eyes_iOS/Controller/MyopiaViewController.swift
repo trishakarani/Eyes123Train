@@ -13,7 +13,9 @@ class MyopiaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.navigationController?.navigationBar.titleTextAttributes =
+            [NSAttributedString.Key.foregroundColor: UIColor.red,
+             NSAttributedString.Key.font: UIFont(name: "Verdana", size: 22)!]
     }
     
 

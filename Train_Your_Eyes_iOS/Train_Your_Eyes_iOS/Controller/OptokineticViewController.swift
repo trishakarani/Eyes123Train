@@ -26,6 +26,10 @@ class OptokineticViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationController?.navigationBar.titleTextAttributes =
+            [NSAttributedString.Key.foregroundColor: UIColor.red,
+             NSAttributedString.Key.font: UIFont(name: "Verdana", size: 22)!]
+
         setupView()
     }
     

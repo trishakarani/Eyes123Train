@@ -16,6 +16,10 @@ class MainScreenViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationController?.navigationBar.titleTextAttributes =
+            [NSAttributedString.Key.foregroundColor: UIColor.red,
+             NSAttributedString.Key.font: UIFont(name: "Verdana", size: 22)!]
+
         self.tableView?.rowHeight = 80.0
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -41,6 +45,7 @@ class MainScreenViewController: UITableViewController {
         
         cell.accessoryType = .none
         cell.menuImage?.image = UIImage(named: imageArray[indexPath.row])
+        cell.menuName?.font = UIFont(name:"Verdana", size:22)
         cell.menuName?.text = mainPageArray[indexPath.row]
         
         return cell

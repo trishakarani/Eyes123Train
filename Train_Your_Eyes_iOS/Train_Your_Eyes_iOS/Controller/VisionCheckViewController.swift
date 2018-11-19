@@ -10,13 +10,28 @@ import UIKit
 
 class VisionCheckViewController: UIViewController {
 
+    @IBOutlet weak var blindnessImg: UIImageView!
+    var currTestIndex : Int = 0
+    var correctChoiceIdx : Int = 0
+    
+    var correctCount : Int = 0
+    
+    @IBOutlet weak var choiceBtn1: UIButton!
+    @IBOutlet weak var choiceBtn2: UIButton!
+    @IBOutlet weak var choiceBtn3: UIButton!
+    @IBOutlet weak var choiceBtn4: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.navigationController?.navigationBar.titleTextAttributes =
+            [NSAttributedString.Key.foregroundColor: UIColor.red,
+             NSAttributedString.Key.font: UIFont(name: "Verdana", size: 22)!]
+        
+        currTestIndex = 1
+        updateNewColorTest()
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -27,4 +42,60 @@ class VisionCheckViewController: UIViewController {
     }
     */
 
+    @IBAction func userNumberSelected(_ sender: UIButton) {
+        if correctChoiceIdx == (sender.tag - 1) {
+            correctCount += 1
+        }
+        print("Score: \(correctCount)")
+        updateNewColorTest()
+    }
+    
+    func updateNewColorTest() {
+        if currTestIndex % 4 == 0 {
+            let randomTestIdx = Int.random(in: 1 ... colorBlindNothingSet.count)
+            print(randomTestIdx)
+            let currentTestData = colorBlindNothingSet[randomTestIdx]
+            setScreenData(testData: currentTestData!)
+        }
+        else {
+            let randomTestIdx = Int.random(in: 1 ... colorBlindNumberSet.count)
+            print(randomTestIdx)
+            let currentTestData = colorBlindNumberSet[randomTestIdx]
+            setScreenData(testData: currentTestData!)
+        }
+        currTestIndex += 1
+    }
+    
+    func setScreenData(testData: ColorBlindData) {
+        blindnessImg.image = UIImage(named: testData.imgName)
+        
+        correctChoiceIdx = Int.random(in: 0..<4)
+        switch correctChoiceIdx {
+        case 0:
+            choiceBtn1.setTitle(testData.choices[2], for: UIControl.State.normal)
+            choiceBtn2.setTitle(testData.choices[1], for: UIControl.State.normal)
+            choiceBtn3.setTitle(testData.choices[0], for: UIControl.State.normal)
+            choiceBtn4.setTitle(testData.choices[3], for: UIControl.State.normal)
+        case 1:
+            choiceBtn1.setTitle(testData.choices[0], for: UIControl.State.normal)
+            choiceBtn2.setTitle(testData.choices[2], for: UIControl.State.normal)
+            choiceBtn3.setTitle(testData.choices[1], for: UIControl.State.normal)
+            choiceBtn4.setTitle(testData.choices[3], for: UIControl.State.normal)
+        case 2:
+            choiceBtn1.setTitle(testData.choices[0], for: UIControl.State.normal)
+            choiceBtn2.setTitle(testData.choices[1], for: UIControl.State.normal)
+            choiceBtn3.setTitle(testData.choices[2], for: UIControl.State.normal)
+            choiceBtn4.setTitle(testData.choices[3], for: UIControl.State.normal)
+        case 3:
+            choiceBtn1.setTitle(testData.choices[0], for: UIControl.State.normal)
+            choiceBtn2.setTitle(testData.choices[1], for: UIControl.State.normal)
+            choiceBtn3.setTitle(testData.choices[3], for: UIControl.State.normal)
+            choiceBtn4.setTitle(testData.choices[2], for: UIControl.State.normal)
+        default:
+            choiceBtn1.setTitle(testData.choices[2], for: UIControl.State.normal)
+            choiceBtn2.setTitle(testData.choices[1], for: UIControl.State.normal)
+            choiceBtn3.setTitle(testData.choices[0], for: UIControl.State.normal)
+            choiceBtn4.setTitle(testData.choices[3], for: UIControl.State.normal)
+        }
+    }
 }
