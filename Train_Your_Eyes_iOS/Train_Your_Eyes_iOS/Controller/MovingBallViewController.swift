@@ -26,12 +26,16 @@ class MovingBallViewController: UIViewController {
     var squareView = UIView()
     var squareViewAnimationId: Int = 1
     
+    var Instructions: String = "\r\n\r\nFocus your eye on the moving ball. Doing this exercise for 5 minutes in a day helps improve focus.\r\n\r\n"
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.titleTextAttributes =
             [NSAttributedString.Key.foregroundColor: UIColor.red,
              NSAttributedString.Key.font: UIFont(name: "Verdana", size: 22)!]
+
+        AlertFunctions.showAlert(title: "Moving Ball Exercise", message: Instructions)
 
         setupView()
     }

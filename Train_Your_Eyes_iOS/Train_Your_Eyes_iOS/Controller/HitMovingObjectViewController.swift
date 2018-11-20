@@ -23,6 +23,9 @@ class HitMovingObjectViewController: UIViewController {
     var totalHits:Int = 15
     var fishCounter:Int = 0
     var timeToAnimateInSeconds = 5
+    
+    var Instructions: String = "\r\n\r\nIn this test we test how you distinguish between red, green and blue colors. Keep the device at a safe distance from your eyes. You should choose the figure that you see in the picture.\r\n\r\n"
+
     override func  viewWillAppear (_ animated: Bool) {
         self.view.addSubview(fishView)
         //fishView.setAnchorPoint(CGPoint(x: self.view.frame.width/2, y:self.view.frame.height/2))
@@ -131,7 +134,9 @@ class HitMovingObjectViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        AlertFunctions.showAlert(title: "Hit Moving Object", message: Instructions)        
     }
+    
     let aquatics: [String] = ["blue_fish","crab","fish_yellow","octopus","prawns","seahorse"]
     func loadfish(){
         print("loadfish")

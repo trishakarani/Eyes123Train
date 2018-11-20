@@ -21,6 +21,8 @@ class VisionCheckViewController: UIViewController {
     @IBOutlet weak var choiceBtn3: UIButton!
     @IBOutlet weak var choiceBtn4: UIButton!
     
+    var Instructions: String = "\r\n\r\nIn this test we test how you distinguish between red, green and blue colors. Keep the device at a safe distance from your eyes. You should choose the figure that you see in the picture.\r\n\r\n"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,6 +30,8 @@ class VisionCheckViewController: UIViewController {
             [NSAttributedString.Key.foregroundColor: UIColor.red,
              NSAttributedString.Key.font: UIFont(name: "Verdana", size: 22)!]
         
+        AlertFunctions.showAlert(title: "Color Blindness Test", message: Instructions)
+
         currTestIndex = 1
         updateNewColorTest()
     }
@@ -51,15 +55,16 @@ class VisionCheckViewController: UIViewController {
     }
     
     func updateNewColorTest() {
-        if currTestIndex % 4 == 0 {
+        if currTestIndex >= 2 {
+            displayResultsPage()
+        }
+        else if currTestIndex % 4 == 0 {
             let randomTestIdx = Int.random(in: 1 ... colorBlindNothingSet.count)
-            print(randomTestIdx)
             let currentTestData = colorBlindNothingSet[randomTestIdx]
             setScreenData(testData: currentTestData!)
         }
         else {
             let randomTestIdx = Int.random(in: 1 ... colorBlindNumberSet.count)
-            print(randomTestIdx)
             let currentTestData = colorBlindNumberSet[randomTestIdx]
             setScreenData(testData: currentTestData!)
         }
@@ -97,5 +102,9 @@ class VisionCheckViewController: UIViewController {
             choiceBtn3.setTitle(testData.choices[0], for: UIControl.State.normal)
             choiceBtn4.setTitle(testData.choices[3], for: UIControl.State.normal)
         }
+    }
+    
+    func displayResultsPage() {
+        performSegue(withIdentifier: "visionResults", sender: nil)
     }
 }

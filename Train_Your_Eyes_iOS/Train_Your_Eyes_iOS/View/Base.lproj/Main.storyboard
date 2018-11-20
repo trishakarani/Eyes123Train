@@ -6,6 +6,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.16.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,7 +21,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="This is a research oriented application. It is not meant for any diagnostic or treatment of any diseases." translatesAutoresizingMaskIntoConstraints="NO" id="eYl-hd-W7Z">
                                 <rect key="frame" x="20" y="70" width="335" height="397"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYe-qk-9rW">
@@ -236,7 +237,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="deepocean" translatesAutoresizingMaskIntoConstraints="NO" id="bxM-rP-521">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -295,78 +296,118 @@
                                 <fontDescription key="fontDescription" name="Verdana-Italic" family="Verdana" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7WH-Wy-qch">
-                                <rect key="frame" x="0.0" y="494" width="375" height="82"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7WH-Wy-qch">
+                                <rect key="frame" x="20" y="484" width="335" height="65"/>
                                 <subviews>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EwU-ue-TU4">
-                                        <rect key="frame" x="0.0" y="0.0" width="86.5" height="82"/>
-                                        <color key="backgroundColor" red="0.15686274510000001" green="0.66666666669999997" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EwU-ue-TU4" customClass="RoundButton" customModule="Train_Your_Eyes_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
+                                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="82" id="h8B-VB-XX0"/>
+                                            <constraint firstAttribute="height" constant="65" id="4Wi-mV-PtC"/>
+                                            <constraint firstAttribute="width" constant="65" id="C7K-bQ-cID"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="22"/>
+                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="14"/>
                                         <state key="normal" title="Button">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="userNumberSelected:" destination="EP7-sW-AIK" eventType="touchUpInside" id="6jI-Jr-59R"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Xh-e3-SQi">
-                                        <rect key="frame" x="96.5" y="0.0" width="86" height="82"/>
-                                        <color key="backgroundColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Xh-e3-SQi" customClass="RoundButton" customModule="Train_Your_Eyes_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="90" y="0.0" width="65" height="65"/>
+                                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="82" id="3fp-SB-aa1"/>
+                                            <constraint firstAttribute="width" constant="65" id="JGX-7O-mKf"/>
+                                            <constraint firstAttribute="height" constant="65" id="YE6-IY-aiZ"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="22"/>
+                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="14"/>
                                         <state key="normal" title="Button">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="userNumberSelected:" destination="EP7-sW-AIK" eventType="touchUpInside" id="a3l-xM-Vd4"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTu-Tv-gTx">
-                                        <rect key="frame" x="192.5" y="0.0" width="86.5" height="82"/>
-                                        <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTu-Tv-gTx" customClass="RoundButton" customModule="Train_Your_Eyes_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="180" y="0.0" width="65" height="65"/>
+                                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="82" id="lqf-ba-8xf"/>
+                                            <constraint firstAttribute="height" constant="65" id="gsA-48-RbI"/>
+                                            <constraint firstAttribute="width" constant="65" id="pZP-w3-6DM"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="22"/>
+                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="14"/>
                                         <state key="normal" title="Button">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="userNumberSelected:" destination="EP7-sW-AIK" eventType="touchUpInside" id="dm0-Wc-0Ud"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psA-xN-948">
-                                        <rect key="frame" x="289" y="0.0" width="86" height="82"/>
-                                        <color key="backgroundColor" red="0.84465640779999995" green="0.51457053419999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psA-xN-948" customClass="RoundButton" customModule="Train_Your_Eyes_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="270" y="0.0" width="65" height="65"/>
+                                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="82" id="T1P-iW-FGb"/>
+                                            <constraint firstAttribute="height" constant="65" id="FJS-Z2-luh"/>
+                                            <constraint firstAttribute="width" constant="65" id="uPE-rx-gft"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="22"/>
-                                        <state key="normal" title="Button"/>
+                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="14"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="userNumberSelected:" destination="EP7-sW-AIK" eventType="touchUpInside" id="RNe-Qk-uIl"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="vTu-Tv-gTx" secondAttribute="bottom" id="2Pa-ij-cGl"/>
+                                    <constraint firstItem="psA-xN-948" firstAttribute="height" secondItem="EwU-ue-TU4" secondAttribute="height" id="2kc-oh-cX2"/>
+                                    <constraint firstItem="4Xh-e3-SQi" firstAttribute="top" secondItem="7WH-Wy-qch" secondAttribute="top" id="HLG-Rr-NsI"/>
+                                    <constraint firstAttribute="bottom" secondItem="EwU-ue-TU4" secondAttribute="bottom" id="Ps5-25-Puz"/>
+                                    <constraint firstAttribute="bottom" secondItem="psA-xN-948" secondAttribute="bottom" id="Qwg-h7-m3F"/>
+                                    <constraint firstItem="vTu-Tv-gTx" firstAttribute="width" secondItem="EwU-ue-TU4" secondAttribute="width" id="TfF-Df-DuN"/>
+                                    <constraint firstItem="vTu-Tv-gTx" firstAttribute="height" secondItem="EwU-ue-TU4" secondAttribute="height" id="Y0b-Zc-UDf"/>
+                                    <constraint firstItem="4Xh-e3-SQi" firstAttribute="width" secondItem="EwU-ue-TU4" secondAttribute="width" id="ZFu-Se-R7s"/>
+                                    <constraint firstItem="vTu-Tv-gTx" firstAttribute="top" secondItem="7WH-Wy-qch" secondAttribute="top" id="iag-Ij-Dgo"/>
+                                    <constraint firstItem="psA-xN-948" firstAttribute="width" secondItem="EwU-ue-TU4" secondAttribute="width" id="n82-In-Sbu"/>
+                                    <constraint firstItem="psA-xN-948" firstAttribute="top" secondItem="7WH-Wy-qch" secondAttribute="top" id="nuG-Ir-ffd"/>
+                                    <constraint firstItem="EwU-ue-TU4" firstAttribute="top" secondItem="7WH-Wy-qch" secondAttribute="top" id="pbG-uV-pav"/>
+                                    <constraint firstItem="4Xh-e3-SQi" firstAttribute="height" secondItem="EwU-ue-TU4" secondAttribute="height" id="uQU-lp-VlY"/>
+                                    <constraint firstAttribute="bottom" secondItem="4Xh-e3-SQi" secondAttribute="bottom" id="ygj-nv-VUs"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Mr1-Hv-p3l" firstAttribute="top" secondItem="OKp-I8-Ozn" secondAttribute="top" constant="35" id="0QJ-E1-qHP"/>
                             <constraint firstItem="ZvT-Xb-9SB" firstAttribute="top" secondItem="Mr1-Hv-p3l" secondAttribute="bottom" constant="8" id="16Z-R0-bkf"/>
+                            <constraint firstItem="OKp-I8-Ozn" firstAttribute="trailing" secondItem="7WH-Wy-qch" secondAttribute="trailing" constant="20" id="3C3-WI-AYg"/>
                             <constraint firstItem="ZvT-Xb-9SB" firstAttribute="centerX" secondItem="A1D-aJ-A5B" secondAttribute="centerX" id="3Lx-7V-7zQ"/>
-                            <constraint firstAttribute="bottom" secondItem="7WH-Wy-qch" secondAttribute="bottom" constant="80" id="OMR-NB-h5M"/>
-                            <constraint firstItem="7WH-Wy-qch" firstAttribute="centerX" secondItem="ZvT-Xb-9SB" secondAttribute="centerX" id="Vlf-f4-KRS"/>
                             <constraint firstItem="Mr1-Hv-p3l" firstAttribute="centerX" secondItem="A1D-aJ-A5B" secondAttribute="centerX" id="bdp-CU-rpC"/>
-                            <constraint firstItem="7WH-Wy-qch" firstAttribute="leading" secondItem="A1D-aJ-A5B" secondAttribute="leading" id="gyg-tt-tUP"/>
+                            <constraint firstItem="7WH-Wy-qch" firstAttribute="top" secondItem="ZvT-Xb-9SB" secondAttribute="bottom" constant="50" id="dxL-zW-7XO"/>
+                            <constraint firstItem="7WH-Wy-qch" firstAttribute="leading" secondItem="OKp-I8-Ozn" secondAttribute="leading" constant="20" id="ho8-g2-Zqz"/>
                             <constraint firstItem="ZvT-Xb-9SB" firstAttribute="top" secondItem="Mr1-Hv-p3l" secondAttribute="bottom" constant="8" id="pSQ-ey-dkq"/>
-                            <constraint firstItem="7WH-Wy-qch" firstAttribute="top" secondItem="ZvT-Xb-9SB" secondAttribute="bottom" constant="60" id="vhc-8O-kIB"/>
-                            <constraint firstAttribute="trailing" secondItem="7WH-Wy-qch" secondAttribute="trailing" id="zOq-9c-Adi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OKp-I8-Ozn"/>
                     </view>
@@ -377,6 +418,7 @@
                         <outlet property="choiceBtn2" destination="4Xh-e3-SQi" id="zqY-Lk-kPX"/>
                         <outlet property="choiceBtn3" destination="vTu-Tv-gTx" id="OXf-EN-07Y"/>
                         <outlet property="choiceBtn4" destination="psA-xN-948" id="dxo-aS-m5e"/>
+                        <segue destination="eva-Dv-kXA" kind="showDetail" identifier="visionResults" id="6dr-88-Uzc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J1J-pR-vcK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -400,6 +442,131 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bCS-eg-eSC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3823.188405797102" y="900.00000000000011"/>
+        </scene>
+        <!--Vision Check Results-->
+        <scene sceneID="8YO-Nt-46a">
+            <objects>
+                <viewController id="eRh-LD-zOM" customClass="VisionTestResultsViewController" customModule="Train_Your_Eyes_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K4z-Q3-PHs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Color Blindness Test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6w-zB-FIL">
+                                <rect key="frame" x="0.0" y="103" width="375" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vision Acuity Test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIU-Wu-x3m">
+                                <rect key="frame" x="0.0" y="219" width="375" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Color Contrast Test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AK6-dr-j7S">
+                                <rect key="frame" x="0.0" y="381" width="375" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Note: Never disregard professional medical advise from your physician or health care provider." textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="3" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1FS-GT-WfI">
+                                <rect key="frame" x="16" y="470" width="343" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCj-CO-2sZ" customClass="RoundButton" customModule="Train_Your_Eyes_iOS" customModuleProvider="target">
+                                <rect key="frame" x="105" y="582" width="165" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="22"/>
+                                <state key="normal" title="DONE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="jOm-D3-lMd" kind="show" id="Did-K3-mdq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RGB Color Accuracy :  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O4i-7t-sTc">
+                                <rect key="frame" x="16" y="151" width="230" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePy-70-Nvh">
+                                <rect key="frame" x="245" y="151" width="72" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wW-BY-42o">
+                                <rect key="frame" x="266" y="267" width="72" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tio-XI-lVY">
+                                <rect key="frame" x="227" y="307" width="72" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20/20 Vision Accuracy :  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qD-6w-YMB">
+                                <rect key="frame" x="16" y="267" width="254" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contrast Accuracy :  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3d-bf-6Mo">
+                                <rect key="frame" x="16" y="429" width="230" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shape Recognition :  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRB-Rt-9bC">
+                                <rect key="frame" x="16" y="307" width="230" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1q3-if-kbK">
+                                <rect key="frame" x="221" y="429" width="72" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="tQm-K3-dDb"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Vision Check Results" id="Qsl-OC-I3d"/>
+                    <connections>
+                        <outlet property="blindnessResult" destination="ePy-70-Nvh" id="kUP-Aj-zD5"/>
+                        <outlet property="contrastResult" destination="1q3-if-kbK" id="x4L-18-cm2"/>
+                        <outlet property="shapeResult" destination="Tio-XI-lVY" id="KtQ-UK-Goo"/>
+                        <outlet property="visionResult" destination="7wW-BY-42o" id="bv9-YR-8TN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OSt-9O-42P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4860" y="899.10044977511257"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uxi-b2-dV0">
@@ -437,15 +604,33 @@
             </objects>
             <point key="canvasLocation" x="2033" y="915"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vll-Tf-2x7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eva-Dv-kXA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AlW-uk-IhK">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eRh-LD-zOM" kind="relationship" relationship="rootViewController" id="yPR-Wd-OrN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6xx-hf-Dvq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4708" y="899.10044977511257"/>
+        </scene>
     </scenes>
     <resources>
         <image name="deepocean" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="iEb-2N-bro"/>
-        <segue reference="5eP-Ob-2Jw"/>
+        <segue reference="3Hg-fY-9Qw"/>
         <segue reference="hrL-rW-tFo"/>
         <segue reference="aTF-9B-Db5"/>
-        <segue reference="xix-vh-KQ7"/>
+        <segue reference="pNY-Bg-wJu"/>
     </inferredMetricsTieBreakers>
 </document>

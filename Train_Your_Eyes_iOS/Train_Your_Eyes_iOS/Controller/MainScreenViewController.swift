@@ -21,6 +21,8 @@ class MainScreenViewController: UITableViewController {
              NSAttributedString.Key.font: UIFont(name: "Verdana", size: 22)!]
 
         self.tableView?.rowHeight = 80.0
+        
+        self.navigationItem.setHidesBackButton(true, animated:true)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

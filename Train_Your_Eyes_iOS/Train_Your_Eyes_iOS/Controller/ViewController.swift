@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, UITextViewDelegate {
-    let agreementString = "This is a research app. It is not meant for diagnostic or treatment of any diseases. \r\n\r\nThere have been many medical research carried out to improve the vision of humans. We are using the research work to help the community. The data collected during the research work is going to be used for medical analysis. \r\n\r\nWe will maintain the confidentiality of our customers results, and no personal data will be shared.\r\n\r\nPlease Click on \"I Accept\" for having made aware of the Agreement."
+    let agreementString = "This is a research app. It is not meant for diagnostic or treatment of any diseases. \r\n\r\nThere have been many medical research carried out to improve the vision of humans. We are using the research work to help the community. The data collected during the research work is going to be used for medical analysis. \r\n\r\nWe will maintain the confidentiality of our customers results, and no personal data will be shared.\r\n\r\nPlease Click on \"I Accept\" for having made aware of the Agreement.\r\n"
     
     @IBOutlet weak var agreementTerms: UITextView!
     
@@ -20,6 +20,7 @@ class ViewController: UIViewController, UITextViewDelegate {
         self.agreementTerms.delegate = self
         
         addAgreementTerms()
+        self.navigationItem.setHidesBackButton(true, animated:true)
     }
     
     @IBAction func acceptButtonPressed(_ sender: UIButton) {

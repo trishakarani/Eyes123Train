@@ -23,12 +23,16 @@ class OptokineticViewController: UIViewController {
     var timerActionCtr : Int = 0
     var isPortraitMode : Bool = true
 
+    var Instructions: String = "\r\n\r\nFocus your eyes by looking at the strips of lines moving on the screen. Watching this for 5 minutes in a day helps improve vision.\r\n\r\n"
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.navigationController?.navigationBar.titleTextAttributes =
             [NSAttributedString.Key.foregroundColor: UIColor.red,
              NSAttributedString.Key.font: UIFont(name: "Verdana", size: 22)!]
+
+        AlertFunctions.showAlert(title: "Opto Kinetic Exercise", message: Instructions)
 
         setupView()
     }
