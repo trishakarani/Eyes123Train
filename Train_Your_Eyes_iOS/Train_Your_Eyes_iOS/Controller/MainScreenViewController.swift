@@ -10,8 +10,8 @@ import UIKit
 
 class MainScreenViewController: UITableViewController {
 
-    let mainPageArray = ["Vision Check", "OptoKinetic", "Lazy Eye Exercise", "Myopia Exercise", "Hit Moving Object"]
-    let imageArray = ["visionCheck", "optoKinetic", "lazyEye", "myopiaEye", "hitMark"]
+    let mainPageArray = ["Vision Check", "OptoKinetic", "Lazy Eye Exercise", "Hit Moving Object"]
+    let imageArray = ["visionCheck", "optoKinetic", "lazyEye", "hitMark"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +20,7 @@ class MainScreenViewController: UITableViewController {
             [NSAttributedString.Key.foregroundColor: UIColor.red,
              NSAttributedString.Key.font: UIFont(name: "Verdana", size: 22)!]
 
-        self.tableView?.rowHeight = 80.0
+        self.tableView?.rowHeight = 140.0
         
         self.navigationItem.setHidesBackButton(true, animated:true)
         // Uncomment the following line to preserve selection between presentations
@@ -64,8 +64,6 @@ class MainScreenViewController: UITableViewController {
         case 2:
             performSegue(withIdentifier: "gotoMovingBall", sender: self)
         case 3:
-            performSegue(withIdentifier: "gotoMyopiaExercise", sender: self)
-        case 4:
             performSegue(withIdentifier: "gotoHitMovingObject", sender: self)
         default:
             performSegue(withIdentifier: "gotoOptoKinetic", sender: self)

@@ -50,12 +50,11 @@ class VisionCheckViewController: UIViewController {
         if correctChoiceIdx == (sender.tag - 1) {
             correctCount += 1
         }
-        print("Score: \(correctCount)")
-        updateNewColorTest()
+         updateNewColorTest()
     }
     
     func updateNewColorTest() {
-        if currTestIndex >= 2 {
+        if currTestIndex > 8 {
             displayResultsPage()
         }
         else if currTestIndex % 4 == 0 {
