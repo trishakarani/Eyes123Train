@@ -206,7 +206,7 @@ class OptokineticViewController: UIViewController {
             timerActionCtr += 1
         case 1:
             stopAnimations()
-            animateButtons45DegOneAtTime(start: CGPoint(x: Int(self.view.frame.width),y: 0), end: CGPoint(x: 0, y: Int(self.view.frame.height)))
+            animateButtons45DegOneAtTime(start: CGPoint(x: 0,y: Int(self.view.frame.height)), end: CGPoint(x: Int(self.view.frame.width), y: 0))
             timerActionCtr += 1
         case 2:
             stopAnimations()
@@ -214,7 +214,7 @@ class OptokineticViewController: UIViewController {
             timerActionCtr += 1
         case 3:
             stopAnimations()
-            animateButtons45DegOneAtTime(start: CGPoint(x: Int(self.view.frame.width),y: Int(self.view.frame.height)), end: CGPoint(x: 0, y: 0))
+            animateButtons45DegOneAtTime(start: CGPoint(x: 0,y: 0), end: CGPoint(x: Int(self.view.frame.width), y: Int(self.view.frame.height)))
             timerActionCtr += 1
         case 4:
             stopAnimations()
@@ -222,7 +222,7 @@ class OptokineticViewController: UIViewController {
             timerActionCtr += 1
         case 5:
             stopAnimations()
-            animateButtons45DegOneAtTime(start: CGPoint(x: 0,y: Int(self.view.frame.height)), end: CGPoint(x: Int(self.view.frame.width), y: 0))
+            animateButtons45DegOneAtTime(start: CGPoint(x: Int(self.view.frame.width),y: 0), end: CGPoint(x: 0, y: Int(self.view.frame.height)))
             timerActionCtr += 1
         case 6:
             stopAnimations()
@@ -230,7 +230,7 @@ class OptokineticViewController: UIViewController {
             timerActionCtr += 1
         case 7:
             stopAnimations()
-            animateButtons45DegOneAtTime(start: CGPoint(x: 0,y: 0), end: CGPoint(x: Int(self.view.frame.width), y: Int(self.view.frame.height)))
+            animateButtons45DegOneAtTime(start: CGPoint(x: Int(self.view.frame.width),y: Int(self.view.frame.height)), end: CGPoint(x: 0, y: 0))
             timerActionCtr = 0
         default:
             stopAnimations()

@@ -39,9 +39,17 @@ let Plate21 = ColorBlindData(imgName: "Plate21", correctIdx: 2, choices: ["71", 
 let Plate22 = ColorBlindData(imgName: "Plate22", correctIdx: 2, choices: ["18", "88", "nothing", "89"])
 let Plate23 = ColorBlindData(imgName: "Plate23", correctIdx: 2, choices: ["34", "74", "nothing", "77"])
 let Plate24 = ColorBlindData(imgName: "Plate24", correctIdx: 2, choices: ["54", "64", "nothing", "19"])
+let Plate25 = ColorBlindData(imgName: "Plate25", correctIdx: 2, choices: ["F", "A", "O", "Z"])
+let Plate26 = ColorBlindData(imgName: "Plate26", correctIdx: 2, choices: ["number", "Bird", "Flower", "nothing"])
+let Plate27 = ColorBlindData(imgName: "Plate27", correctIdx: 2, choices: ["Flower", "nothing", "Butterfly", "Bird"])
+let Plate28 = ColorBlindData(imgName: "Plate28", correctIdx: 2, choices: ["nothing", "0", "8", "18"])
+let Plate29 = ColorBlindData(imgName: "Plate29", correctIdx: 2, choices: ["O", "nothing", "C", "0"])
+let Plate30 = ColorBlindData(imgName: "Plate30", correctIdx: 2, choices: ["2", "4", "42", "nothing"])
+let Plate31 = ColorBlindData(imgName: "Plate31", correctIdx: 2, choices: ["nothing", "5", "57", "37"])
+let Plate32 = ColorBlindData(imgName: "Plate32", correctIdx: 2, choices: ["0", "nothing", "8", "6"])
 
 var colorBlindNumberSet =
-    [1: Plate1, 2: Plate2, 3: Plate3, 4: Plate4, 5: Plate5, 6: Plate6, 7: Plate7, 8: Plate8, 9: Plate9, 10:Plate10, 11: Plate11, 12: Plate12, 13: Plate13, 14: Plate16, 15: Plate17]
+    [1: Plate1, 2: Plate2, 3: Plate3, 4: Plate4, 5: Plate5, 6: Plate6, 7: Plate7, 8: Plate8, 9: Plate9, 10:Plate10, 11: Plate11, 12: Plate12, 13: Plate13, 14: Plate16, 15: Plate17, 16: Plate25, 17: Plate26, 18: Plate27, 19: Plate28, 20: Plate29, 21: Plate30, 22: Plate31, 23: Plate32]
 
 var colorBlindNothingSet =
     [1: Plate14, 2: Plate15, 3: Plate18, 4: Plate19, 5: Plate20, 6: Plate21, 7: Plate22, 8: Plate23, 9: Plate24]

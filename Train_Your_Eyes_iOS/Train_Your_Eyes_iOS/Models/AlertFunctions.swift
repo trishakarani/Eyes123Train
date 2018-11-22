@@ -13,9 +13,11 @@ class AlertFunctions {
     class func showAlert(title: String, message: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
-        let OKAction = UIAlertAction(title: "OK", style: .default)
+        let OKAction = UIAlertAction(title: "OK", style: .default, handler: { action in
+            print("OK Button Clicked")
+        })
         alertController.addAction(OKAction)
-        
+
         var myMutableString = NSMutableAttributedString()
         myMutableString = NSMutableAttributedString(string: title as String, attributes: [NSAttributedString.Key.font:UIFont(name: "Verdana", size: 22.0)!])
         alertController.setValue(myMutableString, forKey: "attributedTitle")

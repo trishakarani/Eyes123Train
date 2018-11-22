@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 
 class HitMovingObjectViewController: UIViewController {
-    let MAX_HITS_LEVEL_RETRIES:Int = 5
+    let MAX_HITS_LEVEL_RETRIES:Int = 10
 
     let fishView = UIView()
     var fish = UIImageView()
@@ -23,10 +23,19 @@ class HitMovingObjectViewController: UIViewController {
     var successHitsCount:Int = 0
     var totalDisplayedCount: Int = 0
     var timeFishDisplayInSeconds = 30
-    let aquatics: [String] = ["blue_fish", "crab", "fish_yellow", "prawns", "seahorse"]
+    let aquatics: [String] = ["octopus", "crab", "fish_yellow", "prawns", "seahorse", "whale", "turtle", "goldfish2", "multiColorFish", "lobster", "dolphin", "orangeFish", "goldfish"]
     
     var gameLevel: Int = 1
     
+    enum HitGameState {
+        case gameNone
+        case gameStart
+        case gameInProgress
+        case nextLevel
+        case gameEnd
+    }
+    var currGameState = HitGameState.gameNone
+
     @IBOutlet var screenView: UIView!
     var bkgdView : UIImageView!
     
@@ -35,15 +44,22 @@ class HitMovingObjectViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        AlertFunctions.showAlert(title: "Hit Flashing Object", message: Instructions)
+        showAlert(title: "Hit Flashing Object", message: Instructions)
         
         bkgdView = UIImageView(image: UIImage(named: "deepocean")!)//Your image name here
         bkgdView.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
         self.view.insertSubview(bkgdView, at: 0)//To set first of all views in VC
-        
+    }
+
+    func startHitGame() {
         loadFish()
         startTimer()
         updateGameLevels()
+        currGameState = HitGameState.gameStart
+    }
+    
+    func endHitGame() {
+        performSegue(withIdentifier: "endHitGame", sender: nil)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -88,8 +104,9 @@ class HitMovingObjectViewController: UIViewController {
             removeFish()
             let successPercent = (successHitsCount * 100) / totalDisplayedCount
             if gameLevel >= 5 {
+                currGameState = HitGameState.gameEnd
                 let msgResult = "\r\nYou have exceeded all levels designed for this game. \r\nWe are working on advanced functionality for the game.\r\nThanks for Playing...\r\n"
-                AlertFunctions.showAlert(title: "* Congratulations *", message: msgResult)
+                showAlert(title: "* Congratulations *", message: msgResult)
             }
             else if successPercent > 80 {
                 gameLevel += 1
@@ -276,6 +293,37 @@ class HitMovingObjectViewController: UIViewController {
         totalDisplayedCount = 0
     }
 }
+
+extension HitMovingObjectViewController {
+    
+    func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let OKAction = UIAlertAction(title: "OK", style: .default, handler: { action in
+            if self.currGameState == HitGameState.gameNone {
+                self.startHitGame()
+            }
+            else if self.currGameState == HitGameState.gameEnd {
+                self.endHitGame()
+            }
+        })
+        alertController.addAction(OKAction)
+        
+        var myMutableString = NSMutableAttributedString()
+        myMutableString = NSMutableAttributedString(string: title as String, attributes: [NSAttributedString.Key.font:UIFont(name: "Verdana", size: 22.0)!])
+        alertController.setValue(myMutableString, forKey: "attributedTitle")
+        
+        var messageMutableString = NSMutableAttributedString()
+        messageMutableString = NSMutableAttributedString(string: message as String, attributes: [NSAttributedString.Key.font:UIFont(name: "Verdana", size: 18.0)!])
+        alertController.setValue(messageMutableString, forKey: "attributedMessage")
+        
+        var alertWindow : UIWindow!
+        alertWindow = UIWindow.init(frame: UIScreen.main.bounds)
+        alertWindow.rootViewController = UIViewController.init()
+        alertWindow.windowLevel = UIWindow.Level.alert + 1
+        alertWindow.makeKeyAndVisible()
+        alertWindow.rootViewController?.present(alertController, animated: true)
+    }}
 
 extension UIView {
     func fadeIn() {

@@ -23,6 +23,7 @@ class MainScreenViewController: UITableViewController {
         self.tableView?.rowHeight = 140.0
         
         self.navigationItem.setHidesBackButton(true, animated:true)
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
