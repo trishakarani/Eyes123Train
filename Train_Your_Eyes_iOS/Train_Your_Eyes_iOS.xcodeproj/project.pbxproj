@@ -28,6 +28,8 @@
 		2CAA5DC921A3CCCA00E769A8 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA5DC821A3CCCA00E769A8 /* RoundButton.swift */; };
 		2CAA5DCB21A3E5E800E769A8 /* VisionTestResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA5DCA21A3E5E800E769A8 /* VisionTestResultsViewController.swift */; };
 		2CB077E9161798CE04920BA3 /* Pods_Train_Your_Eyes_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B77F6E7194E019FCEEBD71 /* Pods_Train_Your_Eyes_iOSTests.framework */; };
+		2CF2F29521A79F7E0020713A /* ContrastTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF2F29421A79F7E0020713A /* ContrastTestViewController.swift */; };
+		2CF2F29921A7F5130020713A /* AcuityTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF2F29821A7F5130020713A /* AcuityTestViewController.swift */; };
 		5577F91F339EB98088CF2CE1 /* Pods_Train_Your_Eyes_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B01C6CD9EB62331F641D13C1 /* Pods_Train_Your_Eyes_iOSUITests.framework */; };
 		DA6386CA076B63387A317EE5 /* Pods_Train_Your_Eyes_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA8ED01AB0FFEC5533D24943 /* Pods_Train_Your_Eyes_iOS.framework */; };
 /* End PBXBuildFile section */
@@ -80,6 +82,8 @@
 		2CAA5DC621A39F3900E769A8 /* AlertFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertFunctions.swift; sourceTree = "<group>"; };
 		2CAA5DC821A3CCCA00E769A8 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		2CAA5DCA21A3E5E800E769A8 /* VisionTestResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionTestResultsViewController.swift; sourceTree = "<group>"; };
+		2CF2F29421A79F7E0020713A /* ContrastTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContrastTestViewController.swift; sourceTree = "<group>"; };
+		2CF2F29821A7F5130020713A /* AcuityTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcuityTestViewController.swift; sourceTree = "<group>"; };
 		488F38336C938C82231AB733 /* Pods-Train_Your_Eyes_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Train_Your_Eyes_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Train_Your_Eyes_iOS/Pods-Train_Your_Eyes_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		4DB704BD5270DA93C6FEFC84 /* Pods-Train_Your_Eyes_iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Train_Your_Eyes_iOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Train_Your_Eyes_iOSUITests/Pods-Train_Your_Eyes_iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9E059006F52E4603BFD887A2 /* Pods-Train_Your_Eyes_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Train_Your_Eyes_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Train_Your_Eyes_iOS/Pods-Train_Your_Eyes_iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -192,6 +196,7 @@
 		2C4D2C1C217B02E1004C0367 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2CF2F29421A79F7E0020713A /* ContrastTestViewController.swift */,
 				2CAA5DCA21A3E5E800E769A8 /* VisionTestResultsViewController.swift */,
 				2C09BE2121745B01006C2A93 /* ViewController.swift */,
 				2C2CB0A42186CF8700D7F77E /* MainScreenViewController.swift */,
@@ -201,6 +206,7 @@
 				2C4D2C1D217BD540004C0367 /* VisionCheckViewController.swift */,
 				2C2CB0AA2186E7F800D7F77E /* MyopiaViewController.swift */,
 				2C2CB0AC2186F42B00D7F77E /* HitMovingObjectViewController.swift */,
+				2CF2F29821A7F5130020713A /* AcuityTestViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -472,12 +478,14 @@
 				2C67BDBD2192C89C00E880FB /* UserDataModel.xcdatamodeld in Sources */,
 				2CAA5DC721A39F3900E769A8 /* AlertFunctions.swift in Sources */,
 				2C2CB0A92186E7BA00D7F77E /* MovingBallViewController.swift in Sources */,
+				2CF2F29921A7F5130020713A /* AcuityTestViewController.swift in Sources */,
 				2CAA5DC921A3CCCA00E769A8 /* RoundButton.swift in Sources */,
 				2C2CB0A52186CF8700D7F77E /* MainScreenViewController.swift in Sources */,
 				2C4D2C1E217BD540004C0367 /* VisionCheckViewController.swift in Sources */,
 				2C3EC83C2188427D004AD3FF /* MainScreenTableViewCell.swift in Sources */,
 				2C2CB0AB2186E7F800D7F77E /* MyopiaViewController.swift in Sources */,
 				2C2CB0A72186E7A800D7F77E /* OptokineticViewController.swift in Sources */,
+				2CF2F29521A79F7E0020713A /* ContrastTestViewController.swift in Sources */,
 				2C09BE2021745B01006C2A93 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

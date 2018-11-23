@@ -26,6 +26,14 @@
 		</dict>
 		<dict>
 			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Monochrome</string>
+			<key>DefaultValue</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 			<key>Title</key>
 			<string>Speed of the Ball</string>
@@ -37,12 +45,12 @@
 			<string>PSSliderSpecifier</string>
 			<key>Key</key>
 			<string>speed_ball</string>
-			<key>DefaultValue</key>
-			<string>3.0</string>
 			<key>MinimumValue</key>
 			<integer>0</integer>
 			<key>MaximumValue</key>
-			<integer>11</integer>
+			<integer>5</integer>
+			<key>DefaultValue</key>
+			<string>3.0</string>
 		</dict>
 		<dict>
 			<key>Type</key>

@@ -30,10 +30,12 @@ class VisionCheckViewController: UIViewController {
             [NSAttributedString.Key.foregroundColor: UIColor.red,
              NSAttributedString.Key.font: UIFont(name: "Verdana", size: 22)!]
         
-        AlertFunctions.showAlert(title: "Color Blindness Test", message: Instructions)
+        //AlertFunctions.showAlert(title: "Color Blindness Test", message: Instructions)
 
-        currTestIndex = 1
-        updateNewColorTest()
+        colorContrastTest()
+
+        //currTestIndex = 1
+        //updateNewColorTest()
     }
     
     /*
@@ -55,7 +57,7 @@ class VisionCheckViewController: UIViewController {
     
     func updateNewColorTest() {
         if currTestIndex > 8 {
-            displayResultsPage()
+            colorContrastTest()
         }
         else if currTestIndex % 4 == 0 {
             let randomTestIdx = Int.random(in: 1 ... colorBlindNothingSet.count)
@@ -103,7 +105,7 @@ class VisionCheckViewController: UIViewController {
         }
     }
     
-    func displayResultsPage() {
-        performSegue(withIdentifier: "visionResults", sender: nil)
+    func colorContrastTest() {
+        performSegue(withIdentifier: "contrastTest", sender: nil)
     }
 }
