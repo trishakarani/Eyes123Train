@@ -1,16 +1,20 @@
 PODS:
+  - CPDAcknowledgements (1.0.0)
   - lottie-ios (2.5.2)
 
 DEPENDENCIES:
+  - CPDAcknowledgements
   - lottie-ios
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - CPDAcknowledgements
     - lottie-ios
 
 SPEC CHECKSUMS:
+  CPDAcknowledgements: 6e15e71849ba4ad5e8a17a0bb9d20938ad23bac8
   lottie-ios: 3fef45d3fabe63e3c7c2eb603dd64ddfffc73062
 
-PODFILE CHECKSUM: 9a6cab63878b71fb04804d9078251fcf9f4c894b
+PODFILE CHECKSUM: a6788eeb9860db4cdb0a157521f065361d28f1ea
 
 COCOAPODS: 1.5.3

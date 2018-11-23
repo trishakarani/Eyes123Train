@@ -22,6 +22,7 @@
 		2C2CB0AD2186F42B00D7F77E /* HitMovingObjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2CB0AC2186F42B00D7F77E /* HitMovingObjectViewController.swift */; };
 		2C3EC83C2188427D004AD3FF /* MainScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3EC83B2188427D004AD3FF /* MainScreenTableViewCell.swift */; };
 		2C4D2C1E217BD540004C0367 /* VisionCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D2C1D217BD540004C0367 /* VisionCheckViewController.swift */; };
+		2C5EEFF821A72D3D00483A93 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2C5EEFF721A72D3D00483A93 /* Settings.bundle */; };
 		2C67BDBD2192C89C00E880FB /* UserDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C67BDBB2192C89C00E880FB /* UserDataModel.xcdatamodeld */; };
 		2CAA5DC721A39F3900E769A8 /* AlertFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA5DC621A39F3900E769A8 /* AlertFunctions.swift */; };
 		2CAA5DC921A3CCCA00E769A8 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA5DC821A3CCCA00E769A8 /* RoundButton.swift */; };
@@ -74,6 +75,7 @@
 		2C2CB0AC2186F42B00D7F77E /* HitMovingObjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitMovingObjectViewController.swift; sourceTree = "<group>"; };
 		2C3EC83B2188427D004AD3FF /* MainScreenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenTableViewCell.swift; sourceTree = "<group>"; };
 		2C4D2C1D217BD540004C0367 /* VisionCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionCheckViewController.swift; sourceTree = "<group>"; };
+		2C5EEFF721A72D3D00483A93 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		2C67BDBC2192C89C00E880FB /* UserDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserDataModel.xcdatamodel; sourceTree = "<group>"; };
 		2CAA5DC621A39F3900E769A8 /* AlertFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertFunctions.swift; sourceTree = "<group>"; };
 		2CAA5DC821A3CCCA00E769A8 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				2C09BE1E21745B01006C2A93 /* Train_Your_Eyes_iOS */,
+				2C5EEFF721A72D3D00483A93 /* Settings.bundle */,
 				2C09BE3321745B02006C2A93 /* Train_Your_Eyes_iOSTests */,
 				2C09BE3E21745B02006C2A93 /* Train_Your_Eyes_iOSUITests */,
 				2C09BE1D21745B01006C2A93 /* Products */,
@@ -342,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C09BE2A21745B02006C2A93 /* LaunchScreen.storyboard in Resources */,
+				2C5EEFF821A72D3D00483A93 /* Settings.bundle in Resources */,
 				2C09BE2721745B02006C2A93 /* Assets.xcassets in Resources */,
 				2C09BE2521745B01006C2A93 /* Main.storyboard in Resources */,
 			);
@@ -417,12 +421,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Train_Your_Eyes_iOS/Pods-Train_Your_Eyes_iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CPDAcknowledgements/CPDAcknowledgements.framework",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CPDAcknowledgements.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

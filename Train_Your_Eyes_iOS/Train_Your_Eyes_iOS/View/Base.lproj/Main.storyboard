@@ -19,18 +19,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="This is a research oriented application. It is not meant for any diagnostic or treatment of any diseases." textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="eYl-hd-W7Z">
-                                <rect key="frame" x="20" y="70" width="335" height="397"/>
+                                <rect key="frame" x="20" y="70" width="335" height="437"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYe-qk-9rW">
                                 <rect key="frame" x="87.5" y="537" width="200" height="60"/>
-                                <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="SFg-bY-qBp"/>
                                     <constraint firstAttribute="width" constant="200" id="l4o-gm-K0e"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="20"/>
                                 <state key="normal" title="I Accept"/>
                                 <connections>
                                     <action selector="acceptButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bk1-ZW-ohc"/>
@@ -40,9 +41,9 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HYe-qk-9rW" secondAttribute="bottom" constant="70" id="A9M-CF-LaB"/>
+                            <constraint firstItem="HYe-qk-9rW" firstAttribute="top" secondItem="eYl-hd-W7Z" secondAttribute="bottom" constant="30" id="HuB-b0-cBp"/>
                             <constraint firstItem="eYl-hd-W7Z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="fCM-91-dTW"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eYl-hd-W7Z" secondAttribute="bottom" constant="200" id="hAP-gN-fKg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eYl-hd-W7Z" secondAttribute="bottom" constant="160" id="hAP-gN-fKg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eYl-hd-W7Z" secondAttribute="trailing" constant="20" id="r6r-1J-5EZ"/>
                             <constraint firstItem="HYe-qk-9rW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sgs-1C-Jbv"/>
                             <constraint firstItem="eYl-hd-W7Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zKI-RY-518"/>

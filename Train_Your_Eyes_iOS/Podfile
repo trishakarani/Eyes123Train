@@ -8,6 +8,7 @@ target 'Train_Your_Eyes_iOS' do
   # Pods for Train_Your_Eyes_iOS
 
     pod 'lottie-ios'
+    pod 'CPDAcknowledgements'
 
   target 'Train_Your_Eyes_iOSTests' do
     inherit! :search_paths
