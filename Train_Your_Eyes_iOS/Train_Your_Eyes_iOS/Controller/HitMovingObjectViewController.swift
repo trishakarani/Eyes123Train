@@ -323,7 +323,8 @@ extension HitMovingObjectViewController {
         alertWindow.windowLevel = UIWindow.Level.alert + 1
         alertWindow.makeKeyAndVisible()
         alertWindow.rootViewController?.present(alertController, animated: true)
-    }}
+    }
+}
 
 extension UIView {
     func fadeIn() {

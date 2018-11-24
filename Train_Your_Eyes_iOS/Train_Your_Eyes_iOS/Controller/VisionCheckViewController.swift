@@ -30,12 +30,12 @@ class VisionCheckViewController: UIViewController {
             [NSAttributedString.Key.foregroundColor: UIColor.red,
              NSAttributedString.Key.font: UIFont(name: "Verdana", size: 22)!]
         
-        //AlertFunctions.showAlert(title: "Color Blindness Test", message: Instructions)
+        AlertFunctions.showAlert(title: "Color Blindness Test", message: Instructions)
+
+        currTestIndex = 1
+        updateNewColorTest()
 
         colorContrastTest()
-
-        //currTestIndex = 1
-        //updateNewColorTest()
     }
     
     /*

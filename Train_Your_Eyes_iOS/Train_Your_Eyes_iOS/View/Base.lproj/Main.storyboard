@@ -6,7 +6,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.16.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -275,14 +274,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZvT-Xb-9SB">
-                                <rect key="frame" x="47.5" y="154" width="280" height="280"/>
+                                <rect key="frame" x="32.5" y="154" width="280" height="280"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="280" id="1pr-n7-7vG"/>
                                     <constraint firstAttribute="width" constant="280" id="HTs-ad-I6I"/>
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="What number do you see?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Mr1-Hv-p3l">
-                                <rect key="frame" x="5.5" y="99" width="364" height="47"/>
+                                <rect key="frame" x="-9.5" y="99" width="364" height="47"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="EpN-yX-Yoe"/>
@@ -291,8 +290,8 @@
                                 <fontDescription key="fontDescription" name="Verdana-Italic" family="Verdana" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7WH-Wy-qch">
-                                <rect key="frame" x="20" y="484" width="335" height="65"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="7WH-Wy-qch">
+                                <rect key="frame" x="20" y="484" width="305" height="65"/>
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EwU-ue-TU4" customClass="RoundButton" customModule="Train_Your_Eyes_iOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
@@ -300,6 +299,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="65" id="4Wi-mV-PtC"/>
                                             <constraint firstAttribute="width" constant="65" id="C7K-bQ-cID"/>
+                                            <constraint firstAttribute="width" secondItem="EwU-ue-TU4" secondAttribute="height" multiplier="1:1" id="nVV-AG-CtZ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="14"/>
                                         <state key="normal" title="Button">
@@ -315,10 +315,11 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Xh-e3-SQi" customClass="RoundButton" customModule="Train_Your_Eyes_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="90" y="0.0" width="65" height="65"/>
+                                        <rect key="frame" x="80" y="0.0" width="65" height="65"/>
                                         <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="65" id="JGX-7O-mKf"/>
+                                            <constraint firstAttribute="width" secondItem="4Xh-e3-SQi" secondAttribute="height" multiplier="1:1" id="SfE-in-rNc"/>
                                             <constraint firstAttribute="height" constant="65" id="YE6-IY-aiZ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="14"/>
@@ -335,9 +336,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTu-Tv-gTx" customClass="RoundButton" customModule="Train_Your_Eyes_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="180" y="0.0" width="65" height="65"/>
+                                        <rect key="frame" x="160" y="0.0" width="65" height="65"/>
                                         <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" secondItem="vTu-Tv-gTx" secondAttribute="height" multiplier="1:1" id="JhG-Xj-pUg"/>
                                             <constraint firstAttribute="height" constant="65" id="gsA-48-RbI"/>
                                             <constraint firstAttribute="width" constant="65" id="pZP-w3-6DM"/>
                                         </constraints>
@@ -355,9 +357,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psA-xN-948" customClass="RoundButton" customModule="Train_Your_Eyes_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="270" y="0.0" width="65" height="65"/>
+                                        <rect key="frame" x="240" y="0.0" width="65" height="65"/>
                                         <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" secondItem="psA-xN-948" secondAttribute="height" multiplier="1:1" id="CWz-lT-BdK"/>
                                             <constraint firstAttribute="height" constant="65" id="FJS-Z2-luh"/>
                                             <constraint firstAttribute="width" constant="65" id="uPE-rx-gft"/>
                                         </constraints>
@@ -782,19 +785,166 @@
                     <view key="view" contentMode="scaleToFill" id="kCn-ae-bUG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="T4K-bl-6Fu">
+                                <rect key="frame" x="20" y="505.5" width="324" height="65"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfJ-fu-3MU" customClass="RoundButton" customModule="Train_Your_Eyes_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="65"/>
+                                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="65" id="R6G-8x-cOe"/>
+                                            <constraint firstAttribute="height" constant="65" id="pDH-s4-wyC"/>
+                                            <constraint firstAttribute="width" secondItem="tfJ-fu-3MU" secondAttribute="height" multiplier="1:1" id="uWh-8W-Uqr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="24"/>
+                                        <state key="normal" title="B">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="optionsButtonClicked:" destination="sDJ-Ad-epN" eventType="touchUpInside" id="wE1-Zl-aB1"/>
+                                            <action selector="userNumberSelected:" destination="EP7-sW-AIK" eventType="touchUpInside" id="RNi-J7-cpA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ngh-WX-MSH" customClass="RoundButton" customModule="Train_Your_Eyes_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="85" y="0.0" width="69.5" height="65"/>
+                                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Ngh-WX-MSH" secondAttribute="height" multiplier="1:1" id="Zow-Ga-vcO"/>
+                                            <constraint firstAttribute="width" constant="65" id="ogR-DR-HJO"/>
+                                            <constraint firstAttribute="height" constant="65" id="zxV-2Z-MnC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="24"/>
+                                        <state key="normal" title="B">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="optionsButtonClicked:" destination="sDJ-Ad-epN" eventType="touchUpInside" id="pPY-aO-IB5"/>
+                                            <action selector="userNumberSelected:" destination="EP7-sW-AIK" eventType="touchUpInside" id="V2t-QQ-i7Y"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJU-bC-iyf" customClass="RoundButton" customModule="Train_Your_Eyes_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="169.5" y="0.0" width="70" height="65"/>
+                                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="bJU-bC-iyf" secondAttribute="height" multiplier="1:1" id="7ua-x9-skP"/>
+                                            <constraint firstAttribute="height" constant="65" id="BxF-np-6bE"/>
+                                            <constraint firstAttribute="width" constant="65" id="Hv1-ie-SoK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="24"/>
+                                        <state key="normal" title="B">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="optionsButtonClicked:" destination="sDJ-Ad-epN" eventType="touchUpInside" id="30H-u1-c73"/>
+                                            <action selector="userNumberSelected:" destination="EP7-sW-AIK" eventType="touchUpInside" id="bjs-B2-Tur"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gAw-6Z-vZr" customClass="RoundButton" customModule="Train_Your_Eyes_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="254.5" y="0.0" width="69.5" height="65"/>
+                                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="65" id="IeE-yi-1cN"/>
+                                            <constraint firstAttribute="width" secondItem="gAw-6Z-vZr" secondAttribute="height" multiplier="1:1" id="Lmy-OH-VcO"/>
+                                            <constraint firstAttribute="width" constant="65" id="VjX-CJ-Wcm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="24"/>
+                                        <state key="normal" title="B">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="optionsButtonClicked:" destination="sDJ-Ad-epN" eventType="touchUpInside" id="PPc-zY-6FU"/>
+                                            <action selector="userNumberSelected:" destination="EP7-sW-AIK" eventType="touchUpInside" id="eBB-N9-xQS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Ngh-WX-MSH" firstAttribute="width" secondItem="tfJ-fu-3MU" secondAttribute="width" id="1LK-mh-Bcn"/>
+                                    <constraint firstItem="gAw-6Z-vZr" firstAttribute="width" secondItem="tfJ-fu-3MU" secondAttribute="width" id="45i-jT-fTa"/>
+                                    <constraint firstItem="Ngh-WX-MSH" firstAttribute="height" secondItem="tfJ-fu-3MU" secondAttribute="height" id="7hM-qD-hfL"/>
+                                    <constraint firstItem="tfJ-fu-3MU" firstAttribute="top" secondItem="T4K-bl-6Fu" secondAttribute="top" id="BcV-7R-s8k"/>
+                                    <constraint firstAttribute="bottom" secondItem="bJU-bC-iyf" secondAttribute="bottom" id="K52-lt-S05"/>
+                                    <constraint firstAttribute="bottom" secondItem="tfJ-fu-3MU" secondAttribute="bottom" id="K8B-BQ-fvb"/>
+                                    <constraint firstItem="bJU-bC-iyf" firstAttribute="top" secondItem="T4K-bl-6Fu" secondAttribute="top" id="SOh-iH-DJN"/>
+                                    <constraint firstItem="bJU-bC-iyf" firstAttribute="height" secondItem="tfJ-fu-3MU" secondAttribute="height" id="VP3-jl-GA8"/>
+                                    <constraint firstItem="bJU-bC-iyf" firstAttribute="width" secondItem="tfJ-fu-3MU" secondAttribute="width" id="bFe-yP-QFo"/>
+                                    <constraint firstAttribute="bottom" secondItem="gAw-6Z-vZr" secondAttribute="bottom" id="cNb-Ys-Xrp"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ngh-WX-MSH" secondAttribute="bottom" id="igX-mZ-jm5"/>
+                                    <constraint firstItem="Ngh-WX-MSH" firstAttribute="top" secondItem="T4K-bl-6Fu" secondAttribute="top" id="kom-hd-YoP"/>
+                                    <constraint firstItem="gAw-6Z-vZr" firstAttribute="height" secondItem="tfJ-fu-3MU" secondAttribute="height" id="pTh-Gw-BnM"/>
+                                    <constraint firstItem="gAw-6Z-vZr" firstAttribute="top" secondItem="T4K-bl-6Fu" secondAttribute="top" id="rbv-RM-Rtf"/>
+                                </constraints>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Select one of the Options?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="b64-wn-AAj">
+                                <rect key="frame" x="0.0" y="114.5" width="364" height="47"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="Kam-TO-g8G"/>
+                                    <constraint firstAttribute="width" constant="364" id="sdd-LM-Zjf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana-Italic" family="Verdana" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qdb-Bu-aEO">
+                                <rect key="frame" x="40" y="191.5" width="284" height="284"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qdb-Bu-aEO" secondAttribute="height" multiplier="1:1" id="xi7-Jm-bEM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="T4K-bl-6Fu" firstAttribute="top" secondItem="qdb-Bu-aEO" secondAttribute="bottom" constant="30" id="1Bw-1T-cv6"/>
+                            <constraint firstItem="qdb-Bu-aEO" firstAttribute="top" secondItem="b64-wn-AAj" secondAttribute="bottom" constant="30" id="7SE-ZF-hb2"/>
+                            <constraint firstItem="b64-wn-AAj" firstAttribute="leading" secondItem="ISN-3E-6VB" secondAttribute="leading" id="ANR-NQ-z1B"/>
+                            <constraint firstItem="T4K-bl-6Fu" firstAttribute="leading" secondItem="ISN-3E-6VB" secondAttribute="leading" constant="20" id="FlX-y4-hwV"/>
+                            <constraint firstAttribute="trailing" secondItem="b64-wn-AAj" secondAttribute="trailing" id="G4a-wu-ACR"/>
+                            <constraint firstItem="qdb-Bu-aEO" firstAttribute="leading" secondItem="ISN-3E-6VB" secondAttribute="leading" constant="40" id="Gw3-pp-tTj"/>
+                            <constraint firstItem="b64-wn-AAj" firstAttribute="leading" secondItem="ISN-3E-6VB" secondAttribute="leading" id="Vtt-V3-nQB"/>
+                            <constraint firstItem="qdb-Bu-aEO" firstAttribute="centerX" secondItem="kCn-ae-bUG" secondAttribute="centerX" id="ecs-8k-fqS"/>
+                            <constraint firstItem="ISN-3E-6VB" firstAttribute="trailing" secondItem="qdb-Bu-aEO" secondAttribute="trailing" constant="40" id="edZ-xU-PC5"/>
+                            <constraint firstAttribute="trailing" secondItem="b64-wn-AAj" secondAttribute="trailing" id="vt5-hy-fAs"/>
+                            <constraint firstItem="ISN-3E-6VB" firstAttribute="trailing" secondItem="T4K-bl-6Fu" secondAttribute="trailing" constant="20" id="yHu-WS-657"/>
+                            <constraint firstItem="qdb-Bu-aEO" firstAttribute="centerY" secondItem="kCn-ae-bUG" secondAttribute="centerY" id="zKX-Ha-oia"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ISN-3E-6VB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Acuity Test" id="R1i-dM-d3E">
                         <barButtonItem key="backBarButtonItem" title="Back" id="gNG-cc-e0m"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="optionsBtn1" destination="tfJ-fu-3MU" id="o4X-Om-8p2"/>
+                        <outlet property="optionsBtn2" destination="Ngh-WX-MSH" id="Zkj-Nc-hil"/>
+                        <outlet property="optionsBtn3" destination="bJU-bC-iyf" id="6rc-50-gVe"/>
+                        <outlet property="optionsBtn4" destination="gAw-6Z-vZr" id="Ydr-UC-ggJ"/>
+                        <outlet property="testBkgdView" destination="qdb-Bu-aEO" id="hbM-7U-hU7"/>
                         <segue destination="eRh-LD-zOM" kind="show" identifier="visionResults" id="fQF-H9-qV1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ys9-ua-t98" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4860" y="1678"/>
+            <point key="canvasLocation" x="4860" y="1677.2113943028487"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4sF-Uq-Bjq">
@@ -816,13 +966,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1d1-aG-3zW"/>
+        <segue reference="O2D-eI-B6I"/>
         <segue reference="fQF-H9-qV1"/>
         <segue reference="yGy-Yt-DQT"/>
-        <segue reference="iEb-2N-bro"/>
+        <segue reference="QGH-wk-BbM"/>
         <segue reference="5eP-Ob-2Jw"/>
         <segue reference="hrL-rW-tFo"/>
         <segue reference="aTF-9B-Db5"/>
-        <segue reference="16w-V5-nta"/>
+        <segue reference="Did-K3-mdq"/>
     </inferredMetricsTieBreakers>
 </document>

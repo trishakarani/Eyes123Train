@@ -30,6 +30,7 @@
 		2CB077E9161798CE04920BA3 /* Pods_Train_Your_Eyes_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B77F6E7194E019FCEEBD71 /* Pods_Train_Your_Eyes_iOSTests.framework */; };
 		2CF2F29521A79F7E0020713A /* ContrastTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF2F29421A79F7E0020713A /* ContrastTestViewController.swift */; };
 		2CF2F29921A7F5130020713A /* AcuityTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF2F29821A7F5130020713A /* AcuityTestViewController.swift */; };
+		2CF2F29B21A9026E0020713A /* AcuityTestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF2F29A21A9026E0020713A /* AcuityTestData.swift */; };
 		5577F91F339EB98088CF2CE1 /* Pods_Train_Your_Eyes_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B01C6CD9EB62331F641D13C1 /* Pods_Train_Your_Eyes_iOSUITests.framework */; };
 		DA6386CA076B63387A317EE5 /* Pods_Train_Your_Eyes_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA8ED01AB0FFEC5533D24943 /* Pods_Train_Your_Eyes_iOS.framework */; };
 /* End PBXBuildFile section */
@@ -84,6 +85,7 @@
 		2CAA5DCA21A3E5E800E769A8 /* VisionTestResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionTestResultsViewController.swift; sourceTree = "<group>"; };
 		2CF2F29421A79F7E0020713A /* ContrastTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContrastTestViewController.swift; sourceTree = "<group>"; };
 		2CF2F29821A7F5130020713A /* AcuityTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcuityTestViewController.swift; sourceTree = "<group>"; };
+		2CF2F29A21A9026E0020713A /* AcuityTestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcuityTestData.swift; sourceTree = "<group>"; };
 		488F38336C938C82231AB733 /* Pods-Train_Your_Eyes_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Train_Your_Eyes_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Train_Your_Eyes_iOS/Pods-Train_Your_Eyes_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		4DB704BD5270DA93C6FEFC84 /* Pods-Train_Your_Eyes_iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Train_Your_Eyes_iOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Train_Your_Eyes_iOSUITests/Pods-Train_Your_Eyes_iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9E059006F52E4603BFD887A2 /* Pods-Train_Your_Eyes_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Train_Your_Eyes_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Train_Your_Eyes_iOS/Pods-Train_Your_Eyes_iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				2C23572721A2032A00412F60 /* ColorBlindData.swift */,
 				2CAA5DC621A39F3900E769A8 /* AlertFunctions.swift */,
 				2CAA5DC821A3CCCA00E769A8 /* RoundButton.swift */,
+				2CF2F29A21A9026E0020713A /* AcuityTestData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -478,6 +481,7 @@
 				2C67BDBD2192C89C00E880FB /* UserDataModel.xcdatamodeld in Sources */,
 				2CAA5DC721A39F3900E769A8 /* AlertFunctions.swift in Sources */,
 				2C2CB0A92186E7BA00D7F77E /* MovingBallViewController.swift in Sources */,
+				2CF2F29B21A9026E0020713A /* AcuityTestData.swift in Sources */,
 				2CF2F29921A7F5130020713A /* AcuityTestViewController.swift in Sources */,
 				2CAA5DC921A3CCCA00E769A8 /* RoundButton.swift in Sources */,
 				2C2CB0A52186CF8700D7F77E /* MainScreenViewController.swift in Sources */,

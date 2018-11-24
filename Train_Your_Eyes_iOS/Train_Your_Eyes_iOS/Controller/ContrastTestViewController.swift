@@ -2,7 +2,7 @@
 //  ContrastTestViewController.swift
 //  Train_Your_Eyes_iOS
 //
-//  Created by Vijay Karani on 11/22/18.
+//  Created by Trisha Karani on 11/22/18.
 //  Copyright © 2018 Eyes123Train. All rights reserved.
 //
 
