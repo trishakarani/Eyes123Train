@@ -32,10 +32,7 @@ class VisionCheckViewController: UIViewController {
         
         AlertFunctions.showAlert(title: "Color Blindness Test", message: Instructions)
 
-        currTestIndex = 1
         updateNewColorTest()
-
-        colorContrastTest()
     }
     
     /*
@@ -63,13 +60,14 @@ class VisionCheckViewController: UIViewController {
             let randomTestIdx = Int.random(in: 1 ... colorBlindNothingSet.count)
             let currentTestData = colorBlindNothingSet[randomTestIdx]
             setScreenData(testData: currentTestData!)
+            currTestIndex += 1
         }
         else {
             let randomTestIdx = Int.random(in: 1 ... colorBlindNumberSet.count)
             let currentTestData = colorBlindNumberSet[randomTestIdx]
             setScreenData(testData: currentTestData!)
+            currTestIndex += 1
         }
-        currTestIndex += 1
     }
     
     func setScreenData(testData: ColorBlindData) {
@@ -106,6 +104,13 @@ class VisionCheckViewController: UIViewController {
     }
     
     func colorContrastTest() {
-        performSegue(withIdentifier: "contrastTest", sender: nil)
+        performSegue(withIdentifier: "contrastTest", sender: self)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is ContrastTestViewController {
+            let vc = segue.destination as? ContrastTestViewController
+            vc?.colorBlindnessResult = "\(correctCount) of \(currTestIndex)"
+        }
     }
 }

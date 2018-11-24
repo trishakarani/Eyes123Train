@@ -22,6 +22,8 @@ class ContrastTestViewController: UIViewController {
     @IBOutlet weak var stack3Btn2: UIButton!
     @IBOutlet weak var stack3Btn3: UIButton!
     
+    var colorBlindnessResult: String = ""
+    
     var contrastColorButtons: [UIButton] = []
     
     var contrastSuccessCount: Int = 0
@@ -42,8 +44,6 @@ class ContrastTestViewController: UIViewController {
         
         setupContrastColorButtons()
         self.navigationController?.replaceCurrentViewController(with: self, animated: false)
-        
-        moveToAcuityTest()
     }
     
     func addButtonsToList() {
@@ -98,7 +98,15 @@ class ContrastTestViewController: UIViewController {
     }
 
     func moveToAcuityTest() {
-        performSegue(withIdentifier: "acuityTest", sender: nil)
+        performSegue(withIdentifier: "acuityTest", sender: self)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is AcuityTestViewController {
+            let vc = segue.destination as? AcuityTestViewController
+            vc?.colorContrastResult = "\(contrastSuccessCount) of \(contrastTestCount)"
+            vc?.colorBlindnessResult = self.colorBlindnessResult
+       }
     }
 }
 

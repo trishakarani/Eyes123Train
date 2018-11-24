@@ -22,6 +22,9 @@ class AcuityTestViewController: UIViewController {
     @IBOutlet weak var optionsBtn3: RoundButton!
     @IBOutlet weak var optionsBtn4: RoundButton!
     
+    var colorBlindnessResult: String = ""
+    var colorContrastResult: String = ""
+    
     var acuitySuccessCount: Int = 0
     var acuityTestCount: Int = 0
     var acuityBtnTagId: Int = 0
@@ -29,6 +32,7 @@ class AcuityTestViewController: UIViewController {
     var prevTestResult: Bool = false
     var currVisionTestLevel: Int = 0
     var correctChoiceIdx: Int = 0
+    var correctedVision: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,6 +68,7 @@ class AcuityTestViewController: UIViewController {
             displayVisionTestResults()
         }
         if sender.tag == (correctChoiceIdx+1) {
+            acuitySuccessCount += 1
             if currVisionTestLevel < (visionTest.count-1) {
                 currVisionTestLevel += 1
             }
@@ -88,6 +93,7 @@ class AcuityTestViewController: UIViewController {
         characterLabel.backgroundColor = .darkGray
         characterLabel.font = UIFont(name: "Verdana", size: CGFloat(inputValues.fontSize))
 
+        correctedVision = inputValues.correctedVision
         correctChoiceIdx = Int.random(in: 0..<4)
         switch correctChoiceIdx {
         case 0:
@@ -119,6 +125,16 @@ class AcuityTestViewController: UIViewController {
     }
     
     func displayVisionTestResults() {
-        performSegue(withIdentifier: "visionResults", sender: nil)
+        performSegue(withIdentifier: "visionResults", sender: self)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is VisionTestResultsViewController {
+            let vc = segue.destination as? VisionTestResultsViewController
+            vc?.acuityTestResult = "\(acuitySuccessCount) of \(acuityTestCount)"
+            vc?.vision2020Result = correctedVision
+            vc?.colorContrastResult = self.colorContrastResult
+            vc?.colorBlindnessResult = self.colorBlindnessResult
+        }
     }
 }

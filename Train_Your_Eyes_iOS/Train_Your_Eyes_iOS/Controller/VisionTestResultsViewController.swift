@@ -15,6 +15,11 @@ class VisionTestResultsViewController: UIViewController {
     @IBOutlet weak var shapeResult: UILabel!
     @IBOutlet weak var contrastResult: UILabel!
     
+    var acuityTestResult: String = ""
+    var vision2020Result: String = ""
+    var colorBlindnessResult: String = ""
+    var colorContrastResult: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,9 +44,14 @@ class VisionTestResultsViewController: UIViewController {
     */
     
     func updateResults() {
-        blindnessResult.text = "6 of 8"
-        visionResult.text = "5 of 6"
-        shapeResult.text = "4 of 6"
-        contrastResult.text = "7 of 9"
+        blindnessResult.text = colorBlindnessResult
+        visionResult.text = acuityTestResult
+        shapeResult.text = vision2020Result
+        contrastResult.text = colorContrastResult
+
+        print("Vision Results: \(colorBlindnessResult)")
+        print("Vision Results: \(acuityTestResult)")
+        print("Vision Results: \(vision2020Result)")
+        print("Vision Results: \(colorContrastResult)")
     }
 }
