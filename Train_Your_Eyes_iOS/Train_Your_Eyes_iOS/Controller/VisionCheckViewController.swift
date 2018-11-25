@@ -21,7 +21,7 @@ class VisionCheckViewController: UIViewController {
     @IBOutlet weak var choiceBtn3: UIButton!
     @IBOutlet weak var choiceBtn4: UIButton!
     
-    var Instructions: String = "\r\n\r\nIn this test we test how you distinguish between red, green and blue colors. Keep the device at a safe distance from your eyes. You should choose the figure that you see in the picture.\r\n\r\n"
+    var Instructions: String = "\r\n\r\nIn this test we test how you distinguish between red, green and blue colors. \r\n\r\nKeep the device at a safe distance from your eyes. You should choose the figure that you see in the picture.\r\n\r\n"
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 
 class HitMovingObjectViewController: UIViewController {
-    let MAX_HITS_LEVEL_RETRIES:Int = 10
+    let MAX_HITS_LEVEL_RETRIES:Int = 12
 
     let fishView = UIView()
     var fish = UIImageView()
@@ -52,8 +52,6 @@ class HitMovingObjectViewController: UIViewController {
     }
 
     func startHitGame() {
-        loadFish()
-        startTimer()
         updateGameLevels()
         currGameState = HitGameState.gameStart
     }
@@ -117,7 +115,10 @@ class HitMovingObjectViewController: UIViewController {
             else {
                 let retryMsg = "\r\nYour accuracy is \(successPercent)%.\r\nWe recommend retrying the Level \(gameLevel) till you achieve 90% accuracy.\r\nThis will help you improve your vision and focus.\r\n"
                 AlertFunctions.showAlert(title: "Re-Start Level \(gameLevel)", message: retryMsg)
-                totalDisplayedCount = 1
+                totalDisplayedCount = 0
+                successHitsCount = 0
+                loadFish()
+                startTimer()
             }
         }
         else {
@@ -131,6 +132,7 @@ class HitMovingObjectViewController: UIViewController {
         let endX = self.fish.frame.origin.x + fish.frame.width
         let startY = self.fish.frame.origin.y
         let endY = self.fish.frame.origin.y + fish.frame.height
+        
         if(position.x >= startX && position.x <= endX && position.y >= startY && position.y <= endY){
             successHitsCount += 1
             updateScore()
@@ -246,7 +248,6 @@ class HitMovingObjectViewController: UIViewController {
     
     func getRandomPosition() -> CGPoint {
         let imageWidth = self.imageWidth
-        let imageHeight = self.imageWidth
 
         // Find the width and height of the enclosing view
         let viewWidth = self.view.frame.width
@@ -256,41 +257,43 @@ class HitMovingObjectViewController: UIViewController {
         // Compute width and height of the area to contain the button's center
         // Subtract the navigation height for y position
         let xwidth = viewWidth - imageWidth
-        let yheight = viewHeight - imageHeight - topbarHeight
+        let yheight = viewHeight - imageWidth - topbarHeight
 
         // Generate a random x and y offset
         // add the navigation height for offset
         let xoffset = CGFloat(arc4random_uniform(UInt32(xwidth)))
         let yoffset = CGFloat(arc4random_uniform(UInt32(yheight)) + UInt32(topbarHeight))
-
+        
+        print("y=\(yoffset), yHeight=\(yheight), topBar=\(topbarHeight), imgwidth=\(imageWidth)")
+        
         return CGPoint(x: CGFloat(xoffset ), y: CGFloat(yoffset))
     }
     
     func updateGameLevels() {
         switch gameLevel {
         case 1:
-            imageWidth = 125
-            timeFishDisplayInSeconds = 30
-        case 2:
             imageWidth = 100
-            timeFishDisplayInSeconds = 20
-        case 3:
+            timeFishDisplayInSeconds = 25
+        case 2:
             imageWidth = 75
-            timeFishDisplayInSeconds = 15
+            timeFishDisplayInSeconds = 18
+        case 3:
+            imageWidth = 55
+            timeFishDisplayInSeconds = 12
         case 4:
-            imageWidth = 50
-            timeFishDisplayInSeconds = 10
+            imageWidth = 40
+            timeFishDisplayInSeconds = 7
         case 5:
-            imageWidth = 25
-            timeFishDisplayInSeconds = 5
+            imageWidth = 20
+            timeFishDisplayInSeconds = 4
         default:
             imageWidth = 125
             timeFishDisplayInSeconds = 30
         }
-        loadFish()
-        startTimer()
         successHitsCount = 0
         totalDisplayedCount = 0
+        loadFish()
+        startTimer()
     }
 }
 
