@@ -8,7 +8,7 @@
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 			<key>Title</key>
-			<string>Speed of the Bars</string>
+			<string>Speed of the Bars (points/sec)</string>
 			<key>Key</key>
 			<string></string>
 		</dict>
@@ -18,39 +18,11 @@
 			<key>Key</key>
 			<string>speed_bars</string>
 			<key>MinimumValue</key>
-			<integer>0</integer>
+			<integer>15</integer>
 			<key>MaximumValue</key>
-			<integer>11</integer>
+			<integer>35</integer>
 			<key>DefaultValue</key>
-			<real>2.5</real>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSToggleSwitchSpecifier</string>
-			<key>Title</key>
-			<string>Monochrome</string>
-			<key>DefaultValue</key>
-			<true/>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-			<key>Title</key>
-			<string>Speed of the Ball</string>
-			<key>Key</key>
-			<string></string>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSSliderSpecifier</string>
-			<key>Key</key>
-			<string>speed_ball</string>
-			<key>MinimumValue</key>
-			<integer>0</integer>
-			<key>MaximumValue</key>
-			<integer>5</integer>
-			<key>DefaultValue</key>
-			<string>3.0</string>
+			<integer>23</integer>
 		</dict>
 		<dict>
 			<key>Type</key>

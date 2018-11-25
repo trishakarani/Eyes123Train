@@ -25,7 +25,10 @@ class MovingBallViewController: UIViewController {
     var isPortraitMode : Bool = true
     var squareView = UIView()
     var squareViewAnimationId: Int = 1
-    
+    var movingBarSpeed: Int = 23
+    var animationDurationPortrait: Double = 20
+    var animationDurationLandscape: Double = 30
+
     var Instructions: String = "\r\n\r\nFocus your eye on the moving ball. Doing this exercise for 5 minutes in a day helps improve focus.\r\n\r\n"
 
     override func viewDidLoad() {
@@ -36,8 +39,26 @@ class MovingBallViewController: UIViewController {
              NSAttributedString.Key.font: UIFont(name: "Verdana", size: 22)!]
 
         AlertFunctions.showAlert(title: "Moving Ball Exercise", message: Instructions)
-
+        settingChanged()
+        
         setupView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        NotificationCenter.default.addObserver(self, selector: #selector(OptokineticViewController.settingChanged), name: UserDefaults.didChangeNotification, object: nil)
+    }
+    
+    @objc func settingChanged() {
+        movingBarSpeed = UserDefaults.standard.integer(forKey: "speed_bars")
+        if movingBarSpeed < 15 {
+            movingBarSpeed = 15
+        }
+        else if (movingBarSpeed > 30) {
+            movingBarSpeed = 30
+        }
+        animationDurationPortrait = Double((Int(self.view.frame.width) + 100) / movingBarSpeed)
+        animationDurationLandscape = Double((Int (self.view.frame.height) + 100) / movingBarSpeed)
     }
     
     @objc func buttonAction(sender: UIButton!) {
@@ -261,7 +282,7 @@ class MovingBallViewController: UIViewController {
     }
     
     func animateButtonsTopOneAtTime() {
-        var duration: Double = 30.0
+        var duration: Double = animationDurationLandscape
         timerAnimationValue = 55
         for btnIdx in 0..<numButtons {
             let delayBtn : Double = 1.0 * Double(btnIdx)
@@ -280,7 +301,7 @@ class MovingBallViewController: UIViewController {
     }
     
     func animateButtonsBottomOneAtTime() {
-        var duration: Double = 30.0
+        var duration: Double = animationDurationLandscape
         for btnIdx in 0..<numButtons {
             let delayBtn : Double = 2.0 * Double(btnIdx)
             timerAnimationValue = 95
@@ -314,7 +335,7 @@ class MovingBallViewController: UIViewController {
     }
     
     func animateButtonsRightOneAtTime() {
-        var duration: Double = 20.0
+        var duration: Double = animationDurationPortrait
         for btnIdx in 0..<numButtons {
             var delayBtn : Double = 2.0 * Double(btnIdx)
             timerAnimationValue = 75
@@ -334,7 +355,7 @@ class MovingBallViewController: UIViewController {
     }
     
     func animateButtonsLeftOneAtTime() {
-        var duration: Double = 20.0
+        var duration: Double = animationDurationPortrait
         for btnIdx in 0..<numButtons {
             let delayBtn : Double = 1.0 * Double(btnIdx)
             timerAnimationValue = 45
@@ -366,7 +387,7 @@ class MovingBallViewController: UIViewController {
     }
     
     func animateButtons45DegOneAtTime(start: CGPoint, end: CGPoint) {
-        let duration: Double = 30.0
+        let duration: Double = animationDurationLandscape
         for btnIdx in 0..<numButtons {
             let path = UIBezierPath()
             path.move(to: start)

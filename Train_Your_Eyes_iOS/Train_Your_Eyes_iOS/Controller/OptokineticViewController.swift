@@ -22,6 +22,9 @@ class OptokineticViewController: UIViewController {
     var timerAnimationValue: Int = 0
     var timerActionCtr : Int = 0
     var isPortraitMode : Bool = true
+    var movingBarSpeed: Int = 23
+    var animationDurationPortrait: Double = 20
+    var animationDurationLandscape: Double = 30
 
     var Instructions: String = "\r\n\r\nFocus your eyes by looking at the strips of lines moving on the screen. Watching this for 5 minutes in a day helps improve vision.\r\n\r\n"
 
@@ -32,9 +35,27 @@ class OptokineticViewController: UIViewController {
             [NSAttributedString.Key.foregroundColor: UIColor.red,
              NSAttributedString.Key.font: UIFont(name: "Verdana", size: 22)!]
 
-        AlertFunctions.showAlert(title: "Opto Kinetic Exercise", message: Instructions)
+        settingChanged()
+        AlertFunctions.showAlert(title: "OptoKinetic Exercise", message: Instructions)
 
         setupView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        NotificationCenter.default.addObserver(self, selector: #selector(OptokineticViewController.settingChanged), name: UserDefaults.didChangeNotification, object: nil)
+    }
+    
+    @objc func settingChanged() {
+        movingBarSpeed = UserDefaults.standard.integer(forKey: "speed_bars")
+        if movingBarSpeed < 15 {
+            movingBarSpeed = 15
+        }
+        else if (movingBarSpeed > 30) {
+            movingBarSpeed = 30
+        }
+        animationDurationPortrait = Double((Int(self.view.frame.width) + 100) / movingBarSpeed)
+        animationDurationLandscape = Double((Int (self.view.frame.height) + 100) / movingBarSpeed)
     }
     
     @objc func buttonAction(sender: UIButton!) {
@@ -75,6 +96,7 @@ class OptokineticViewController: UIViewController {
     }
     
     func setupPortraitModeView() {
+        print("frame=\(self.view.frame) , width=\(self.view.frame.width), height=\(self.view.frame.height)")
         for _ in 0..<numButtons {
             let yBtmRightViewValue = Int(self.view.frame.height)
             let btmRightView = makeAngularButton(yValue: yBtmRightViewValue)
@@ -194,7 +216,6 @@ class OptokineticViewController: UIViewController {
     }
 
     @objc func timerAction() {
-        print("Timer Action \(timerActionCtr)")
         eyeExerciseMotion()
     }
     
@@ -256,7 +277,7 @@ class OptokineticViewController: UIViewController {
     }
 
     func animateButtonsTopOneAtTime() {
-        var duration: Double = 30.0
+        var duration: Double = animationDurationLandscape
         timerAnimationValue = 55
         for btnIdx in 0..<numButtons {
             let delayBtn : Double = 1.0 * Double(btnIdx)
@@ -275,7 +296,7 @@ class OptokineticViewController: UIViewController {
     }
     
     func animateButtonsBottomOneAtTime() {
-        var duration: Double = 30.0
+        var duration: Double = animationDurationLandscape
         for btnIdx in 0..<numButtons {
             let delayBtn : Double = 2.0 * Double(btnIdx)
             timerAnimationValue = 95
@@ -309,7 +330,7 @@ class OptokineticViewController: UIViewController {
     }
     
     func animateButtonsRightOneAtTime() {
-        var duration: Double = 20.0
+        var duration: Double = animationDurationPortrait
         for btnIdx in 0..<numButtons {
             var delayBtn : Double = 2.0 * Double(btnIdx)
             timerAnimationValue = 75
@@ -329,7 +350,7 @@ class OptokineticViewController: UIViewController {
     }
     
     func animateButtonsLeftOneAtTime() {
-        var duration: Double = 20.0
+        var duration: Double = animationDurationPortrait
         for btnIdx in 0..<numButtons {
             let delayBtn : Double = 1.0 * Double(btnIdx)
             timerAnimationValue = 45
@@ -361,7 +382,7 @@ class OptokineticViewController: UIViewController {
     }
     
     func animateButtons45DegOneAtTime(start: CGPoint, end: CGPoint) {
-        let duration: Double = 30.0
+        let duration: Double = animationDurationLandscape
         for btnIdx in 0..<numButtons {
             let path = UIBezierPath()
             path.move(to: start)
