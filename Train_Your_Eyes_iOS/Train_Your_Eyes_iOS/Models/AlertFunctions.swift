@@ -18,12 +18,16 @@ class AlertFunctions {
         })
         alertController.addAction(OKAction)
 
+        let style = NSMutableParagraphStyle()
+        style.alignment = NSTextAlignment.center
+
         var myMutableString = NSMutableAttributedString()
         myMutableString = NSMutableAttributedString(string: title as String, attributes: [NSAttributedString.Key.font:UIFont(name: "Verdana", size: 22.0)!])
         alertController.setValue(myMutableString, forKey: "attributedTitle")
 
         var messageMutableString = NSMutableAttributedString()
-        messageMutableString = NSMutableAttributedString(string: message as String, attributes: [NSAttributedString.Key.font:UIFont(name: "Verdana", size: 18.0)!])
+        messageMutableString = NSMutableAttributedString(string: message as String, attributes: [NSAttributedString.Key.font:UIFont(name: "Verdana", size: 18.0)!,
+            NSAttributedString.Key.paragraphStyle: style])
         alertController.setValue(messageMutableString, forKey: "attributedMessage")
 
         var alertWindow : UIWindow!

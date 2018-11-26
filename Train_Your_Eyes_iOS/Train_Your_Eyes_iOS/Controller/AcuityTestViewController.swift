@@ -8,7 +8,7 @@
 
 import UIKit
 
-var Instructions: String = "\r\n\r\nIn this test we test how well you see alphabets of different sizes and shapes. \r\nKeep the device at a safe distance from your eyes. Choose the option box whose shape match with the one in the picture.\r\n\r\n"
+var Instructions: String = "\r\n\r\nIn this test we test how well you see alphabets of different sizes and shapes. \r\n\r\nKeep the device at a safe distance from your eyes. Choose the option box whose shape match with the one in the picture.\r\n\r\n"
 
 class AcuityTestViewController: UIViewController {
 

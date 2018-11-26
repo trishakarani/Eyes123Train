@@ -16,17 +16,11 @@ class MainScreenViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print("\(self.navigationController?.navigationBar.frame)")
-        let height: CGFloat = 50 //whatever height you want to add to the existing height
-        let bounds = self.navigationController!.navigationBar.bounds
-        self.navigationController?.navigationBar.frame = CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height + height)
-        print("\(self.navigationController?.navigationBar.frame)")
-
         self.navigationController?.navigationBar.titleTextAttributes =
             [NSAttributedString.Key.foregroundColor: UIColor.red,
              NSAttributedString.Key.font: UIFont(name: "Verdana", size: 22)!]
 
-        self.tableView?.rowHeight = 140.0
+        self.tableView?.rowHeight = 130.0
         
         self.navigationItem.setHidesBackButton(true, animated:true)
 

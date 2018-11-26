@@ -29,7 +29,7 @@ class MovingBallViewController: UIViewController {
     var animationDurationPortrait: Double = 20
     var animationDurationLandscape: Double = 30
 
-    var Instructions: String = "\r\n\r\nFocus your eye on the moving ball. Doing this exercise for 5 minutes in a day helps improve focus.\r\n\r\n"
+    var Instructions: String = "\r\n\r\nFocus your eye on the moving ball. \r\nDoing this exercise for 5 minutes in a day helps improve focus.\r\n\r\n"
 
     override func viewDidLoad() {
         super.viewDidLoad()

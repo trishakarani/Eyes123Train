@@ -12,7 +12,6 @@ import AVFoundation
 class HitMovingObjectViewController: UIViewController {
     let MAX_HITS_LEVEL_RETRIES:Int = 12
 
-    let fishView = UIView()
     var fish = UIImageView()
     var xpos: CGFloat = 100
     var scaleValue: CGFloat = 1
@@ -39,7 +38,7 @@ class HitMovingObjectViewController: UIViewController {
     @IBOutlet var screenView: UIView!
     var bkgdView : UIImageView!
     
-    var Instructions: String = "\r\n\r\nHit the flashing object. \r\nIf the accuracy of the flashing object recognition is above 90%, the game would automatically move to next level. \r\n Enjoy the Game ...\r\n\r\n"
+    var Instructions: String = "\r\n\r\nHit the flashing object. \r\n\r\nIf the accuracy of the flashing object recognition is above 90%, the game would automatically move to next level. \r\n Enjoy the Game ...\r\n\r\n"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,6 +75,14 @@ class HitMovingObjectViewController: UIViewController {
         fish.setAnchorPoint(CGPoint(x: 0.5, y:0.5))
         //fish.frame = AVMakeRect(aspectRatio: (self.fish.image?.size)!, insideRect: self.fish.frame)
         self.xpos = -self.fish.frame.origin.x - 75
+//        UIView.animate(withDuration: 1, delay: 0, options: [.curveEaseIn, .repeat, .autoreverse], animations: {
+//            self.fish.alpha = 0.2
+//            self.fish.transform  = CGAffineTransform( scaleX: 0.6, y: 0.6)
+//        }) { _ in
+//            self.fish.image = nil
+//            self.fish.removeFromSuperview()
+//        }
+        
 //        UIView.animate(withDuration: 1, delay: 0.0, options:[.repeat,.autoreverse], animations: {
 //            self.fish.alpha = 0.2
 //            self.fish.transform  = CGAffineTransform( scaleX: 0.6, y: 0.6)
@@ -90,10 +97,8 @@ class HitMovingObjectViewController: UIViewController {
     }
     
     func removeFish() {
-        if fishView.subviews.count > 0 {
-            fish.image = nil
-            fish.removeFromSuperview()
-        }
+        fish.image = nil
+        fish.removeFromSuperview()
     }
     
     func changeFish() {
@@ -204,17 +209,6 @@ class HitMovingObjectViewController: UIViewController {
 //        }, completion: {_ in
 //            //self.fishView.frame.origin.x = -self.fishView.frame.size.width
 //            self.shrinkTheFish(fish: self.fish)
-//        })
-    }
-
-    func animateTheFish(fish : UIImageView) {
-//        let fishMovingSpeed = 60.0/view.frame.size.width
-//        let duration = (view.frame.size.width - fishView.frame.origin.x) * fishMovingSpeed
-//        UIView.animate(withDuration: TimeInterval(duration), delay: 0.0, options: .curveLinear, animations: {
-//            //self.fishView.frame.origin.x = self.view.frame.size.width
-//        }, completion: {_ in
-//            self.fishView.frame.origin.x = -self.fishView.frame.size.width
-//            self.animateTheFish(fish: self.fishView as! UIImageView)
 //        })
     }
 

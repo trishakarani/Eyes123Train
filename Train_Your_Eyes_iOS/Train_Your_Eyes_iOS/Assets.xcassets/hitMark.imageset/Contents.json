@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "game_1.jpg",
+      "filename" : "hitMark@1x.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "game_1@2x.jpg",
+      "filename" : "hitMark@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "game_1@3x.jpg",
+      "filename" : "hitMark@3x.png",
       "scale" : "3x"
     }
   ],

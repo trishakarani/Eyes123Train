@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "optoKinetic.jpg",
+      "filename" : "optoKinetic@1x.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "optoKinetic@2x.jpg",
+      "filename" : "optoKinetic@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "optoKinetic@3x.jpg",
+      "filename" : "optoKinetic@3x.png",
       "scale" : "3x"
     }
   ],

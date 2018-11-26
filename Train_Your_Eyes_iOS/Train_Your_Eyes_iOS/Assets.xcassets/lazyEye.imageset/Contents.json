@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "lazyEye.jpeg",
+      "filename" : "lazyEye@1x.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "lazyEye@2x.jpeg",
+      "filename" : "lazyEye@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "lazyEye@3x.jpeg",
+      "filename" : "lazyEye@3x.png",
       "scale" : "3x"
     }
   ],

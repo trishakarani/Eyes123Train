@@ -26,7 +26,7 @@ class OptokineticViewController: UIViewController {
     var animationDurationPortrait: Double = 20
     var animationDurationLandscape: Double = 30
 
-    var Instructions: String = "\r\n\r\nFocus your eyes by looking at the strips of lines moving on the screen. Watching this for 5 minutes in a day helps improve vision.\r\n\r\n"
+    var Instructions: String = "\r\n\r\nFocus your eyes by looking at the strips of lines moving on the screen. \r\nWatching this for 5 minutes in a day helps improve vision.\r\n\r\n"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,8 +54,8 @@ class OptokineticViewController: UIViewController {
         else if (movingBarSpeed > 30) {
             movingBarSpeed = 30
         }
-        animationDurationPortrait = Double((Int(self.view.frame.width) + 100) / movingBarSpeed)
-        animationDurationLandscape = Double((Int (self.view.frame.height) + 100) / movingBarSpeed)
+//        animationDurationPortrait = Double((Int(self.view.frame.width) + 100) / movingBarSpeed)
+//        animationDurationLandscape = Double((Int (self.view.frame.height) + 100) / movingBarSpeed)
     }
     
     @objc func buttonAction(sender: UIButton!) {
