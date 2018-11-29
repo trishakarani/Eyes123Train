@@ -26,8 +26,8 @@ class MovingBallViewController: UIViewController {
     var squareView = UIView()
     var squareViewAnimationId: Int = 1
     var movingBarSpeed: Int = 23
-    var animationDurationPortrait: Double = 20
-    var animationDurationLandscape: Double = 30
+    var animationDurationPortrait: Double = 5
+    var animationDurationLandscape: Double = 8
 
     var Instructions: String = "\r\n\r\nFocus your eye on the moving ball. \r\nDoing this exercise for 5 minutes in a day helps improve focus.\r\n\r\n"
 
@@ -57,8 +57,8 @@ class MovingBallViewController: UIViewController {
         else if (movingBarSpeed > 30) {
             movingBarSpeed = 30
         }
-        animationDurationPortrait = Double((Int(self.view.frame.width) + 100) / movingBarSpeed)
-        animationDurationLandscape = Double((Int (self.view.frame.height) + 100) / movingBarSpeed)
+//        animationDurationPortrait = Double((Int(self.view.frame.width) + 100) / movingBarSpeed)
+//        animationDurationLandscape = Double((Int (self.view.frame.height) + 100) / movingBarSpeed)
     }
     
     @objc func buttonAction(sender: UIButton!) {
@@ -236,11 +236,11 @@ class MovingBallViewController: UIViewController {
             timerActionCtr += 1
         case 2:
             stopAnimations()
-            animateButtonsBottomOneAtTime()
+            animateButtonsTopOneAtTime()
             timerActionCtr += 1
         case 3:
             stopAnimations()
-            animateButtons45DegOneAtTime(start: CGPoint(x: 0,y: 0), end: CGPoint(x: Int(self.view.frame.width), y: Int(self.view.frame.height)))
+            animateButtons45DegOneAtTime(start: CGPoint(x: Int(self.view.frame.width),y: Int(self.view.frame.height)), end: CGPoint(x: 0, y: 0))
             timerActionCtr += 1
         case 4:
             stopAnimations()
@@ -252,11 +252,11 @@ class MovingBallViewController: UIViewController {
             timerActionCtr += 1
         case 6:
             stopAnimations()
-            animateButtonsTopOneAtTime()
+            animateButtonsBottomOneAtTime()
             timerActionCtr += 1
         case 7:
             stopAnimations()
-            animateButtons45DegOneAtTime(start: CGPoint(x: Int(self.view.frame.width),y: Int(self.view.frame.height)), end: CGPoint(x: 0, y: 0))
+            animateButtons45DegOneAtTime(start: CGPoint(x: 0,y: 0), end: CGPoint(x: Int(self.view.frame.width), y: Int(self.view.frame.height)))
             timerActionCtr = 0
         default:
             stopAnimations()
@@ -282,17 +282,17 @@ class MovingBallViewController: UIViewController {
     }
     
     func animateButtonsTopOneAtTime() {
-        var duration: Double = animationDurationLandscape
-        timerAnimationValue = 55
+        var duration: Double = 14
+        timerAnimationValue = 113
         for btnIdx in 0..<numButtons {
-            let delayBtn : Double = 1.0 * Double(btnIdx)
+            let delayBtn : Double = 0.5 * Double(btnIdx)
             if UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft || UIDevice.current.orientation == UIDeviceOrientation.landscapeRight {
                 duration = 20.0
                 timerAnimationValue = 50
             }
             
             UIView.animate(withDuration: Double(duration), delay: Double(delayBtn), options: [.curveLinear, .repeat] , animations: {
-                UIView.setAnimationRepeatCount(2)
+                UIView.setAnimationRepeatCount(8)
                 self.moveToTop(view: self.bottomButtonArray[btnIdx])
             }) { (finished) in
                 self.startAtBottom(view: self.bottomButtonArray[btnIdx])
@@ -303,15 +303,15 @@ class MovingBallViewController: UIViewController {
     func animateButtonsBottomOneAtTime() {
         var duration: Double = animationDurationLandscape
         for btnIdx in 0..<numButtons {
-            let delayBtn : Double = 2.0 * Double(btnIdx)
-            timerAnimationValue = 95
+            let delayBtn : Double = 0.5 * Double(btnIdx)
+            timerAnimationValue = 135
             if UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft || UIDevice.current.orientation == UIDeviceOrientation.landscapeRight {
                 duration = 20.0
                 timerAnimationValue = 62
             }
             
             UIView.animate(withDuration: Double(duration), delay: Double(delayBtn), options: [.curveLinear, .repeat] , animations: {
-                UIView.setAnimationRepeatCount(2)
+                UIView.setAnimationRepeatCount(16)
                 self.moveToBottom(view: self.topButtonArray[btnIdx])
             }) { (finished) in
                 self.startAtTop(view: self.topButtonArray[btnIdx])
@@ -337,8 +337,7 @@ class MovingBallViewController: UIViewController {
     func animateButtonsRightOneAtTime() {
         var duration: Double = animationDurationPortrait
         for btnIdx in 0..<numButtons {
-            var delayBtn : Double = 2.0 * Double(btnIdx)
-            timerAnimationValue = 75
+            var delayBtn : Double = 0.5 * Double(btnIdx)
             if UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft || UIDevice.current.orientation == UIDeviceOrientation.landscapeRight {
                 delayBtn = 2.0 * Double(btnIdx)
                 timerAnimationValue = 75
@@ -346,29 +345,30 @@ class MovingBallViewController: UIViewController {
             }
             
             UIView.animate(withDuration: Double(duration), delay: Double(delayBtn), options: [.curveLinear, .repeat] , animations: {
-                UIView.setAnimationRepeatCount(2)
+                UIView.setAnimationRepeatCount(16)
                 self.moveToRight(view: self.leftButtonArray[btnIdx])
             }) { (finished) in
                 self.startAtLeft(view: self.leftButtonArray[btnIdx])
             }
         }
+        timerAnimationValue = 86
     }
     
     func animateButtonsLeftOneAtTime() {
-        var duration: Double = animationDurationPortrait
+        var duration: Double = 10
         for btnIdx in 0..<numButtons {
-            let delayBtn : Double = 1.0 * Double(btnIdx)
-            timerAnimationValue = 45
+            let delayBtn : Double = 0.5 * Double(btnIdx)
             if UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft || UIDevice.current.orientation == UIDeviceOrientation.landscapeRight {
                 duration = 30.0
             }
             UIView.animate(withDuration: Double(duration), delay: Double(delayBtn), options: [.curveLinear, .repeat] , animations: {
-                UIView.setAnimationRepeatCount(2)
+                UIView.setAnimationRepeatCount(8)
                 self.moveToLeft(view: self.rightButtonArray[btnIdx])
             }) { (finished) in
                 self.startAtRight(view: self.rightButtonArray[btnIdx])
             }
         }
+        timerAnimationValue = 86
     }
     
     // MARK: - Animate Motion 45 degree
@@ -397,15 +397,15 @@ class MovingBallViewController: UIViewController {
             let anim = CAKeyframeAnimation(keyPath: "position")
             anim.path = path.cgPath
             anim.rotationMode = CAAnimationRotationMode.rotateAuto
-            anim.repeatCount = 2
+            anim.repeatCount = 16
             anim.duration = duration
-            let delay = (btnIdx * 2)
-            anim.beginTime = CACurrentMediaTime() + Double(delay)
+            let delay: Double = Double(btnIdx) * 0.5
+            anim.beginTime = CACurrentMediaTime() + delay
             
             // add the animation
             angularViewArray[btnIdx].layer.add(anim, forKey: "animate position along path")
         }
-        timerAnimationValue = 95
+        timerAnimationValue = 134
     }
     
     //MARK: Animate moving ball in the frame

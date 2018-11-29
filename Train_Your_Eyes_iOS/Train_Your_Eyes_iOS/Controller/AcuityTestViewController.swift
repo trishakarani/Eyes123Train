@@ -8,14 +8,13 @@
 
 import UIKit
 
-var Instructions: String = "\r\n\r\nIn this test we test how well you see alphabets of different sizes and shapes. \r\n\r\nKeep the device at a safe distance from your eyes. Choose the option box whose shape match with the one in the picture.\r\n\r\n"
+var Instructions: String = "\r\n\r\nIn this test we test how well you see alphabets of different sizes and shapes. \r\n\r\nKeep the device at a suggested distance of 16 inches from your eyes. Choose the option box whose shape match with the one in the picture.\r\n\r\n"
 
 class AcuityTestViewController: UIViewController {
 
     
     @IBOutlet weak var testBkgdView: UIView!
-    var testCharacterView: UIView!
-    var characterLabel: UILabel!
+    @IBOutlet weak var characterLabel: UILabel!
     
     @IBOutlet weak var optionsBtn1: RoundButton!
     @IBOutlet weak var optionsBtn2: RoundButton!
@@ -41,11 +40,6 @@ class AcuityTestViewController: UIViewController {
         backButton.title = "Back"
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         
-        let labelWidth = testBkgdView.frame.width
-        let labelHeight = testBkgdView.frame.height
-        characterLabel = UILabel(frame: CGRect(x: 0, y: 0, width: labelWidth, height: labelHeight))
-        testBkgdView.addSubview(characterLabel)
-
         setupAcuityTest()
         AlertFunctions.showAlert(title: "Acuity Test", message: Instructions)
         
@@ -92,7 +86,7 @@ class AcuityTestViewController: UIViewController {
         characterLabel.textColor = .white
         characterLabel.backgroundColor = .darkGray
         characterLabel.font = UIFont(name: "Verdana", size: CGFloat(inputValues.fontSize))
-
+        
         correctedVision = inputValues.correctedVision
         correctChoiceIdx = Int.random(in: 0..<4)
         switch correctChoiceIdx {

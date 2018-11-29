@@ -28,6 +28,7 @@
 		2CAA5DC921A3CCCA00E769A8 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA5DC821A3CCCA00E769A8 /* RoundButton.swift */; };
 		2CAA5DCB21A3E5E800E769A8 /* VisionTestResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA5DCA21A3E5E800E769A8 /* VisionTestResultsViewController.swift */; };
 		2CB077E9161798CE04920BA3 /* Pods_Train_Your_Eyes_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B77F6E7194E019FCEEBD71 /* Pods_Train_Your_Eyes_iOSTests.framework */; };
+		2CC151B421AE749900C9B2C3 /* HockeySDK.embeddedframework in Resources */ = {isa = PBXBuildFile; fileRef = 2CC151B321AE749900C9B2C3 /* HockeySDK.embeddedframework */; };
 		2CF2F29521A79F7E0020713A /* ContrastTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF2F29421A79F7E0020713A /* ContrastTestViewController.swift */; };
 		2CF2F29921A7F5130020713A /* AcuityTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF2F29821A7F5130020713A /* AcuityTestViewController.swift */; };
 		2CF2F29B21A9026E0020713A /* AcuityTestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF2F29A21A9026E0020713A /* AcuityTestData.swift */; };
@@ -83,6 +84,7 @@
 		2CAA5DC621A39F3900E769A8 /* AlertFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertFunctions.swift; sourceTree = "<group>"; };
 		2CAA5DC821A3CCCA00E769A8 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		2CAA5DCA21A3E5E800E769A8 /* VisionTestResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionTestResultsViewController.swift; sourceTree = "<group>"; };
+		2CC151B321AE749900C9B2C3 /* HockeySDK.embeddedframework */ = {isa = PBXFileReference; lastKnownFileType = folder; path = HockeySDK.embeddedframework; sourceTree = "<group>"; };
 		2CF2F29421A79F7E0020713A /* ContrastTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContrastTestViewController.swift; sourceTree = "<group>"; };
 		2CF2F29821A7F5130020713A /* AcuityTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcuityTestViewController.swift; sourceTree = "<group>"; };
 		2CF2F29A21A9026E0020713A /* AcuityTestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcuityTestData.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 		2C09BE1E21745B01006C2A93 /* Train_Your_Eyes_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				2CC151AB21AE72DC00C9B2C3 /* Vendor */,
 				2C4D2C1C217B02E1004C0367 /* Controller */,
 				2C4D2C1B217B02DB004C0367 /* View */,
 				2C4D2C1A217B02D1004C0367 /* Models */,
@@ -222,6 +225,14 @@
 			path = "Data Model";
 			sourceTree = "<group>";
 		};
+		2CC151AB21AE72DC00C9B2C3 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				2CC151B321AE749900C9B2C3 /* HockeySDK.embeddedframework */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
 		841C2400C013F8420B80BDB3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,7 +267,8 @@
 				2C09BE1821745B01006C2A93 /* Sources */,
 				2C09BE1921745B01006C2A93 /* Frameworks */,
 				2C09BE1A21745B01006C2A93 /* Resources */,
-				85C615D705C7447320C6D792 /* [CP] Embed Pods Frameworks */,
+				2C063CFA21AE7049008272DF /* ShellScript */,
+				A4459BA45BEFF06CDE0D2556 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -357,6 +369,7 @@
 				2C5EEFF821A72D3D00483A93 /* Settings.bundle in Resources */,
 				2C09BE2721745B02006C2A93 /* Assets.xcassets in Resources */,
 				2C09BE2521745B01006C2A93 /* Main.storyboard in Resources */,
+				2CC151B421AE749900C9B2C3 /* HockeySDK.embeddedframework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +412,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		2C063CFA21AE7049008272DF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nFILE=\"${SRCROOT}/HockeySDK-iOS/BuildAgent\"\nif [ -f \"$FILE\" ]; then\n\"$FILE\"\nfi\n";
+		};
 		51B14FFDDB912B167F4E317C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -421,7 +451,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		85C615D705C7447320C6D792 /* [CP] Embed Pods Frameworks */ = {
+		A4459BA45BEFF06CDE0D2556 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -429,20 +459,18 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Train_Your_Eyes_iOS/Pods-Train_Your_Eyes_iOS-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CPDAcknowledgements/CPDAcknowledgements.framework",
-				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Train_Your_Eyes_iOS/Pods-Train_Your_Eyes_iOS-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/HockeySDK/HockeySDKResources.bundle",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CPDAcknowledgements.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/HockeySDKResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Train_Your_Eyes_iOS/Pods-Train_Your_Eyes_iOS-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Train_Your_Eyes_iOS/Pods-Train_Your_Eyes_iOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EFD2A5A3B02B4143DB94D308 /* [CP] Check Pods Manifest.lock */ = {
@@ -667,14 +695,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6LPD4868J6;
+				DEVELOPMENT_TEAM = YS5R96N32B;
 				INFOPLIST_FILE = Train_Your_Eyes_iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.eyes123train.Train-Your-Eyes-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.eyeWorkout.Train-Your-Eyes-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -687,14 +715,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6LPD4868J6;
+				DEVELOPMENT_TEAM = YS5R96N32B;
 				INFOPLIST_FILE = Train_Your_Eyes_iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.eyes123train.Train-Your-Eyes-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.eyeWorkout.Train-Your-Eyes-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

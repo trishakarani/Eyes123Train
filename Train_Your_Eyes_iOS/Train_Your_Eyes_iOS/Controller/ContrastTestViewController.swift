@@ -30,7 +30,7 @@ class ContrastTestViewController: UIViewController {
     var contrastTestCount: Int = 0
     var contrastBtnTagId: Int = 0
     
-    var Instructions: String = "\r\n\r\nIn this test we test how you distinguish contrast in the colors.\r\n\r\nKeep the device at a safe distance from your eyes. You should choose the square box whose color contrasts in the picture.\r\n\r\n"
+    var Instructions: String = "\r\n\r\nIn this test we test how you distinguish contrast in the colors.\r\n\r\nKeep the device at a suggested distance of 16 inches from your eyes. You should choose the square box whose color contrasts in the picture.\r\n\r\n"
 
     override func viewDidLoad() {
         super.viewDidLoad()

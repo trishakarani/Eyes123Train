@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import HockeySDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,6 +27,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             navigationController?.pushViewController(storyboard.instantiateViewController(withIdentifier: "FirstTimeUserViewController"), animated: false)
         }
         
+        BITHockeyManager.shared().configure(withIdentifier: "56e8cfef69db468a87bb58f76ed72b29")
+        // Do some additional configuration if needed here
+        BITHockeyManager.shared().start()
+        BITHockeyManager.shared().authenticator.authenticateInstallation()
+
         return true
     }
 

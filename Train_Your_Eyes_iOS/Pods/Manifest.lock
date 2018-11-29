@@ -1,20 +1,18 @@
 PODS:
-  - CPDAcknowledgements (1.0.0)
-  - lottie-ios (2.5.2)
+  - HockeySDK (5.1.4):
+    - HockeySDK/DefaultLib (= 5.1.4)
+  - HockeySDK/DefaultLib (5.1.4)
 
 DEPENDENCIES:
-  - CPDAcknowledgements
-  - lottie-ios
+  - HockeySDK
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - CPDAcknowledgements
-    - lottie-ios
+    - HockeySDK
 
 SPEC CHECKSUMS:
-  CPDAcknowledgements: 6e15e71849ba4ad5e8a17a0bb9d20938ad23bac8
-  lottie-ios: 3fef45d3fabe63e3c7c2eb603dd64ddfffc73062
+  HockeySDK: 15afe6bc0a5bfe3a531fd73dbf082095f37dac3b
 
-PODFILE CHECKSUM: a6788eeb9860db4cdb0a157521f065361d28f1ea
+PODFILE CHECKSUM: 134662aee34d455a212a015e44c513863e77a44e
 
 COCOAPODS: 1.5.3
