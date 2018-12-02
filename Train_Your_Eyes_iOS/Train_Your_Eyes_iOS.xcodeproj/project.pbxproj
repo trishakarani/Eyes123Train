@@ -656,6 +656,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9E059006F52E4603BFD887A2 /* Pods-Train_Your_Eyes_iOS.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YS5R96N32B;
@@ -677,6 +678,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 488F38336C938C82231AB733 /* Pods-Train_Your_Eyes_iOS.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YS5R96N32B;
