@@ -46,6 +46,13 @@ class ContrastTestViewController: UIViewController {
         self.navigationController?.replaceCurrentViewController(with: self, animated: false)
     }
     
+    func back(sender: UIBarButtonItem) {
+        // Perform your custom actions
+        // ...
+        // Go back to the previous ViewController
+        self.navigationController?.popViewController(animated: true)
+    }
+
     func addButtonsToList() {
         contrastColorButtons.append(stack1Btn1)
         contrastColorButtons.append(stack1Btn2)

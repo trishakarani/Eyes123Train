@@ -43,11 +43,29 @@ class HitMovingObjectViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addBackButton()
+
         showAlert(title: "Hit Flashing Object", message: Instructions)
         
         bkgdView = UIImageView(image: UIImage(named: "deepocean")!)//Your image name here
         bkgdView.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
         self.view.insertSubview(bkgdView, at: 0)//To set first of all views in VC
+    }
+
+    @objc func backAction() {
+        countdownTimer.invalidate()
+        // Go back to the previous ViewController
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    func addBackButton() {
+        let backButton = UIButton(type: .custom)
+        backButton.setImage(UIImage(named: "backButton.png"), for: .normal) // Image can be downloaded from here below link
+        backButton.setTitle("  Back", for: .normal)
+        backButton.setTitleColor(backButton.tintColor, for: .normal) // You can change the TitleColor
+        backButton.addTarget(self, action: #selector(self.backAction), for: .touchUpInside)
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
     }
 
     func startHitGame() {
@@ -67,12 +85,12 @@ class HitMovingObjectViewController: UIViewController {
     }
     
     func loadFish() {
-        let randomPos = getRandomPosition ()
+        let randomPos = getRandomPosition()
         fish.frame = CGRect(x: randomPos.x, y: randomPos.y, width: imageWidth, height: imageWidth)
         let fishImage = UIImage(named: getRandomFish())
         fish.image = fishImage!.scaled(to: CGSize(width: imageWidth, height: imageWidth), scalingMode: .aspectFit)
         
-        fish.setAnchorPoint(CGPoint(x: 0.5, y:0.5))
+//        fish.setAnchorPoint(CGPoint(x: 0.5, y:0.5))
         //fish.frame = AVMakeRect(aspectRatio: (self.fish.image?.size)!, insideRect: self.fish.frame)
         self.xpos = -self.fish.frame.origin.x - 75
 //        UIView.animate(withDuration: 1, delay: 0, options: [.curveEaseIn, .repeat, .autoreverse], animations: {
@@ -113,7 +131,7 @@ class HitMovingObjectViewController: UIViewController {
             }
             else if successPercent > 80 {
                 gameLevel += 1
-                let msgResult = "\r\nYou have moved to Level \(gameLevel). The next challenge will test you on your speed and recognition of smaller fishes.\r\n"
+                let msgResult = "\r\nYou have moved to Level \(gameLevel). \r\nThe next challenge will test you on your speed and recognition of smaller fishes.\r\n"
                 AlertFunctions.showAlert(title: "Congratulations", message: msgResult)
                 updateGameLevels()
             }
@@ -256,8 +274,10 @@ class HitMovingObjectViewController: UIViewController {
         // Generate a random x and y offset
         // add the navigation height for offset
         let xoffset = CGFloat(arc4random_uniform(UInt32(xwidth)))
-        let yoffset = CGFloat(arc4random_uniform(UInt32(yheight)) + UInt32(topbarHeight))
-        
+        var yoffset = CGFloat(arc4random_uniform(UInt32(yheight)) + UInt32(topbarHeight) + 60)
+        if yoffset > yheight {
+            yoffset = yoffset - 60
+        }
         print("y=\(yoffset), yHeight=\(yheight), topBar=\(topbarHeight), imgwidth=\(imageWidth)")
         
         return CGPoint(x: CGFloat(xoffset ), y: CGFloat(yoffset))

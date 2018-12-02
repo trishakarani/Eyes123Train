@@ -9,13 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Train_Your_Eyes_iOS/Controller/HitMovingObjectViewController.swift"
-            timestampString = "564889081.737155"
+            filePath = "Train_Your_Eyes_iOS/Controller/ContrastTestViewController.swift"
+            timestampString = "565393590.235736"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "removeFish()"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "back(sender:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

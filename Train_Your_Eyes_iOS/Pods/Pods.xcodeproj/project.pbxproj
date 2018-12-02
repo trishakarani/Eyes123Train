@@ -7,69 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05B2A27272B2CE67127CD9DD9E729606 /* buttonRoundedRegularHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 5901197B3987E9A197BAE12CF25B5FDC /* buttonRoundedRegularHighlighted.png */; };
-		0BE0EB2E46F8813032EC45640B8B595B /* hu.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 61B837F8917E2C7DA4C53901A4979DE3 /* hu.lproj */; };
-		0EB4EA6580DAE04E7C6E70ECF6434B32 /* buttonRoundedRegular@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60677E00FAC22367B647C4C8838F465F /* buttonRoundedRegular@2x.png */; };
-		10102D2E1E4FCF01E4839F71170EF4FA /* hr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 95F24DCBDB58E37B4471F4539B910AEC /* hr.lproj */; };
-		10E71ECB9306E5534B085AEA0BCD8A52 /* buttonRoundedDeleteHighlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15589695389259E1BD5E90E2E0232C5A /* buttonRoundedDeleteHighlighted@2x.png */; };
-		1741C39F86DB6FEA459F2B549CD326FB /* Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 414B62F6676EA636D1BD70E9584C0CC9 /* Arrow.png */; };
-		1B9228F487DF7B494E7E8E93DF2D2371 /* buttonRoundedDeleteHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F74CBE6CA844FDCAB184BB4432E82A8 /* buttonRoundedDeleteHighlighted.png */; };
-		211848600C7182B0051E73DE82B20421 /* Rectangle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 689144D3A960938626D8DDEB8C80C7E1 /* Rectangle@3x.png */; };
 		23B42BB61650A04C3B7A0A1555DD7D84 /* Pods-Train_Your_Eyes_iOSTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C81920D158A870D51DDA2FAD589B784 /* Pods-Train_Your_Eyes_iOSTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25CD03ECAA0F700BFACA71CDE3C8D00E /* Pods-Train_Your_Eyes_iOSTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2942C796B7AB79DB0563265C377ABB /* Pods-Train_Your_Eyes_iOSTests-dummy.m */; };
-		2744196B80834C8C64B2B22220285201 /* nl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 537116497ACE881241CD3C7E58C4B470 /* nl.lproj */; };
 		32BA1204B8B2BC6AD4993F1F959F5443 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
-		34F1B4DCE098F105AAE2C9CA9A58EF85 /* Blur@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 43CDE53F43970E6AFA9C0A76A4ABC49C /* Blur@2x.png */; };
-		35720EF83CF77037C3DF93CCA5394BF6 /* nb.lproj in Resources */ = {isa = PBXBuildFile; fileRef = B1C3828DA1460D03BB0A86B6B486E4B8 /* nb.lproj */; };
-		3B13A83F0B416416FE3AE60DD68D00B4 /* buttonRoundedDelete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 34E700747914C4D89F7D32E845753711 /* buttonRoundedDelete@2x.png */; };
-		3D99AEFD65C4B18FF4D751CC43DEAF0D /* IconGradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 60E3617B80C95BF5669C9569E031D24E /* IconGradient.png */; };
-		3E08E40938C162E223543E74CC97374E /* Cancel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8698EFA25700D8B57002BD6D28BAC369 /* Cancel@3x.png */; };
-		40902EEE245159F48FE2048E0DAE9168 /* feedbackActivity@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ECD15EC45FD311CD58450356C335065 /* feedbackActivity@2x~ipad.png */; };
-		4548C1011A02C777B4B263AD821A2DD3 /* pt-PT.lproj in Resources */ = {isa = PBXBuildFile; fileRef = F9F618A7FC68FEC17E31BC11B817D564 /* pt-PT.lproj */; };
-		4BD0CD3F98A9DECD717A405B6F5B7D85 /* Arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BDEA8AB5D5D87E43EF779BB228B8557 /* Arrow@2x.png */; };
-		4EC2B357CD04FCBA1A75CC7A477153CC /* it.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 7F5600972B8D28F2B2F23B7C97F8CF4E /* it.lproj */; };
-		4F01E11E5BC96B92C255589CF5BBCC49 /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 86A58524768054BEF7BFB02D59D7B802 /* de.lproj */; };
+		3D969FE8F47A3BA81F85616FB62B2B26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
 		52F05657D48EFD3434E8AF71FFBC4272 /* Pods-Train_Your_Eyes_iOSUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C0BE9DC54A7A61A7DD8D475DED640B64 /* Pods-Train_Your_Eyes_iOSUITests-dummy.m */; };
-		59CA5F7719005184AB71884C81DFA971 /* feedbackActivity~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D22D18CD0D639E9EA75649C914F424F /* feedbackActivity~ipad.png */; };
-		682F3F35A8D7954EAD87213CF6D92CA6 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 12658C43F8B1DE6B4F94FFA0FE135DC3 /* en.lproj */; };
-		6C61D0A340F8DAB2806ED2170818E945 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
-		6EC8E3228BB60E487E156467919BA83A /* fr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = C31A661D04B1E8E30935BBA2A67C3D39 /* fr.lproj */; };
+		73E3EE8774FA1A537E410EC8AC3D7B1B /* Pods-Train_Your_Eyes_iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E6E164A016A403EB3FB907B0255142 /* Pods-Train_Your_Eyes_iOS-dummy.m */; };
 		77BB0FB398A867344A7E76B5A11E48BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
-		7BF1BC9703683E3CDD159A6264CFB58B /* Rectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = A09D6184BC0C5FF49FABCAA002074082 /* Rectangle.png */; };
-		7C4D1F326A2B12AE370997778531801A /* iconCamera.png in Resources */ = {isa = PBXBuildFile; fileRef = F098E2ADF091F7B91A996ECD1C36C836 /* iconCamera.png */; };
-		7D498B858EFD7F9E012A78B81781175B /* Cancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5FAA282848FD9F0E2BCA6C164E997ED /* Cancel@2x.png */; };
-		7D99EDF1A4767CCDB9B5E29DA6D6B8D6 /* Ok@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4B9BB39571564147C03AF05D56E0A8B /* Ok@2x.png */; };
-		7DDD41B9276BFE828CD85F7E049F9A7A /* ru.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 4E22A290B3038B1BC60F7A4C208ED50A /* ru.lproj */; };
-		7FC1A2AC6EE5A2A9FED69B5D8C39ECA9 /* tr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 34E8F055502FBB7495AD415CDD7CFCC3 /* tr.lproj */; };
-		8D401BC540B6CF254C8C5E2B2E41636D /* Rectangle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 334066E242FD10E58AAB1FA0A31AE056 /* Rectangle@2x.png */; };
-		8F7E5E1D1B7D7B814864BFCAEBCAF00F /* zh-Hans.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 830D2A01598EA0062EC99CCA48B1BC33 /* zh-Hans.lproj */; };
-		9369C7444953229DAAFC0D616CCAC0FF /* ja.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 12AD05EFA23F5A16A1231E3723F829CC /* ja.lproj */; };
-		945181D2B7E30D3C0B07EDEC26E1FC2B /* authorize_denied@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CAA68C117E55F87C07C366C51C75593 /* authorize_denied@3x.png */; };
-		94673DF28CFD10AF179F7D04CDA8BAC5 /* Blur@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A52F167C61985F7C376D243BEFB707F5 /* Blur@3x.png */; };
-		94B7C8911B2A9A08A71606D9581A1148 /* buttonRoundedDelete.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E287FA3F2AEBB0657217F203DDC5479 /* buttonRoundedDelete.png */; };
-		95B86A37516E4159141D192C653EC815 /* buttonRoundedRegularHighlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 311A51484A8E73A2A738ADF746201B00 /* buttonRoundedRegularHighlighted@2x.png */; };
-		970466C82DB88ECDDD27BF3E9DF4FC46 /* AppIconPlaceHolder.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AD960C50D83CB5AFB9719385F1869FF /* AppIconPlaceHolder.png */; };
-		A2F8D34BECA3DD0EE318A3558C049E13 /* Pods-Train_Your_Eyes_iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1020B314E88132A07E5908904BF88194 /* Pods-Train_Your_Eyes_iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A416F348274132328F2F7889EE0070B0 /* buttonRoundedRegular.png in Resources */ = {isa = PBXBuildFile; fileRef = 719BED56242DC41036818C3DCA7C13D1 /* buttonRoundedRegular.png */; };
-		A8D32AA73678855CF6E93D4FFEA2F7AF /* pt.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 3F30A75B329A08F926EA206A65925F9C /* pt.lproj */; };
-		A9DDA23615CC07AA99D48471BF75C2C1 /* es.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 2A1EBFAB42D2AD9BFC857D874A6ADB95 /* es.lproj */; };
-		AD12DCF1C2174A7E2FA68AF2D7D59DAF /* feedbackActivity@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3969FAC5CBAF15736622F149AA681AB6 /* feedbackActivity@2x.png */; };
-		B8D849B69A2177B7C31381E54D1A0712 /* fa.lproj in Resources */ = {isa = PBXBuildFile; fileRef = F516A17671CF888699A83774CC039642 /* fa.lproj */; };
-		BA2233A98BC53B7D3A80D66A15750525 /* Blur.png in Resources */ = {isa = PBXBuildFile; fileRef = 03B61E35A09BA818C45F6D8CA4FC8615 /* Blur.png */; };
-		BF9BA87EFEB1661385681C47E3F5AF1F /* iconCamera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0173610778456A067CE461B371595A9 /* iconCamera@2x.png */; };
+		BD7BC12B8C801F03377103A36FE6B371 /* Pods-Train_Your_Eyes_iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1020B314E88132A07E5908904BF88194 /* Pods-Train_Your_Eyes_iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C1B4D0FB911F652698DE4C55198A2F79 /* Pods-Train_Your_Eyes_iOSUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 76B1331FF0C3D9FDC5B2288E8B44322B /* Pods-Train_Your_Eyes_iOSUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C55B22B5563005DBE84409659356E8F3 /* Cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = F4DAD751EC22971C9935C6B2210B7F34 /* Cancel.png */; };
-		CA8BF5345E764D249B03B1A6778AED0F /* Ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 11CE55204592B0E2CDD6B162EE7543F3 /* Ok.png */; };
-		CCFF4CE602C8186E2465ADE936E75F08 /* IconGradient@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 40C68FAB6042683AA504A5AC18A0EFC5 /* IconGradient@2x.png */; };
-		CF06D2A6538A5E191A84AAD84742D4B2 /* FeedbackPlaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = CA5553BA12D16A1D27ED5AB8CA39CB95 /* FeedbackPlaceholder.png */; };
-		D07FABF52BC4DA8B8D3C35DCAD6BC2BD /* authorize_denied@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0070C3D4B18039B6FB637E13800B8DF6 /* authorize_denied@2x.png */; };
-		D4DCCD6AF3C265A5727931AAE35E0A67 /* Pods-Train_Your_Eyes_iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E6E164A016A403EB3FB907B0255142 /* Pods-Train_Your_Eyes_iOS-dummy.m */; };
-		D9DEFA783A3190B4261843DCF2D07E6E /* feedbackActivity@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C1661242FECE94C28A115B200D37D2 /* feedbackActivity@3x.png */; };
-		DDC7B4901BAFE62B6B02777D1FA029F4 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 878A3F52F918AF4FE45043E853F49E36 /* bg.png */; };
-		E244908082C989A96CA733AD2B3C78AB /* Arrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2204E170E3B1038BBB7DD756EE1DA56F /* Arrow@3x.png */; };
-		ECAE78B15FAE7AF144F6EA0A1F03AF16 /* Ok@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F120EB752CB0DB7FA9F7E3FDB916C08 /* Ok@3x.png */; };
-		EEBE916DB2F225C07EF64E2D05060418 /* authorize_denied.png in Resources */ = {isa = PBXBuildFile; fileRef = A480A004A0AFD6F64524E179740F7A2A /* authorize_denied.png */; };
-		FC3045CA8195C0BF3460910978BEE9B2 /* feedbackActivity.png in Resources */ = {isa = PBXBuildFile; fileRef = 490AF340E53802101389D1852B940509 /* feedbackActivity.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,121 +23,65 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5E2A35072070D1AF0516B58E6126F615;
+			remoteGlobalIDString = 6746C14C566A3D5ACD0AA1191F221FE0;
 			remoteInfo = "Pods-Train_Your_Eyes_iOS";
-		};
-		EC78680C15E72564DCF06A2C583AE40D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C587F1B2FA2CB38A29F84936DEFD569D;
-			remoteInfo = "HockeySDK-HockeySDKResources";
 		};
 		FF91EF25F9E9A8E2D9C17BEF2009A878 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5E2A35072070D1AF0516B58E6126F615;
+			remoteGlobalIDString = 6746C14C566A3D5ACD0AA1191F221FE0;
 			remoteInfo = "Pods-Train_Your_Eyes_iOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0070C3D4B18039B6FB637E13800B8DF6 /* authorize_denied@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "authorize_denied@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/authorize_denied@2x.png"; sourceTree = "<group>"; };
-		03B61E35A09BA818C45F6D8CA4FC8615 /* Blur.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Blur.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Blur.png"; sourceTree = "<group>"; };
 		08C650E10E8DA7F75D3ECF2AC0DC7FF9 /* Pods-Train_Your_Eyes_iOSUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Train_Your_Eyes_iOSUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		0CAA68C117E55F87C07C366C51C75593 /* authorize_denied@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "authorize_denied@3x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/authorize_denied@3x.png"; sourceTree = "<group>"; };
 		1020B314E88132A07E5908904BF88194 /* Pods-Train_Your_Eyes_iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Train_Your_Eyes_iOS-umbrella.h"; sourceTree = "<group>"; };
-		11CE55204592B0E2CDD6B162EE7543F3 /* Ok.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Ok.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Ok.png"; sourceTree = "<group>"; };
-		12658C43F8B1DE6B4F94FFA0FE135DC3 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/en.lproj"; sourceTree = "<group>"; };
-		12AD05EFA23F5A16A1231E3723F829CC /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ja.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/ja.lproj"; sourceTree = "<group>"; };
-		15589695389259E1BD5E90E2E0232C5A /* buttonRoundedDeleteHighlighted@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "buttonRoundedDeleteHighlighted@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedDeleteHighlighted@2x.png"; sourceTree = "<group>"; };
+		124DD26154DBC64CF78EC02853180048 /* Pods_Train_Your_Eyes_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Train_Your_Eyes_iOSUITests.framework; path = "Pods-Train_Your_Eyes_iOSUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		159DC5C81D9901C16014001A5326BDA2 /* Pods-Train_Your_Eyes_iOSUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Train_Your_Eyes_iOSUITests.modulemap"; sourceTree = "<group>"; };
-		1AE7D85FF720448BBF23D80032815739 /* HockeySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HockeySDK.framework; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework"; sourceTree = "<group>"; };
 		1BFDF962C6FE675C4093519E36D39459 /* Pods-Train_Your_Eyes_iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Train_Your_Eyes_iOS-acknowledgements.plist"; sourceTree = "<group>"; };
-		2204E170E3B1038BBB7DD756EE1DA56F /* Arrow@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Arrow@3x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Arrow@3x.png"; sourceTree = "<group>"; };
-		237ABABDC84C54B7BB1CFA07DBE47C5A /* ResourceBundle-HockeySDKResources-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-HockeySDKResources-Info.plist"; sourceTree = "<group>"; };
-		2A1EBFAB42D2AD9BFC857D874A6ADB95 /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = es.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/es.lproj"; sourceTree = "<group>"; };
-		2BDEA8AB5D5D87E43EF779BB228B8557 /* Arrow@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Arrow@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Arrow@2x.png"; sourceTree = "<group>"; };
+		2B3A673E68CE553D8433E2ED31BE22AD /* Pods_Train_Your_Eyes_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Train_Your_Eyes_iOS.framework; path = "Pods-Train_Your_Eyes_iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C81920D158A870D51DDA2FAD589B784 /* Pods-Train_Your_Eyes_iOSTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Train_Your_Eyes_iOSTests-umbrella.h"; sourceTree = "<group>"; };
-		2ECD15EC45FD311CD58450356C335065 /* feedbackActivity@2x~ipad.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "feedbackActivity@2x~ipad.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/feedbackActivity@2x~ipad.png"; sourceTree = "<group>"; };
-		311A51484A8E73A2A738ADF746201B00 /* buttonRoundedRegularHighlighted@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "buttonRoundedRegularHighlighted@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedRegularHighlighted@2x.png"; sourceTree = "<group>"; };
-		334066E242FD10E58AAB1FA0A31AE056 /* Rectangle@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Rectangle@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Rectangle@2x.png"; sourceTree = "<group>"; };
-		34E700747914C4D89F7D32E845753711 /* buttonRoundedDelete@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "buttonRoundedDelete@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedDelete@2x.png"; sourceTree = "<group>"; };
-		34E8F055502FBB7495AD415CDD7CFCC3 /* tr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = tr.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/tr.lproj"; sourceTree = "<group>"; };
 		35C984BB46086E04B153C49495BF0581 /* Pods-Train_Your_Eyes_iOSTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Train_Your_Eyes_iOSTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		38F2FA974AE38B064A92D5614162E418 /* Pods-Train_Your_Eyes_iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Train_Your_Eyes_iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		3969FAC5CBAF15736622F149AA681AB6 /* feedbackActivity@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "feedbackActivity@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/feedbackActivity@2x.png"; sourceTree = "<group>"; };
 		3D19A70650413D35DDD4E334A56BA051 /* Pods-Train_Your_Eyes_iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Train_Your_Eyes_iOS-resources.sh"; sourceTree = "<group>"; };
-		3F30A75B329A08F926EA206A65925F9C /* pt.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = pt.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/pt.lproj"; sourceTree = "<group>"; };
-		40C68FAB6042683AA504A5AC18A0EFC5 /* IconGradient@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "IconGradient@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/IconGradient@2x.png"; sourceTree = "<group>"; };
 		412ED5D42750FE70C30311DCF6B8EE90 /* Pods-Train_Your_Eyes_iOSTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Train_Your_Eyes_iOSTests-frameworks.sh"; sourceTree = "<group>"; };
-		414B62F6676EA636D1BD70E9584C0CC9 /* Arrow.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Arrow.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Arrow.png"; sourceTree = "<group>"; };
-		43CDE53F43970E6AFA9C0A76A4ABC49C /* Blur@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Blur@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Blur@2x.png"; sourceTree = "<group>"; };
 		47E05C9B043319A01F5DCF5E9CA393D7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		490AF340E53802101389D1852B940509 /* feedbackActivity.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = feedbackActivity.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/feedbackActivity.png"; sourceTree = "<group>"; };
-		4E22A290B3038B1BC60F7A4C208ED50A /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ru.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/ru.lproj"; sourceTree = "<group>"; };
 		4E4CAF065F7CC6597CEB7654D74E0103 /* Pods-Train_Your_Eyes_iOSUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Train_Your_Eyes_iOSUITests-frameworks.sh"; sourceTree = "<group>"; };
-		4F120EB752CB0DB7FA9F7E3FDB916C08 /* Ok@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Ok@3x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Ok@3x.png"; sourceTree = "<group>"; };
-		537116497ACE881241CD3C7E58C4B470 /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = nl.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/nl.lproj"; sourceTree = "<group>"; };
 		55C23212902E2901829A530D5BB1F6C4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5901197B3987E9A197BAE12CF25B5FDC /* buttonRoundedRegularHighlighted.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = buttonRoundedRegularHighlighted.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedRegularHighlighted.png"; sourceTree = "<group>"; };
 		5AD0B9831177602909E792E828DF5A1C /* Pods-Train_Your_Eyes_iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Train_Your_Eyes_iOS.modulemap"; sourceTree = "<group>"; };
-		60677E00FAC22367B647C4C8838F465F /* buttonRoundedRegular@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "buttonRoundedRegular@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedRegular@2x.png"; sourceTree = "<group>"; };
-		60E3617B80C95BF5669C9569E031D24E /* IconGradient.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = IconGradient.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/IconGradient.png"; sourceTree = "<group>"; };
-		61B837F8917E2C7DA4C53901A4979DE3 /* hu.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = hu.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/hu.lproj"; sourceTree = "<group>"; };
+		5E8D3A2C35C10E067DC02404183986B7 /* Pods_Train_Your_Eyes_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Train_Your_Eyes_iOSTests.framework; path = "Pods-Train_Your_Eyes_iOSTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		685472A9D74C04A2FCD909454E012F4A /* Pods-Train_Your_Eyes_iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Train_Your_Eyes_iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		689144D3A960938626D8DDEB8C80C7E1 /* Rectangle@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Rectangle@3x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Rectangle@3x.png"; sourceTree = "<group>"; };
-		6D22D18CD0D639E9EA75649C914F424F /* feedbackActivity~ipad.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "feedbackActivity~ipad.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/feedbackActivity~ipad.png"; sourceTree = "<group>"; };
 		70D148FA653050A202D69B2B26AD64DD /* Pods-Train_Your_Eyes_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Train_Your_Eyes_iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		719BED56242DC41036818C3DCA7C13D1 /* buttonRoundedRegular.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = buttonRoundedRegular.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedRegular.png"; sourceTree = "<group>"; };
 		750FCBA4126BCC94D757A56B98A087CD /* Pods-Train_Your_Eyes_iOSUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Train_Your_Eyes_iOSUITests-resources.sh"; sourceTree = "<group>"; };
 		76B1331FF0C3D9FDC5B2288E8B44322B /* Pods-Train_Your_Eyes_iOSUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Train_Your_Eyes_iOSUITests-umbrella.h"; sourceTree = "<group>"; };
-		7F5600972B8D28F2B2F23B7C97F8CF4E /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = it.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/it.lproj"; sourceTree = "<group>"; };
-		7F74CBE6CA844FDCAB184BB4432E82A8 /* buttonRoundedDeleteHighlighted.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = buttonRoundedDeleteHighlighted.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedDeleteHighlighted.png"; sourceTree = "<group>"; };
 		82A9DAB90A54ED61431D2F6E05E3C696 /* Pods-Train_Your_Eyes_iOSTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Train_Your_Eyes_iOSTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		830D2A01598EA0062EC99CCA48B1BC33 /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hans.lproj"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/zh-Hans.lproj"; sourceTree = "<group>"; };
-		8698EFA25700D8B57002BD6D28BAC369 /* Cancel@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Cancel@3x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Cancel@3x.png"; sourceTree = "<group>"; };
-		86A58524768054BEF7BFB02D59D7B802 /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = de.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/de.lproj"; sourceTree = "<group>"; };
-		878A3F52F918AF4FE45043E853F49E36 /* bg.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = bg.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/bg.png"; sourceTree = "<group>"; };
-		91154E6314821D8D63BBE5A9D439B111 /* HockeySDKResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = HockeySDKResources.bundle; path = "HockeySDK-HockeySDKResources.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		95F24DCBDB58E37B4471F4539B910AEC /* hr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = hr.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/hr.lproj"; sourceTree = "<group>"; };
-		9AD960C50D83CB5AFB9719385F1869FF /* AppIconPlaceHolder.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = AppIconPlaceHolder.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/AppIconPlaceHolder.png"; sourceTree = "<group>"; };
-		9E287FA3F2AEBB0657217F203DDC5479 /* buttonRoundedDelete.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = buttonRoundedDelete.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/buttonRoundedDelete.png"; sourceTree = "<group>"; };
-		A09D6184BC0C5FF49FABCAA002074082 /* Rectangle.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Rectangle.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Rectangle.png"; sourceTree = "<group>"; };
 		A36A40188CC0D844EDDDB11933A06CE6 /* Pods-Train_Your_Eyes_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Train_Your_Eyes_iOS.release.xcconfig"; sourceTree = "<group>"; };
-		A480A004A0AFD6F64524E179740F7A2A /* authorize_denied.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = authorize_denied.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/authorize_denied.png"; sourceTree = "<group>"; };
-		A52F167C61985F7C376D243BEFB707F5 /* Blur@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Blur@3x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Blur@3x.png"; sourceTree = "<group>"; };
-		A5FAA282848FD9F0E2BCA6C164E997ED /* Cancel@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Cancel@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Cancel@2x.png"; sourceTree = "<group>"; };
 		A7BB926265A1405E957184033340B092 /* Pods-Train_Your_Eyes_iOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Train_Your_Eyes_iOS-frameworks.sh"; sourceTree = "<group>"; };
 		AAA2E99322CB4082C9329846DEB9F937 /* Pods-Train_Your_Eyes_iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Train_Your_Eyes_iOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		B1C3828DA1460D03BB0A86B6B486E4B8 /* nb.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = nb.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/nb.lproj"; sourceTree = "<group>"; };
-		B4B9BB39571564147C03AF05D56E0A8B /* Ok@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Ok@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Ok@2x.png"; sourceTree = "<group>"; };
-		B92812DA09B4DEE8376B9D0012D3AE91 /* Pods_Train_Your_Eyes_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Train_Your_Eyes_iOS.framework; path = "Pods-Train_Your_Eyes_iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF2942C796B7AB79DB0563265C377ABB /* Pods-Train_Your_Eyes_iOSTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Train_Your_Eyes_iOSTests-dummy.m"; sourceTree = "<group>"; };
-		BF8A03B4D7A1636634D141ED8CBACF27 /* Pods_Train_Your_Eyes_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Train_Your_Eyes_iOSTests.framework; path = "Pods-Train_Your_Eyes_iOSTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0BE9DC54A7A61A7DD8D475DED640B64 /* Pods-Train_Your_Eyes_iOSUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Train_Your_Eyes_iOSUITests-dummy.m"; sourceTree = "<group>"; };
-		C31A661D04B1E8E30935BBA2A67C3D39 /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = fr.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/fr.lproj"; sourceTree = "<group>"; };
-		CA5553BA12D16A1D27ED5AB8CA39CB95 /* FeedbackPlaceholder.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = FeedbackPlaceholder.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/FeedbackPlaceholder.png"; sourceTree = "<group>"; };
 		CB2E19468C10FD070F3A4D6E2C363B67 /* Pods-Train_Your_Eyes_iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Train_Your_Eyes_iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CCED3CF1F97B0704C4C5A10FBB7283AC /* Pods-Train_Your_Eyes_iOSTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Train_Your_Eyes_iOSTests-resources.sh"; sourceTree = "<group>"; };
-		D0173610778456A067CE461B371595A9 /* iconCamera@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "iconCamera@2x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/iconCamera@2x.png"; sourceTree = "<group>"; };
 		D05CBC9998A72AA188C08CD7E0BD6B6D /* Pods-Train_Your_Eyes_iOSTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Train_Your_Eyes_iOSTests.modulemap"; sourceTree = "<group>"; };
 		D24BD5B6653BF1619D69E25C1D54A740 /* Pods-Train_Your_Eyes_iOSUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Train_Your_Eyes_iOSUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		D382D9E8232A13F1E64B8EB24968E319 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D7C1661242FECE94C28A115B200D37D2 /* feedbackActivity@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "feedbackActivity@3x.png"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/feedbackActivity@3x.png"; sourceTree = "<group>"; };
 		DC3B87B783DDED382C2228AC8332B55E /* Pods-Train_Your_Eyes_iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Train_Your_Eyes_iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E8E6E164A016A403EB3FB907B0255142 /* Pods-Train_Your_Eyes_iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Train_Your_Eyes_iOS-dummy.m"; sourceTree = "<group>"; };
-		F098E2ADF091F7B91A996ECD1C36C836 /* iconCamera.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = iconCamera.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/iconCamera.png"; sourceTree = "<group>"; };
-		F4DAD751EC22971C9935C6B2210B7F34 /* Cancel.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Cancel.png; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/Cancel.png"; sourceTree = "<group>"; };
-		F516A17671CF888699A83774CC039642 /* fa.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = fa.lproj; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/fa.lproj"; sourceTree = "<group>"; };
-		F7E32F32A32E44C2122AA244B1C4B25B /* Pods_Train_Your_Eyes_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Train_Your_Eyes_iOSUITests.framework; path = "Pods-Train_Your_Eyes_iOSUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9F618A7FC68FEC17E31BC11B817D564 /* pt-PT.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "pt-PT.lproj"; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle/pt-PT.lproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1BC0CB68F6513BD4F158B6B697F22B78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D969FE8F47A3BA81F85616FB62B2B26 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6004AF6B455877CE2C2F27867F00EB65 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -200,26 +90,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		70DEC5BB5A1916502A6DE02FD70E1F55 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6C61D0A340F8DAB2806ED2170818E945 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7CE6B9BA3894BB936D43BD1648B63378 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				77BB0FB398A867344A7E76B5A11E48BD /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D83F41C35122B9469EFE0B26DE89F3E2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +119,16 @@
 			path = "Target Support Files/Pods-Train_Your_Eyes_iOS";
 			sourceTree = "<group>";
 		};
+		3CACCC035312B463F59F596D1A3A6E03 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B3A673E68CE553D8433E2ED31BE22AD /* Pods_Train_Your_Eyes_iOS.framework */,
+				5E8D3A2C35C10E067DC02404183986B7 /* Pods_Train_Your_Eyes_iOSTests.framework */,
+				124DD26154DBC64CF78EC02853180048 /* Pods_Train_Your_Eyes_iOSUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		44D5347904CF754D6785B84253F2574A /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,23 +145,6 @@
 				85DDFAFFCF4DD724369A4CB802F3F04F /* Pods-Train_Your_Eyes_iOSUITests */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		67B234C5957D052B90742EBB5C421DF3 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1AE7D85FF720448BBF23D80032815739 /* HockeySDK.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		683302794879E5299698DBB9C6978E88 /* DefaultLib */ = {
-			isa = PBXGroup;
-			children = (
-				67B234C5957D052B90742EBB5C421DF3 /* Frameworks */,
-				7E6239E97D696555F1CEE3723696D2A8 /* Resources */,
-			);
-			name = DefaultLib;
 			sourceTree = "<group>";
 		};
 		6C2A90A844BF78BCEAF86E1EED18DBCC /* Pods-Train_Your_Eyes_iOSTests */ = {
@@ -302,71 +170,9 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				EC4CB44E075E7F0F33D6C84131440F2A /* Pods */,
-				866178F27C8EE6A64CABC0E98F35896E /* Products */,
+				3CACCC035312B463F59F596D1A3A6E03 /* Products */,
 				5EB58B56E40C9C3C67C1F909E6667974 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		7E6239E97D696555F1CEE3723696D2A8 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				9AD960C50D83CB5AFB9719385F1869FF /* AppIconPlaceHolder.png */,
-				414B62F6676EA636D1BD70E9584C0CC9 /* Arrow.png */,
-				2BDEA8AB5D5D87E43EF779BB228B8557 /* Arrow@2x.png */,
-				2204E170E3B1038BBB7DD756EE1DA56F /* Arrow@3x.png */,
-				A480A004A0AFD6F64524E179740F7A2A /* authorize_denied.png */,
-				0070C3D4B18039B6FB637E13800B8DF6 /* authorize_denied@2x.png */,
-				0CAA68C117E55F87C07C366C51C75593 /* authorize_denied@3x.png */,
-				878A3F52F918AF4FE45043E853F49E36 /* bg.png */,
-				03B61E35A09BA818C45F6D8CA4FC8615 /* Blur.png */,
-				43CDE53F43970E6AFA9C0A76A4ABC49C /* Blur@2x.png */,
-				A52F167C61985F7C376D243BEFB707F5 /* Blur@3x.png */,
-				9E287FA3F2AEBB0657217F203DDC5479 /* buttonRoundedDelete.png */,
-				34E700747914C4D89F7D32E845753711 /* buttonRoundedDelete@2x.png */,
-				7F74CBE6CA844FDCAB184BB4432E82A8 /* buttonRoundedDeleteHighlighted.png */,
-				15589695389259E1BD5E90E2E0232C5A /* buttonRoundedDeleteHighlighted@2x.png */,
-				719BED56242DC41036818C3DCA7C13D1 /* buttonRoundedRegular.png */,
-				60677E00FAC22367B647C4C8838F465F /* buttonRoundedRegular@2x.png */,
-				5901197B3987E9A197BAE12CF25B5FDC /* buttonRoundedRegularHighlighted.png */,
-				311A51484A8E73A2A738ADF746201B00 /* buttonRoundedRegularHighlighted@2x.png */,
-				F4DAD751EC22971C9935C6B2210B7F34 /* Cancel.png */,
-				A5FAA282848FD9F0E2BCA6C164E997ED /* Cancel@2x.png */,
-				8698EFA25700D8B57002BD6D28BAC369 /* Cancel@3x.png */,
-				86A58524768054BEF7BFB02D59D7B802 /* de.lproj */,
-				12658C43F8B1DE6B4F94FFA0FE135DC3 /* en.lproj */,
-				2A1EBFAB42D2AD9BFC857D874A6ADB95 /* es.lproj */,
-				F516A17671CF888699A83774CC039642 /* fa.lproj */,
-				490AF340E53802101389D1852B940509 /* feedbackActivity.png */,
-				3969FAC5CBAF15736622F149AA681AB6 /* feedbackActivity@2x.png */,
-				2ECD15EC45FD311CD58450356C335065 /* feedbackActivity@2x~ipad.png */,
-				D7C1661242FECE94C28A115B200D37D2 /* feedbackActivity@3x.png */,
-				6D22D18CD0D639E9EA75649C914F424F /* feedbackActivity~ipad.png */,
-				CA5553BA12D16A1D27ED5AB8CA39CB95 /* FeedbackPlaceholder.png */,
-				C31A661D04B1E8E30935BBA2A67C3D39 /* fr.lproj */,
-				95F24DCBDB58E37B4471F4539B910AEC /* hr.lproj */,
-				61B837F8917E2C7DA4C53901A4979DE3 /* hu.lproj */,
-				F098E2ADF091F7B91A996ECD1C36C836 /* iconCamera.png */,
-				D0173610778456A067CE461B371595A9 /* iconCamera@2x.png */,
-				60E3617B80C95BF5669C9569E031D24E /* IconGradient.png */,
-				40C68FAB6042683AA504A5AC18A0EFC5 /* IconGradient@2x.png */,
-				7F5600972B8D28F2B2F23B7C97F8CF4E /* it.lproj */,
-				12AD05EFA23F5A16A1231E3723F829CC /* ja.lproj */,
-				B1C3828DA1460D03BB0A86B6B486E4B8 /* nb.lproj */,
-				537116497ACE881241CD3C7E58C4B470 /* nl.lproj */,
-				11CE55204592B0E2CDD6B162EE7543F3 /* Ok.png */,
-				B4B9BB39571564147C03AF05D56E0A8B /* Ok@2x.png */,
-				4F120EB752CB0DB7FA9F7E3FDB916C08 /* Ok@3x.png */,
-				3F30A75B329A08F926EA206A65925F9C /* pt.lproj */,
-				F9F618A7FC68FEC17E31BC11B817D564 /* pt-PT.lproj */,
-				A09D6184BC0C5FF49FABCAA002074082 /* Rectangle.png */,
-				334066E242FD10E58AAB1FA0A31AE056 /* Rectangle@2x.png */,
-				689144D3A960938626D8DDEB8C80C7E1 /* Rectangle@3x.png */,
-				4E22A290B3038B1BC60F7A4C208ED50A /* ru.lproj */,
-				34E8F055502FBB7495AD415CDD7CFCC3 /* tr.lproj */,
-				830D2A01598EA0062EC99CCA48B1BC33 /* zh-Hans.lproj */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 		85DDFAFFCF4DD724369A4CB802F3F04F /* Pods-Train_Your_Eyes_iOSUITests */ = {
@@ -387,50 +193,12 @@
 			path = "Target Support Files/Pods-Train_Your_Eyes_iOSUITests";
 			sourceTree = "<group>";
 		};
-		866178F27C8EE6A64CABC0E98F35896E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				91154E6314821D8D63BBE5A9D439B111 /* HockeySDKResources.bundle */,
-				B92812DA09B4DEE8376B9D0012D3AE91 /* Pods_Train_Your_Eyes_iOS.framework */,
-				BF8A03B4D7A1636634D141ED8CBACF27 /* Pods_Train_Your_Eyes_iOSTests.framework */,
-				F7E32F32A32E44C2122AA244B1C4B25B /* Pods_Train_Your_Eyes_iOSUITests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		B5F6774BCBF24BBC1F1EABBC731E7427 /* HockeySDK */ = {
-			isa = PBXGroup;
-			children = (
-				683302794879E5299698DBB9C6978E88 /* DefaultLib */,
-				FA514FCADF3C6B78FF02E4D8CCDD570C /* Support Files */,
-			);
-			name = HockeySDK;
-			path = HockeySDK;
-			sourceTree = "<group>";
-		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				44D5347904CF754D6785B84253F2574A /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		EC4CB44E075E7F0F33D6C84131440F2A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				B5F6774BCBF24BBC1F1EABBC731E7427 /* HockeySDK */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		FA514FCADF3C6B78FF02E4D8CCDD570C /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				237ABABDC84C54B7BB1CFA07DBE47C5A /* ResourceBundle-HockeySDKResources-Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/HockeySDK";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -452,34 +220,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DBDFB464CB6960E2C80187C35151A944 /* Headers */ = {
+		2E669199EC2CB1820FE685AD9CDA3327 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2F8D34BECA3DD0EE318A3558C049E13 /* Pods-Train_Your_Eyes_iOS-umbrella.h in Headers */,
+				BD7BC12B8C801F03377103A36FE6B371 /* Pods-Train_Your_Eyes_iOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		5E2A35072070D1AF0516B58E6126F615 /* Pods-Train_Your_Eyes_iOS */ = {
+		6746C14C566A3D5ACD0AA1191F221FE0 /* Pods-Train_Your_Eyes_iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D4B39CB428C165081CD6DE9453585BE4 /* Build configuration list for PBXNativeTarget "Pods-Train_Your_Eyes_iOS" */;
+			buildConfigurationList = B1A59111288BA06F23FC478E0AC1EE0C /* Build configuration list for PBXNativeTarget "Pods-Train_Your_Eyes_iOS" */;
 			buildPhases = (
-				DBDFB464CB6960E2C80187C35151A944 /* Headers */,
-				3FD27F31492A28B7D2D33A1EFCA07D01 /* Sources */,
-				70DEC5BB5A1916502A6DE02FD70E1F55 /* Frameworks */,
-				A73DC17DC6640BAC88143E1C87E8C33D /* Resources */,
+				2E669199EC2CB1820FE685AD9CDA3327 /* Headers */,
+				A52E47C08F4801B732ED5C136784E2D3 /* Sources */,
+				1BC0CB68F6513BD4F158B6B697F22B78 /* Frameworks */,
+				DAFF048C07AA7400A47AD51547F7970D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				168DB9B9C602429285A945632DD11732 /* PBXTargetDependency */,
 			);
 			name = "Pods-Train_Your_Eyes_iOS";
 			productName = "Pods-Train_Your_Eyes_iOS";
-			productReference = B92812DA09B4DEE8376B9D0012D3AE91 /* Pods_Train_Your_Eyes_iOS.framework */;
+			productReference = 2B3A673E68CE553D8433E2ED31BE22AD /* Pods_Train_Your_Eyes_iOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		92D71BB394C8C6950160B766C4F0CCEA /* Pods-Train_Your_Eyes_iOSUITests */ = {
@@ -498,25 +265,8 @@
 			);
 			name = "Pods-Train_Your_Eyes_iOSUITests";
 			productName = "Pods-Train_Your_Eyes_iOSUITests";
-			productReference = F7E32F32A32E44C2122AA244B1C4B25B /* Pods_Train_Your_Eyes_iOSUITests.framework */;
+			productReference = 124DD26154DBC64CF78EC02853180048 /* Pods_Train_Your_Eyes_iOSUITests.framework */;
 			productType = "com.apple.product-type.framework";
-		};
-		C587F1B2FA2CB38A29F84936DEFD569D /* HockeySDK-HockeySDKResources */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0FC2FABFCFEBF498AF80B6AE02C030A5 /* Build configuration list for PBXNativeTarget "HockeySDK-HockeySDKResources" */;
-			buildPhases = (
-				0FF9CBA4DD3425B7E8E790CB76D18160 /* Sources */,
-				D83F41C35122B9469EFE0B26DE89F3E2 /* Frameworks */,
-				EDD671D0392060F0FE733EF56A6C89BA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "HockeySDK-HockeySDKResources";
-			productName = "HockeySDK-HockeySDKResources";
-			productReference = 91154E6314821D8D63BBE5A9D439B111 /* HockeySDKResources.bundle */;
-			productType = "com.apple.product-type.bundle";
 		};
 		F838C3427159331502D3651367C50E00 /* Pods-Train_Your_Eyes_iOSTests */ = {
 			isa = PBXNativeTarget;
@@ -534,7 +284,7 @@
 			);
 			name = "Pods-Train_Your_Eyes_iOSTests";
 			productName = "Pods-Train_Your_Eyes_iOSTests";
-			productReference = BF8A03B4D7A1636634D141ED8CBACF27 /* Pods_Train_Your_Eyes_iOSTests.framework */;
+			productReference = 5E8D3A2C35C10E067DC02404183986B7 /* Pods_Train_Your_Eyes_iOSTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -554,12 +304,11 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 866178F27C8EE6A64CABC0E98F35896E /* Products */;
+			productRefGroup = 3CACCC035312B463F59F596D1A3A6E03 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C587F1B2FA2CB38A29F84936DEFD569D /* HockeySDK-HockeySDKResources */,
-				5E2A35072070D1AF0516B58E6126F615 /* Pods-Train_Your_Eyes_iOS */,
+				6746C14C566A3D5ACD0AA1191F221FE0 /* Pods-Train_Your_Eyes_iOS */,
 				F838C3427159331502D3651367C50E00 /* Pods-Train_Your_Eyes_iOSTests */,
 				92D71BB394C8C6950160B766C4F0CCEA /* Pods-Train_Your_Eyes_iOSUITests */,
 			);
@@ -581,97 +330,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A73DC17DC6640BAC88143E1C87E8C33D /* Resources */ = {
+		DAFF048C07AA7400A47AD51547F7970D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EDD671D0392060F0FE733EF56A6C89BA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				970466C82DB88ECDDD27BF3E9DF4FC46 /* AppIconPlaceHolder.png in Resources */,
-				1741C39F86DB6FEA459F2B549CD326FB /* Arrow.png in Resources */,
-				4BD0CD3F98A9DECD717A405B6F5B7D85 /* Arrow@2x.png in Resources */,
-				E244908082C989A96CA733AD2B3C78AB /* Arrow@3x.png in Resources */,
-				EEBE916DB2F225C07EF64E2D05060418 /* authorize_denied.png in Resources */,
-				D07FABF52BC4DA8B8D3C35DCAD6BC2BD /* authorize_denied@2x.png in Resources */,
-				945181D2B7E30D3C0B07EDEC26E1FC2B /* authorize_denied@3x.png in Resources */,
-				DDC7B4901BAFE62B6B02777D1FA029F4 /* bg.png in Resources */,
-				BA2233A98BC53B7D3A80D66A15750525 /* Blur.png in Resources */,
-				34F1B4DCE098F105AAE2C9CA9A58EF85 /* Blur@2x.png in Resources */,
-				94673DF28CFD10AF179F7D04CDA8BAC5 /* Blur@3x.png in Resources */,
-				94B7C8911B2A9A08A71606D9581A1148 /* buttonRoundedDelete.png in Resources */,
-				3B13A83F0B416416FE3AE60DD68D00B4 /* buttonRoundedDelete@2x.png in Resources */,
-				1B9228F487DF7B494E7E8E93DF2D2371 /* buttonRoundedDeleteHighlighted.png in Resources */,
-				10E71ECB9306E5534B085AEA0BCD8A52 /* buttonRoundedDeleteHighlighted@2x.png in Resources */,
-				A416F348274132328F2F7889EE0070B0 /* buttonRoundedRegular.png in Resources */,
-				0EB4EA6580DAE04E7C6E70ECF6434B32 /* buttonRoundedRegular@2x.png in Resources */,
-				05B2A27272B2CE67127CD9DD9E729606 /* buttonRoundedRegularHighlighted.png in Resources */,
-				95B86A37516E4159141D192C653EC815 /* buttonRoundedRegularHighlighted@2x.png in Resources */,
-				C55B22B5563005DBE84409659356E8F3 /* Cancel.png in Resources */,
-				7D498B858EFD7F9E012A78B81781175B /* Cancel@2x.png in Resources */,
-				3E08E40938C162E223543E74CC97374E /* Cancel@3x.png in Resources */,
-				4F01E11E5BC96B92C255589CF5BBCC49 /* de.lproj in Resources */,
-				682F3F35A8D7954EAD87213CF6D92CA6 /* en.lproj in Resources */,
-				A9DDA23615CC07AA99D48471BF75C2C1 /* es.lproj in Resources */,
-				B8D849B69A2177B7C31381E54D1A0712 /* fa.lproj in Resources */,
-				FC3045CA8195C0BF3460910978BEE9B2 /* feedbackActivity.png in Resources */,
-				AD12DCF1C2174A7E2FA68AF2D7D59DAF /* feedbackActivity@2x.png in Resources */,
-				40902EEE245159F48FE2048E0DAE9168 /* feedbackActivity@2x~ipad.png in Resources */,
-				D9DEFA783A3190B4261843DCF2D07E6E /* feedbackActivity@3x.png in Resources */,
-				59CA5F7719005184AB71884C81DFA971 /* feedbackActivity~ipad.png in Resources */,
-				CF06D2A6538A5E191A84AAD84742D4B2 /* FeedbackPlaceholder.png in Resources */,
-				6EC8E3228BB60E487E156467919BA83A /* fr.lproj in Resources */,
-				10102D2E1E4FCF01E4839F71170EF4FA /* hr.lproj in Resources */,
-				0BE0EB2E46F8813032EC45640B8B595B /* hu.lproj in Resources */,
-				7C4D1F326A2B12AE370997778531801A /* iconCamera.png in Resources */,
-				BF9BA87EFEB1661385681C47E3F5AF1F /* iconCamera@2x.png in Resources */,
-				3D99AEFD65C4B18FF4D751CC43DEAF0D /* IconGradient.png in Resources */,
-				CCFF4CE602C8186E2465ADE936E75F08 /* IconGradient@2x.png in Resources */,
-				4EC2B357CD04FCBA1A75CC7A477153CC /* it.lproj in Resources */,
-				9369C7444953229DAAFC0D616CCAC0FF /* ja.lproj in Resources */,
-				35720EF83CF77037C3DF93CCA5394BF6 /* nb.lproj in Resources */,
-				2744196B80834C8C64B2B22220285201 /* nl.lproj in Resources */,
-				CA8BF5345E764D249B03B1A6778AED0F /* Ok.png in Resources */,
-				7D99EDF1A4767CCDB9B5E29DA6D6B8D6 /* Ok@2x.png in Resources */,
-				ECAE78B15FAE7AF144F6EA0A1F03AF16 /* Ok@3x.png in Resources */,
-				4548C1011A02C777B4B263AD821A2DD3 /* pt-PT.lproj in Resources */,
-				A8D32AA73678855CF6E93D4FFEA2F7AF /* pt.lproj in Resources */,
-				7BF1BC9703683E3CDD159A6264CFB58B /* Rectangle.png in Resources */,
-				8D401BC540B6CF254C8C5E2B2E41636D /* Rectangle@2x.png in Resources */,
-				211848600C7182B0051E73DE82B20421 /* Rectangle@3x.png in Resources */,
-				7DDD41B9276BFE828CD85F7E049F9A7A /* ru.lproj in Resources */,
-				7FC1A2AC6EE5A2A9FED69B5D8C39ECA9 /* tr.lproj in Resources */,
-				8F7E5E1D1B7D7B814864BFCAEBCAF00F /* zh-Hans.lproj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0FF9CBA4DD3425B7E8E790CB76D18160 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		38A44B037679923F1C80AB9DA7796EFC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				52F05657D48EFD3434E8AF71FFBC4272 /* Pods-Train_Your_Eyes_iOSUITests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3FD27F31492A28B7D2D33A1EFCA07D01 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D4DCCD6AF3C265A5727931AAE35E0A67 /* Pods-Train_Your_Eyes_iOS-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -683,48 +356,97 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A52E47C08F4801B732ED5C136784E2D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73E3EE8774FA1A537E410EC8AC3D7B1B /* Pods-Train_Your_Eyes_iOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		168DB9B9C602429285A945632DD11732 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "HockeySDK-HockeySDKResources";
-			target = C587F1B2FA2CB38A29F84936DEFD569D /* HockeySDK-HockeySDKResources */;
-			targetProxy = EC78680C15E72564DCF06A2C583AE40D /* PBXContainerItemProxy */;
-		};
 		4FF13DB48D5B811918DCA9619BCEDD16 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-Train_Your_Eyes_iOS";
-			target = 5E2A35072070D1AF0516B58E6126F615 /* Pods-Train_Your_Eyes_iOS */;
+			target = 6746C14C566A3D5ACD0AA1191F221FE0 /* Pods-Train_Your_Eyes_iOS */;
 			targetProxy = E2AF8DF8215479710D6021DDA0B1D792 /* PBXContainerItemProxy */;
 		};
 		CC044A48F5944ECFDF1D00CBAFDE0F38 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-Train_Your_Eyes_iOS";
-			target = 5E2A35072070D1AF0516B58E6126F615 /* Pods-Train_Your_Eyes_iOS */;
+			target = 6746C14C566A3D5ACD0AA1191F221FE0 /* Pods-Train_Your_Eyes_iOS */;
 			targetProxy = FF91EF25F9E9A8E2D9C17BEF2009A878 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		06330EBA42AE84CA411417785FE0510A /* Debug */ = {
+		3E7A231C7D36EB502FA2EEBBF84B029A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/HockeySDK";
-				INFOPLIST_FILE = "Target Support Files/HockeySDK/ResourceBundle-HockeySDKResources-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				PRODUCT_NAME = HockeySDKResources;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
 			};
-			name = Debug;
+			name = Release;
 		};
-		225DFCDAD0C57E085074A4B90A51F40E /* Debug */ = {
+		478F3E5201D6DEF6B268590B576BE5D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 685472A9D74C04A2FCD909454E012F4A /* Pods-Train_Your_Eyes_iOSTests.debug.xcconfig */;
+			baseConfigurationReference = 38F2FA974AE38B064A92D5614162E418 /* Pods-Train_Your_Eyes_iOSUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -737,16 +459,16 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Train_Your_Eyes_iOSTests/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-Train_Your_Eyes_iOSUITests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Train_Your_Eyes_iOSTests/Pods-Train_Your_Eyes_iOSTests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-Train_Your_Eyes_iOSUITests/Pods-Train_Your_Eyes_iOSUITests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -760,9 +482,9 @@
 			};
 			name = Debug;
 		};
-		460C7B66005B72B9DD4B6A2AD82A43BD /* Release */ = {
+		6BF4441BE9870F52D68F0810427B1147 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AAA2E99322CB4082C9329846DEB9F937 /* Pods-Train_Your_Eyes_iOSTests.release.xcconfig */;
+			baseConfigurationReference = CB2E19468C10FD070F3A4D6E2C363B67 /* Pods-Train_Your_Eyes_iOSUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -775,16 +497,16 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Train_Your_Eyes_iOSTests/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-Train_Your_Eyes_iOSUITests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Train_Your_Eyes_iOSTests/Pods-Train_Your_Eyes_iOSTests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-Train_Your_Eyes_iOSUITests/Pods-Train_Your_Eyes_iOSUITests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -799,7 +521,7 @@
 			};
 			name = Release;
 		};
-		98E98810EEEB96C99CB95CB91F4ADE0A /* Debug */ = {
+		8716550BC11F7BEA523AD4BDBA876D5D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -852,7 +574,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -865,200 +587,7 @@
 			};
 			name = Debug;
 		};
-		9B6DAE1A51C1897824CCACF2AA89175B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38F2FA974AE38B064A92D5614162E418 /* Pods-Train_Your_Eyes_iOSUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Train_Your_Eyes_iOSUITests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Train_Your_Eyes_iOSUITests/Pods-Train_Your_Eyes_iOSUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		A808C15755834A8C01ABBCE31F05C793 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CB2E19468C10FD070F3A4D6E2C363B67 /* Pods-Train_Your_Eyes_iOSUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Train_Your_Eyes_iOSUITests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Train_Your_Eyes_iOSUITests/Pods-Train_Your_Eyes_iOSUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		B8E8013C123C9CDEAB30BC8914923E9B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A36A40188CC0D844EDDDB11933A06CE6 /* Pods-Train_Your_Eyes_iOS.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Train_Your_Eyes_iOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Train_Your_Eyes_iOS/Pods-Train_Your_Eyes_iOS.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		B97A7F6ACE1216BB5A2307CA83FC93C5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 4.2;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		D79D73A4782017E3A9F7B7968210303B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/HockeySDK";
-				INFOPLIST_FILE = "Target Support Files/HockeySDK/ResourceBundle-HockeySDKResources-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				PRODUCT_NAME = HockeySDKResources;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		EEE81C33DBF81333342ED994CB70FEB1 /* Debug */ = {
+		A6A83B1DCC25C46790EDABB7FC2CBA43 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 70D148FA653050A202D69B2B26AD64DD /* Pods-Train_Your_Eyes_iOS.debug.xcconfig */;
 			buildSettings = {
@@ -1075,7 +604,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-Train_Your_Eyes_iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1096,23 +625,130 @@
 			};
 			name = Debug;
 		};
+		E6E32F738ADDFF0ABC002C3B8A1D410C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A36A40188CC0D844EDDDB11933A06CE6 /* Pods-Train_Your_Eyes_iOS.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Train_Your_Eyes_iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Train_Your_Eyes_iOS/Pods-Train_Your_Eyes_iOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EC15B95359684F5DA1FE8461A38745D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 685472A9D74C04A2FCD909454E012F4A /* Pods-Train_Your_Eyes_iOSTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Train_Your_Eyes_iOSTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Train_Your_Eyes_iOSTests/Pods-Train_Your_Eyes_iOSTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FBCAA813CCB22DBA79F73DA3CEB937FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAA2E99322CB4082C9329846DEB9F937 /* Pods-Train_Your_Eyes_iOSTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Train_Your_Eyes_iOSTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Train_Your_Eyes_iOSTests/Pods-Train_Your_Eyes_iOSTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0FC2FABFCFEBF498AF80B6AE02C030A5 /* Build configuration list for PBXNativeTarget "HockeySDK-HockeySDKResources" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				06330EBA42AE84CA411417785FE0510A /* Debug */,
-				D79D73A4782017E3A9F7B7968210303B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				98E98810EEEB96C99CB95CB91F4ADE0A /* Debug */,
-				B97A7F6ACE1216BB5A2307CA83FC93C5 /* Release */,
+				8716550BC11F7BEA523AD4BDBA876D5D /* Debug */,
+				3E7A231C7D36EB502FA2EEBBF84B029A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1120,8 +756,17 @@
 		A12848194F0B5991E9070FCF3B37B41D /* Build configuration list for PBXNativeTarget "Pods-Train_Your_Eyes_iOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				225DFCDAD0C57E085074A4B90A51F40E /* Debug */,
-				460C7B66005B72B9DD4B6A2AD82A43BD /* Release */,
+				EC15B95359684F5DA1FE8461A38745D2 /* Debug */,
+				FBCAA813CCB22DBA79F73DA3CEB937FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1A59111288BA06F23FC478E0AC1EE0C /* Build configuration list for PBXNativeTarget "Pods-Train_Your_Eyes_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6A83B1DCC25C46790EDABB7FC2CBA43 /* Debug */,
+				E6E32F738ADDFF0ABC002C3B8A1D410C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1129,17 +774,8 @@
 		CAB3AAF1FD15E68CEF9A1A98D0F30AFB /* Build configuration list for PBXNativeTarget "Pods-Train_Your_Eyes_iOSUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9B6DAE1A51C1897824CCACF2AA89175B /* Debug */,
-				A808C15755834A8C01ABBCE31F05C793 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D4B39CB428C165081CD6DE9453585BE4 /* Build configuration list for PBXNativeTarget "Pods-Train_Your_Eyes_iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EEE81C33DBF81333342ED994CB70FEB1 /* Debug */,
-				B8E8013C123C9CDEAB30BC8914923E9B /* Release */,
+				478F3E5201D6DEF6B268590B576BE5D5 /* Debug */,
+				6BF4441BE9870F52D68F0810427B1147 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -6,7 +6,6 @@ target 'Train_Your_Eyes_iOS' do
   use_frameworks!
 
   # Pods for Train_Your_Eyes_iOS
-  pod "HockeySDK"
 
   target 'Train_Your_Eyes_iOSTests' do
     inherit! :search_paths

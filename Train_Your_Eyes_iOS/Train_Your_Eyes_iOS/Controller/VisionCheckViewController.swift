@@ -30,6 +30,10 @@ class VisionCheckViewController: UIViewController {
             [NSAttributedString.Key.foregroundColor: UIColor.red,
              NSAttributedString.Key.font: UIFont(name: "Verdana", size: 22)!]
         
+        let backButton = UIBarButtonItem()
+        backButton.title = "Back"
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+
         AlertFunctions.showAlert(title: "Color Blindness Test", message: Instructions)
 
         updateNewColorTest()
