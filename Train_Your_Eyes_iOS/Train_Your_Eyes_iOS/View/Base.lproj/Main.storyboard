@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--2020 Eyes-->
+        <!--Eye Trainer 101-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="FirstTimeUserViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Train_Your_Eyes_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -50,7 +50,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="2020 Eyes" id="fAX-Pp-qys"/>
+                    <navigationItem key="navigationItem" title="Eye Trainer 101" id="fAX-Pp-qys"/>
                     <connections>
                         <outlet property="acceptButton" destination="HYe-qk-9rW" id="IoU-AA-NLZ"/>
                         <outlet property="agreementTerms" destination="eYl-hd-W7Z" id="x62-ae-dWh"/>
@@ -60,7 +60,7 @@
             </objects>
             <point key="canvasLocation" x="958" y="-492"/>
         </scene>
-        <!--2020 Eyes-->
+        <!--Eye Trainer 101-->
         <scene sceneID="FM7-zU-gF9">
             <objects>
                 <tableViewController storyboardIdentifier="AcceptedTermsViewController" id="jOm-D3-lMd" customClass="MainScreenViewController" customModule="Train_Your_Eyes_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -111,7 +111,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="2020 Eyes" id="058-ZN-7bj"/>
+                    <navigationItem key="navigationItem" title="Eye Trainer 101" id="058-ZN-7bj"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="yMY-QB-aSf" kind="show" identifier="gotoMovingBall" id="aTF-9B-Db5"/>
@@ -820,10 +820,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="T4K-bl-6Fu">
-                                <rect key="frame" x="20" y="505.5" width="324" height="65"/>
+                                <rect key="frame" x="20" y="511" width="335" height="65"/>
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfJ-fu-3MU" customClass="RoundButton" customModule="Train_Your_Eyes_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="70" height="65"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="72.5" height="65"/>
                                         <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="65" id="R6G-8x-cOe"/>
@@ -845,7 +845,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ngh-WX-MSH" customClass="RoundButton" customModule="Train_Your_Eyes_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="85" y="0.0" width="69.5" height="65"/>
+                                        <rect key="frame" x="87.5" y="0.0" width="72.5" height="65"/>
                                         <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Ngh-WX-MSH" secondAttribute="height" multiplier="1:1" id="Zow-Ga-vcO"/>
@@ -867,7 +867,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJU-bC-iyf" customClass="RoundButton" customModule="Train_Your_Eyes_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="169.5" y="0.0" width="70" height="65"/>
+                                        <rect key="frame" x="175" y="0.0" width="72.5" height="65"/>
                                         <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="bJU-bC-iyf" secondAttribute="height" multiplier="1:1" id="7ua-x9-skP"/>
@@ -889,7 +889,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gAw-6Z-vZr" customClass="RoundButton" customModule="Train_Your_Eyes_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="254.5" y="0.0" width="69.5" height="65"/>
+                                        <rect key="frame" x="262.5" y="0.0" width="72.5" height="65"/>
                                         <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="65" id="IeE-yi-1cN"/>
@@ -929,7 +929,7 @@
                                 </constraints>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Select one of the Options?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="b64-wn-AAj">
-                                <rect key="frame" x="0.0" y="114.5" width="364" height="47"/>
+                                <rect key="frame" x="0.0" y="109" width="364" height="47"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="Kam-TO-g8G"/>
@@ -939,10 +939,10 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qdb-Bu-aEO">
-                                <rect key="frame" x="40" y="191.5" width="284" height="284"/>
+                                <rect key="frame" x="40" y="186" width="295" height="295"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cP5-UP-hyu">
-                                        <rect key="frame" x="0.0" y="0.0" width="284" height="284"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="295"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
