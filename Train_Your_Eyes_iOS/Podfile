@@ -6,7 +6,8 @@ target 'Train_Your_Eyes_iOS' do
   use_frameworks!
 
   # Pods for Train_Your_Eyes_iOS
-
+  pod
+  
   target 'Train_Your_Eyes_iOSTests' do
     inherit! :search_paths
     # Pods for testing
