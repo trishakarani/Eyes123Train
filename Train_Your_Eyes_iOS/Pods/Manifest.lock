@@ -1,3 +1,16 @@
-PODFILE CHECKSUM: 47f2b23b9ce5f82c6035fc6b5f4381164a63bba3
+PODS:
+  - NewPopMenu (2.1.1)
+
+DEPENDENCIES:
+  - NewPopMenu (~> 2.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - NewPopMenu
+
+SPEC CHECKSUMS:
+  NewPopMenu: 60d67846a401964dcaa51bffb792f04f6fe2fc76
+
+PODFILE CHECKSUM: 1498a05b75d574933e465125d4deda1c0a74453e
 
 COCOAPODS: 1.5.3

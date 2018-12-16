@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PopMenu
 
 class MovingBallViewController: UIViewController {
 
@@ -18,7 +19,8 @@ class MovingBallViewController: UIViewController {
     var leftButtonArray: [UIButton] = [UIButton]()
     var rightButtonArray: [UIButton] = [UIButton]()
     var angularViewArray: [UIView] = [UIView]()
-    var numButtons: Int = 0
+    var leftRightBtnCount: Int = 0
+    var topBottomBtnCount: Int = 0
     var timer = Timer()
     var timerAnimationValue: Int = 0
     var timerActionCtr : Int = 0
@@ -29,6 +31,14 @@ class MovingBallViewController: UIViewController {
     var animationDurationPortrait: Double = 2
     var animationDurationLandscape: Double = 4
 
+    enum OptoDirections {
+        case none, right, left, top, bottom
+    }
+    var menuOptoDirectionList = [OptoDirections]()
+    var optoPrevDirection = OptoDirections.none
+    var optoCurrDirection = OptoDirections.right
+    var optoMenuActions = [PopMenuDefaultAction]()
+    
     var Instructions: String = "\r\n\r\nFocus your eye on the moving ball. \r\nDoing this exercise for 5 minutes in a day helps improve focus.\r\n\r\n"
 
     override func viewDidLoad() {
@@ -82,17 +92,22 @@ class MovingBallViewController: UIViewController {
      }
      */
     
+    func presentMenu() {
+        let menuViewController = PopMenuViewController(actions: optoMenuActions)
+        menuViewController.delegate = self
+        present(menuViewController, animated: true, completion: nil)
+    }
+    
     @IBAction func colorButtonPressed(_ sender: UIBarButtonItem) {
-        optoKColorStatus = !optoKColorStatus
-        setupColorButton()
+        presentMenu()
     }
     
     func setupView() {
-        numButtons = Int((self.view.frame.height+100) / 50)
-        numButtons = 30
-        setupLeftRightButtons(btnCount: numButtons)
-        numButtons = 45
-        setupTopBottomButtons(btnCount: numButtons)
+        leftRightBtnCount = Int((self.view.frame.height+100) / 50)
+        leftRightBtnCount = 30
+        setupLeftRightButtons(btnCount: leftRightBtnCount)
+        topBottomBtnCount = 45
+        setupTopBottomButtons(btnCount: topBottomBtnCount)
         if UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft || UIDevice.current.orientation == UIDeviceOrientation.landscapeRight {
             setupLandscapeModeView()
             isPortraitMode = false
@@ -106,7 +121,7 @@ class MovingBallViewController: UIViewController {
     }
     
     func setupPortraitModeView() {
-        for _ in 0..<numButtons {
+        for _ in 0..<topBottomBtnCount {
             let yBtmRightViewValue = Int(self.view.frame.height)
             let btmRightView = makeAngularButton(yValue: yBtmRightViewValue)
             angularViewArray.append(btmRightView)
@@ -115,7 +130,7 @@ class MovingBallViewController: UIViewController {
     }
     
     func setupLandscapeModeView() {
-        for _ in 0..<numButtons {
+        for _ in 0..<leftRightBtnCount {
             let yBtmRightViewValue = Int(self.view.frame.height)
             let btmRightView = makeLandscapeAngularButton(yValue: yBtmRightViewValue)
             angularViewArray.append(btmRightView)
@@ -136,7 +151,7 @@ class MovingBallViewController: UIViewController {
             self.view.addSubview(rightButton)
         }
     }
-    
+
     func setupTopBottomButtons(btnCount: Int) {
         for _ in 0..<btnCount {
             let yDelayValue = Int(self.view.frame.height)
@@ -217,12 +232,15 @@ class MovingBallViewController: UIViewController {
     }
     
     func setupColorButton() {
-        for btnIdx in 0..<numButtons {
+        for btnIdx in 0..<leftRightBtnCount {
+            let btnColor: UIColor = optoKColorStatus ? UIColor.red : UIColor.black
+            leftButtonArray[btnIdx].backgroundColor = btnColor
+            rightButtonArray[btnIdx].backgroundColor = btnColor
+        }
+        for btnIdx in 0..<topBottomBtnCount {
             let btnColor: UIColor = optoKColorStatus ? UIColor.red : UIColor.black
             bottomButtonArray[btnIdx].backgroundColor = btnColor
             topButtonArray[btnIdx].backgroundColor = btnColor
-            leftButtonArray[btnIdx].backgroundColor = btnColor
-            rightButtonArray[btnIdx].backgroundColor = btnColor
             angularViewArray[btnIdx].backgroundColor = btnColor
         }
         colorButton.tintColor = optoKColorStatus ? UIColor.black : UIColor.red
@@ -234,24 +252,70 @@ class MovingBallViewController: UIViewController {
         eyeExerciseMotion()
     }
     
+    func setupMenuOptions() {
+        let titleStr = optoKColorStatus ? "Black-White Color" : "Red-White Color"
+        let colorImg = optoKColorStatus ? UIImage(named: "black") : UIImage(named: "red")
+        let menuColor = optoKColorStatus ? UIColor.white : UIColor.red
+        
+        optoMenuActions.removeAll()
+        optoMenuActions.append(PopMenuDefaultAction(title: titleStr, image: colorImg, color: menuColor))
+        
+        menuOptoDirectionList.removeAll()
+        
+        switch optoCurrDirection {
+        case .none:
+            menuOptoDirectionList.removeAll()
+        case .right:
+            optoMenuActions.append(PopMenuDefaultAction(title: "Left Movement", image: UIImage(named: "left")))
+            optoMenuActions.append(PopMenuDefaultAction(title: "Up Movement", image: UIImage(named: "top")))
+            optoMenuActions.append(PopMenuDefaultAction(title: "Down Movement", image: UIImage(named: "bottom")))
+            menuOptoDirectionList.append(.left)
+            menuOptoDirectionList.append(.top)
+            menuOptoDirectionList.append(.bottom)
+        case .left:
+            optoMenuActions.append(PopMenuDefaultAction(title: "Right Movement", image: UIImage(named: "right")))
+            optoMenuActions.append(PopMenuDefaultAction(title: "Up Movement", image: UIImage(named: "top")))
+            optoMenuActions.append(PopMenuDefaultAction(title: "Down Movement", image: UIImage(named: "bottom")))
+            menuOptoDirectionList.append(.right)
+            menuOptoDirectionList.append(.top)
+            menuOptoDirectionList.append(.bottom)
+        case .top:
+            optoMenuActions.append(PopMenuDefaultAction(title: "Left Movement", image: UIImage(named: "left")))
+            optoMenuActions.append(PopMenuDefaultAction(title: "Right Movement", image: UIImage(named: "right")))
+            optoMenuActions.append(PopMenuDefaultAction(title: "Down Movement", image: UIImage(named: "bottom")))
+            menuOptoDirectionList.append(.left)
+            menuOptoDirectionList.append(.right)
+            menuOptoDirectionList.append(.bottom)
+        case .bottom:
+            optoMenuActions.append(PopMenuDefaultAction(title: "Left Movement", image: UIImage(named: "left")))
+            optoMenuActions.append(PopMenuDefaultAction(title: "Right Movement", image: UIImage(named: "right")))
+            optoMenuActions.append(PopMenuDefaultAction(title: "Up Movement", image: UIImage(named: "top")))
+            menuOptoDirectionList.append(.left)
+            menuOptoDirectionList.append(.right)
+            menuOptoDirectionList.append(.top)
+        }
+    }
+    
     func eyeExerciseMotionManualControl() {
-        switch timerActionCtr {
-        case 0:
+        setupMenuOptions()
+        
+        switch optoCurrDirection {
+        case .none:
             stopAnimations()
-            animateButtonsBottomOneAtTime(rptCount: -1)
-        case 2:
-            stopAnimations()
-            animateButtonsTopOneAtTime(rptCount: -1)
-        case 4:
-            stopAnimations()
-            animateButtonsLeftOneAtTime(rptCount: -1)
-        case 6:
-            stopAnimations()
-            animateButtonsBottomOneAtTime(rptCount: -1)
-        default:
+        case .right:
             stopAnimations()
             animateButtonsRightOneAtTime(rptCount: -1)
+        case .left:
+            stopAnimations()
+            animateButtonsLeftOneAtTime(rptCount: -1)
+        case .top:
+            stopAnimations()
+            animateButtonsTopOneAtTime(rptCount: -1)
+        case .bottom:
+            stopAnimations()
+            animateButtonsBottomOneAtTime(rptCount: -1)
         }
+        optoPrevDirection = optoCurrDirection
     }
 
     func eyeExerciseMotion() {
@@ -314,7 +378,7 @@ class MovingBallViewController: UIViewController {
     func animateButtonsTopOneAtTime(rptCount: Int) {
         var duration: Double = 7
         timerAnimationValue = 113
-        for btnIdx in 0..<numButtons {
+        for btnIdx in 0..<topBottomBtnCount {
             let delayBtn : Double = 0.2 * Double(btnIdx)
             if UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft || UIDevice.current.orientation == UIDeviceOrientation.landscapeRight {
                 duration = 20.0
@@ -341,7 +405,7 @@ class MovingBallViewController: UIViewController {
 
     func animateButtonsBottomOneAtTime(rptCount: Int) {
         var duration: Double = animationDurationLandscape
-        for btnIdx in 0..<numButtons {
+        for btnIdx in 0..<topBottomBtnCount {
             let delayBtn : Double = 0.25 * Double(btnIdx)
             timerAnimationValue = 135
             if UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft || UIDevice.current.orientation == UIDeviceOrientation.landscapeRight {
@@ -384,7 +448,7 @@ class MovingBallViewController: UIViewController {
     
     func animateButtonsRightOneAtTime(rptCount: Int) {
         var duration: Double = animationDurationPortrait
-        for btnIdx in 0..<numButtons {
+        for btnIdx in 0..<leftRightBtnCount {
             var delayBtn : Double = 0.2 * Double(btnIdx)
             if UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft || UIDevice.current.orientation == UIDeviceOrientation.landscapeRight {
                 delayBtn = 1.0 * Double(btnIdx)
@@ -413,7 +477,7 @@ class MovingBallViewController: UIViewController {
 
     func animateButtonsLeftOneAtTime(rptCount: Int) {
         var duration: Double = 5
-        for btnIdx in 0..<numButtons {
+        for btnIdx in 0..<leftRightBtnCount {
             let delayBtn : Double = 0.25 * Double(btnIdx)
             if UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft || UIDevice.current.orientation == UIDeviceOrientation.landscapeRight {
                 duration = 30.0
@@ -455,7 +519,7 @@ class MovingBallViewController: UIViewController {
     
     func animateButtons45DegOneAtTime(start: CGPoint, end: CGPoint) {
         let duration: Double = animationDurationLandscape
-        for btnIdx in 0..<numButtons {
+        for btnIdx in 0..<topBottomBtnCount {
             let path = UIBezierPath()
             path.move(to: start)
             path.addLine(to: end)
@@ -587,6 +651,28 @@ class MovingBallViewController: UIViewController {
     }
 
     func stopAnimations() {
+        switch optoPrevDirection {
+        case .none:
+            for btnIdx in 0..<leftRightBtnCount {
+                leftButtonArray[btnIdx].layer.removeAllAnimations()
+            }
+        case .right:
+            for btnIdx in 0..<leftRightBtnCount {
+                leftButtonArray[btnIdx].layer.removeAllAnimations()
+            }
+        case .left:
+            for btnIdx in 0..<leftRightBtnCount {
+                rightButtonArray[btnIdx].layer.removeAllAnimations()
+            }
+        case .top:
+            for btnIdx in 0..<topBottomBtnCount {
+                bottomButtonArray[btnIdx].layer.removeAllAnimations()
+            }
+        case .bottom:
+            for btnIdx in 0..<topBottomBtnCount {
+                topButtonArray[btnIdx].layer.removeAllAnimations()
+            }
+        }
         self.view.layer.removeAllAnimations()
     }
     
@@ -632,6 +718,21 @@ extension MovingBallViewController: CAAnimationDelegate {
             squareViewAnimationId = 0
         default:
             squareViewAnimationId = 0
+        }
+    }
+}
+
+extension MovingBallViewController: PopMenuViewControllerDelegate {
+    
+    func popMenuDidSelectItem(_ popMenuViewController: PopMenuViewController, at index: Int) {
+        if index == 0 {
+            optoKColorStatus = !optoKColorStatus
+            setupColorButton()
+            setupMenuOptions()
+        }
+        else if index > 0 {
+            optoCurrDirection = menuOptoDirectionList[index-1]
+            eyeExerciseMotionManualControl()
         }
     }
 }

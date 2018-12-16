@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, UITextViewDelegate {
-    let agreementString = "This is a research app. It is not meant for diagnosis or treatment of any diseases. \r\n\r\nThere have been much medical research carried out to improve the vision of humans. We are using the research work to help the people interested in sight and vision. The data collected during the research work is going to be used for medical analysis. \r\n\r\nWe will maintain the confidentiality of our user results, and no personal data will be shared.\r\n\r\nPlease Click on \"I Accept\" for agreeing to these terms and conditions.\r\n"
+    let agreementString = "This is a research app. It is not meant for diagnosis or treatment of any diseases. \r\n\r\nThere have been much medical research carried out to improve the vision of humans. We are using the research work to train eye-muscle and help users in Presybyopia and vision improvement. The data collected during research work is going to be used for medical analysis. \r\n\r\nWe maintain the confidentiality of our user results, and no personal data will be shared.\r\n\r\nPlease Click on \"I Accept\" for agreeing to these terms and conditions.\r\n\n© Research on Eyes"
     
     @IBOutlet weak var agreementTerms: UITextView!
     
