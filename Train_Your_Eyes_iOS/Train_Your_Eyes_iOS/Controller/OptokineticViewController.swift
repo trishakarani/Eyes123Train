@@ -124,7 +124,6 @@ class OptokineticViewController: UIViewController {
     }
     
     func setupPortraitModeView() {
-        print("frame=\(self.view.frame) , width=\(self.view.frame.width), height=\(self.view.frame.height)")
         for _ in 0..<topBottomBtnCount {
             let yBtmRightViewValue = Int(self.view.frame.height)
             let btmRightView = makeAngularButton(yValue: yBtmRightViewValue)

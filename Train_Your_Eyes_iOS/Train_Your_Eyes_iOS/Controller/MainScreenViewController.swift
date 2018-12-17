@@ -10,8 +10,9 @@ import UIKit
 
 class MainScreenViewController: UITableViewController {
 
-    let mainPageArray = ["Vision Check", "OptoKinetic", "Lazy Eye Exercise", "Hit Moving Object"]
+    let mainPageArray = ["Vision Check", "OptoKinetic", "Moving Eye Exercise", "Hit Moving Object"]
     let imageArray = ["visionCheck", "optoKinetic", "lazyEye", "hitMark"]
+    var tablefontSize: Int = 22
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +21,24 @@ class MainScreenViewController: UITableViewController {
             [NSAttributedString.Key.foregroundColor: UIColor.red,
              NSAttributedString.Key.font: UIFont(name: "Verdana", size: 22)!]
 
-        self.tableView?.rowHeight = 130.0
+        print("frame=\(self.view.frame) , width=\(self.view.frame.width), height=\(self.view.frame.height)")
+        if self.view.frame.height > 720 {
+            self.tableView?.rowHeight = 140.0
+            if self.view.frame.width > 400 {
+                tablefontSize = 22
+            }
+            else {
+                tablefontSize = 20
+            }
+        }
+        else if self.view.frame.height > 660 {
+            self.tableView?.rowHeight = 130.0
+            tablefontSize = 22
+        }
+        else if self.view.frame.height > 560 {
+            self.tableView?.rowHeight = 110.0
+            tablefontSize = 18
+        }
         
         self.navigationItem.setHidesBackButton(true, animated:true)
 
@@ -48,7 +66,7 @@ class MainScreenViewController: UITableViewController {
         
         cell.accessoryType = .none
         cell.menuImage?.image = UIImage(named: imageArray[indexPath.row])
-        cell.menuName?.font = UIFont(name:"Verdana", size:22)
+        cell.menuName?.font = UIFont(name:"Verdana", size:CGFloat(tablefontSize))
         cell.menuName?.text = mainPageArray[indexPath.row]
         
         return cell

@@ -26,6 +26,8 @@ class ContrastTestViewController: UIViewController {
     
     var contrastColorButtons: [UIButton] = []
     
+    var acuityTestResult: String = ""
+    var vision2020Result: String = ""
     var contrastSuccessCount: Int = 0
     var contrastTestCount: Int = 0
     var contrastBtnTagId: Int = 0
@@ -80,7 +82,7 @@ class ContrastTestViewController: UIViewController {
             contrastSuccessCount += 1
         }
         if contrastTestCount > 10 {
-            moveToAcuityTest()
+            displayVisionTestResults()
         }
         setupContrastColorButtons()
     }
@@ -104,16 +106,18 @@ class ContrastTestViewController: UIViewController {
         contrastTestCount += 1
     }
 
-    func moveToAcuityTest() {
-        performSegue(withIdentifier: "acuityTest", sender: self)
+    func displayVisionTestResults() {
+        performSegue(withIdentifier: "visionResults", sender: self)
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is AcuityTestViewController {
-            let vc = segue.destination as? AcuityTestViewController
+        if segue.destination is VisionTestResultsViewController {
+            let vc = segue.destination as? VisionTestResultsViewController
+            vc?.acuityTestResult = self.acuityTestResult
+            vc?.vision2020Result = self.vision2020Result
             vc?.colorContrastResult = "\(contrastSuccessCount) of \(contrastTestCount)"
             vc?.colorBlindnessResult = self.colorBlindnessResult
-       }
+        }
     }
 }
 

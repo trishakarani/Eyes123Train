@@ -21,6 +21,9 @@ class VisionCheckViewController: UIViewController {
     @IBOutlet weak var choiceBtn3: UIButton!
     @IBOutlet weak var choiceBtn4: UIButton!
     
+    var acuityTestResult: String = ""
+    var vision2020Result: String = ""
+
     var Instructions: String = "\r\n\r\nIn this test we test how you distinguish between red, green and blue colors. \r\n\r\nKeep the device at a suggested distance of 16 inches from your eyes. You should choose the figure that you see in the picture.\r\n\r\n"
     
     override func viewDidLoad() {
@@ -115,6 +118,8 @@ class VisionCheckViewController: UIViewController {
         if segue.destination is ContrastTestViewController {
             let vc = segue.destination as? ContrastTestViewController
             vc?.colorBlindnessResult = "\(correctCount) of \(currTestIndex)"
+            vc?.acuityTestResult = self.acuityTestResult
+            vc?.vision2020Result = self.vision2020Result
         }
     }
 }

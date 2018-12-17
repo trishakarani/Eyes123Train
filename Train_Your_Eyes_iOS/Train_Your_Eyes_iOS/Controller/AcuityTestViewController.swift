@@ -59,7 +59,7 @@ class AcuityTestViewController: UIViewController {
     
     @IBAction func optionsButtonClicked(_ sender: UIButton) {
         if acuityTestCount > 10 {
-            displayVisionTestResults()
+            moveToColorBlindnessTest()
         }
         if sender.tag == (correctChoiceIdx+1) {
             acuitySuccessCount += 1
@@ -117,18 +117,16 @@ class AcuityTestViewController: UIViewController {
             optionsBtn4.setTitle(inputValues.choices[3], for: UIControl.State.normal)
         }
     }
-    
-    func displayVisionTestResults() {
-        performSegue(withIdentifier: "visionResults", sender: self)
-    }
 
+    func moveToColorBlindnessTest() {
+        performSegue(withIdentifier: "gotoBlindnessTest", sender: self)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is VisionTestResultsViewController {
-            let vc = segue.destination as? VisionTestResultsViewController
+        if segue.destination is VisionCheckViewController {
+            let vc = segue.destination as? VisionCheckViewController
             vc?.acuityTestResult = "\(acuitySuccessCount) of \(acuityTestCount)"
             vc?.vision2020Result = correctedVision
-            vc?.colorContrastResult = self.colorContrastResult
-            vc?.colorBlindnessResult = self.colorBlindnessResult
         }
     }
 }
