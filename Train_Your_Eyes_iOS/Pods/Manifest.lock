@@ -1,5 +1,5 @@
 PODS:
-  - NewPopMenu (2.1.1)
+  - NewPopMenu (2.1.2)
 
 DEPENDENCIES:
   - NewPopMenu (~> 2.0)
@@ -9,8 +9,8 @@ SPEC REPOS:
     - NewPopMenu
 
 SPEC CHECKSUMS:
-  NewPopMenu: 60d67846a401964dcaa51bffb792f04f6fe2fc76
+  NewPopMenu: c6129e08e8192f6257ceb5f9a4357e1b59c6e2e7
 
-PODFILE CHECKSUM: 1498a05b75d574933e465125d4deda1c0a74453e
+PODFILE CHECKSUM: bcc75faf1797ebcd684ff217fa8b0a663b3b571f
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.7.4
