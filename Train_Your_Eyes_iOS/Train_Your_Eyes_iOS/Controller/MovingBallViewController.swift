@@ -71,8 +71,8 @@ class MovingBallViewController: UIViewController {
         else if (movingBarSpeed > 30) {
             movingBarSpeed = 30
         }
-//        animationDurationPortrait = Double((Int(self.view.frame.width) + 100) / movingBarSpeed)
-//        animationDurationLandscape = Double((Int (self.view.frame.height) + 100) / movingBarSpeed)
+ //       animationDurationPortrait = Double((Int(self.view.frame.width) + 100) / movingBarSpeed)
+//       animationDurationLandscape = Double((Int (self.view.frame.height) + 100) / movingBarSpeed)
     }
     
     @objc func buttonAction(sender: UIButton!) {

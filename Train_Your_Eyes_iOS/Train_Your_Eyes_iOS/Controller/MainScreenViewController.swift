@@ -10,8 +10,8 @@ import UIKit
 
 class MainScreenViewController: UITableViewController {
 
-    let mainPageArray = ["Vision Check", "OptoKinetic", "Moving Eye Exercise", "Hit Moving Object"]
-    let imageArray = ["visionCheck", "optoKinetic", "lazyEye", "hitMark"]
+    let mainPageArray = ["Hit Moving Object", "Moving Eye Exercise", "OptoKinetic", "Vision Check"]
+    let imageArray = ["hitMark", "lazyEye", "optoKinetic", "visionCheck"]
     var tablefontSize: Int = 22
     
     override func viewDidLoad() {
@@ -40,7 +40,7 @@ class MainScreenViewController: UITableViewController {
             tablefontSize = 18
         }
         
-        self.navigationItem.setHidesBackButton(true, animated:true)
+        self.navigationItem.setHidesBackButton(true,  animated:true)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -77,13 +77,13 @@ class MainScreenViewController: UITableViewController {
         
         switch indexPath.row {
         case 0:
-            performSegue(withIdentifier: "gotoVisionCheck", sender: self)
-        case 1:
-            performSegue(withIdentifier: "gotoOptoKinetic", sender: self)
-        case 2:
-            performSegue(withIdentifier: "gotoMovingBall", sender: self)
-        case 3:
             performSegue(withIdentifier: "gotoHitMovingObject", sender: self)
+        case 1:
+            performSegue(withIdentifier: "gotoMovingBall", sender: self)
+        case 2:
+            performSegue(withIdentifier: "gotoOptoKinetic", sender: self)
+        case 3:
+            performSegue(withIdentifier: "gotoVisionCheck", sender: self)
         default:
             performSegue(withIdentifier: "gotoOptoKinetic", sender: self)
         }

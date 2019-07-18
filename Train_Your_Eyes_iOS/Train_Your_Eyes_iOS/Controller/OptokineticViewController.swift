@@ -91,7 +91,7 @@ class OptokineticViewController: UIViewController {
      */
     
     func presentMenu() {
-        let menuViewController = PopMenuViewController(actions: optoMenuActions)
+       let menuViewController = PopMenuViewController(actions: optoMenuActions)
         menuViewController.delegate = self
         present(menuViewController, animated: true, completion: nil)
     }
@@ -584,4 +584,4 @@ extension OptokineticViewController: PopMenuViewControllerDelegate {
             eyeExerciseMotionManualControl()
         }
     }
-}
+} 

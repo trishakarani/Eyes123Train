@@ -26,21 +26,36 @@ class VisionCheckViewController: UIViewController {
 
     var Instructions: String = "\r\n\r\nIn this test we test how you distinguish between red, green and blue colors. \r\n\r\nKeep the device at a suggested distance of 16 inches from your eyes. You should choose the figure that you see in the picture.\r\n\r\n"
     
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//
+//        self.navigationController?.navigationBar.titleTextAttributes =
+//            [NSAttributedString.Key.foregroundColor: UIColor.red,
+//             NSAttributedString.Key.font: UIFont(name: "Verdana", size: 22)!]
+//
+//        let backButton = UIBarButtonItem()
+//        backButton.title = "Back"
+//        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+//
+//        AlertFunctions.showAlert(title: "Color Blindness Test", message: Instructions)
+//
+//        updateNewColorTest()
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.navigationController?.navigationBar.titleTextAttributes =
-            [NSAttributedString.Key.foregroundColor: UIColor.red,
-             NSAttributedString.Key.font: UIFont(name: "Verdana", size: 22)!]
         
         let backButton = UIBarButtonItem()
         backButton.title = "Back"
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
-
+        
         AlertFunctions.showAlert(title: "Color Blindness Test", message: Instructions)
-
+        
         updateNewColorTest()
+        self.navigationController?.replaceCurrentViewController(with: self, animated: false)
     }
+    
+
     
     /*
     // MARK: - Navigation
@@ -91,7 +106,7 @@ class VisionCheckViewController: UIViewController {
             choiceBtn1.setTitle(testData.choices[0], for: UIControl.State.normal)
             choiceBtn2.setTitle(testData.choices[2], for: UIControl.State.normal)
             choiceBtn3.setTitle(testData.choices[1], for: UIControl.State.normal)
-            choiceBtn4.setTitle(testData.choices[3], for: UIControl.State.normal)
+
         case 2:
             choiceBtn1.setTitle(testData.choices[0], for: UIControl.State.normal)
             choiceBtn2.setTitle(testData.choices[1], for: UIControl.State.normal)

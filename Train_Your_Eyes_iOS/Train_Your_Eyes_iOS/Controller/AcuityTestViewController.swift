@@ -43,7 +43,8 @@ class AcuityTestViewController: UIViewController {
         setupAcuityTest()
         AlertFunctions.showAlert(title: "Acuity Test", message: Instructions)
         
-        self.navigationController?.replaceCurrentViewController(with: self, animated: false)
+        //not necessary
+        //self.navigationController?.replaceCurrentViewController(with: self, animated: false)
     }
     
 
@@ -58,15 +59,18 @@ class AcuityTestViewController: UIViewController {
     */
     
     @IBAction func optionsButtonClicked(_ sender: UIButton) {
-        if acuityTestCount > 10 {
-            moveToColorBlindnessTest()
-        }
+        
         if sender.tag == (correctChoiceIdx+1) {
             acuitySuccessCount += 1
             if currVisionTestLevel < (visionTest.count-1) {
                 currVisionTestLevel += 1
             }
         }
+        
+        if acuityTestCount > 10 {
+            moveToColorBlindnessTest()
+        }
+        
         setupAcuityTest()
     }
     
@@ -75,7 +79,7 @@ class AcuityTestViewController: UIViewController {
         let currVisionTest: AcuityTestData = visionTest[currVisionTestLevel][randomTestIdx]
         
         generateTestData(inputValues: currVisionTest)
-        
+    
         acuityTestCount += 1
     }
     
