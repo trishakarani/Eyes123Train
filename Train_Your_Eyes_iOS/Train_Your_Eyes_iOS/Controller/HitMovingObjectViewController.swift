@@ -10,8 +10,8 @@ import UIKit
 import AVFoundation
 
 class HitMovingObjectViewController: UIViewController {
-    let MAX_HITS_LEVEL_RETRIES:Int = 12
-
+    let MAX_HITS_LEVEL_RETRIES:Int = 5
+    
     var fish = UIImageView()
     var xpos: CGFloat = 100
     var scaleValue: CGFloat = 1
@@ -34,24 +34,26 @@ class HitMovingObjectViewController: UIViewController {
         case gameEnd
     }
     var currGameState = HitGameState.gameNone
-
+    
     @IBOutlet var screenView: UIView!
     var bkgdView : UIImageView!
     
     var Instructions: String = "\r\n\r\nHit the flashing object. \r\n\r\nIf the accuracy of the flashing object recognition is above 90%, the game would automatically move to next level. \r\n Enjoy the Game ...\r\n\r\n"
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         addBackButton()
-
+        
         showAlert(title: "Hit Flashing Object", message: Instructions)
         
-        bkgdView = UIImageView(image: UIImage(named: "deepocean")!)//Your image name here
-        bkgdView.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
+        //self.view.backgroundColor = UIColor.white
+        
+       bkgdView = UIImageView(image: UIImage(named: "whitebackground")!)//Your image name here
+       bkgdView.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
         self.view.insertSubview(bkgdView, at: 0)//To set first of all views in VC
     }
-
+    
     @objc func backAction() {
         countdownTimer.invalidate()
         // Go back to the previous ViewController
@@ -67,7 +69,7 @@ class HitMovingObjectViewController: UIViewController {
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
     }
-
+    
     func startHitGame() {
         updateGameLevels()
         currGameState = HitGameState.gameStart
@@ -87,30 +89,30 @@ class HitMovingObjectViewController: UIViewController {
     func loadFish() {
         let randomPos = getRandomPosition()
         fish.frame = CGRect(x: randomPos.x, y: randomPos.y, width: imageWidth, height: imageWidth)
-        let fishImage = UIImage(named: getRandomFish())
+        let fishImage = UIImage(named: "blackdots")
         fish.image = fishImage!.scaled(to: CGSize(width: imageWidth, height: imageWidth), scalingMode: .aspectFit)
         
-//        fish.setAnchorPoint(CGPoint(x: 0.5, y:0.5))
+        //        fish.setAnchorPoint(CGPoint(x: 0.5, y:0.5))
         //fish.frame = AVMakeRect(aspectRatio: (self.fish.image?.size)!, insideRect: self.fish.frame)
         self.xpos = -self.fish.frame.origin.x - 75
-//        UIView.animate(withDuration: 1, delay: 0, options: [.curveEaseIn, .repeat, .autoreverse], animations: {
-//            self.fish.alpha = 0.2
-//            self.fish.transform  = CGAffineTransform( scaleX: 0.6, y: 0.6)
-//        }) { _ in
-//            self.fish.image = nil
-//            self.fish.removeFromSuperview()
-//        }
+        //        UIView.animate(withDuration: 1, delay: 0, options: [.curveEaseIn, .repeat, .autoreverse], animations: {
+        //            self.fish.alpha = 0.2
+        //            self.fish.transform  = CGAffineTransform( scaleX: 0.6, y: 0.6)
+        //        }) { _ in
+        //            self.fish.image = nil
+        //            self.fish.removeFromSuperview()
+        //        }
         
-//        UIView.animate(withDuration: 1, delay: 0.0, options:[.repeat,.autoreverse], animations: {
-//            self.fish.alpha = 0.2
-//            self.fish.transform  = CGAffineTransform( scaleX: 0.6, y: 0.6)
-//        }, completion: {_ in
-//            self.fish.alpha = 1.0
-//            self.fish.transform = .identity
-//            //self.shrinkTheFish(fish: self.fish)
-//        })
+        //        UIView.animate(withDuration: 1, delay: 0.0, options:[.repeat,.autoreverse], animations: {
+        //            self.fish.alpha = 0.2
+        //            self.fish.transform  = CGAffineTransform( scaleX: 0.6, y: 0.6)
+        //        }, completion: {_ in
+        //            self.fish.alpha = 1.0
+        //            self.fish.transform = .identity
+        //            //self.shrinkTheFish(fish: self.fish)
+        //        })
         bkgdView.addSubview(fish)
-
+        
         totalDisplayedCount += 1
     }
     
@@ -164,7 +166,7 @@ class HitMovingObjectViewController: UIViewController {
         removeFish()
         changeFish()
     }
-
+    
     func updateScore() {
         print("Score - \(successHitsCount) / \(totalDisplayedCount)")
     }
@@ -176,12 +178,12 @@ class HitMovingObjectViewController: UIViewController {
     func startTimer() {
         countdownTimer = Timer.scheduledTimer(timeInterval: TimeInterval(self.timeFishDisplayInSeconds), target: self, selector: #selector(timerAction), userInfo: nil, repeats: false)
     }
-
+    
     @objc func timerAction() {
         removeFish()
         changeFish()
     }
-
+    
     func timeString(time:TimeInterval) -> String {
         let hours = Int(time) / 3600
         let minutes = Int(time) / 60 % 60
@@ -189,47 +191,47 @@ class HitMovingObjectViewController: UIViewController {
         return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
     }
     
-     // MARK: - Navigation
+ 
     var count:CGFloat = 1
     func shrinkTheFish(fish : UIImageView) {
-//        print("shrinkTheFish y \(self.fishView.frame.origin.y)")
-//        let fishMovingSpeed = 60.0/view.frame.size.width
-//        let moveDuration = (view.frame.size.width - fish.frame.origin.x) * fishMovingSpeed
-//
-//        let duration = 8
-//        let newX = self.fish.frame.origin.x - 20
-//
-//        UIView.animate(withDuration: TimeInterval(duration), delay: 0.0, options: .curveEaseInOut, animations: {
-//            //self.fishViewc = self.view.frame.size.width
-//            //self.fishView.transform = CGAffineTransform( scaleX: 0.65, y: 0.65)
-//            self.fish.transform  = CGAffineTransform( scaleX: 0.1, y: 0.1)
-//            self.fish.frame.origin.x = self.xpos
-//
-//        }, completion: {_ in
-//
-//            /*  self.xpos = self.fish.frame.origin.x - CGFloat((50/self.count))
-//             self.scaleValue = self.scaleValue - 0.1
-//             self.shrinkTheFish(fish: self.fish)
-//             self.count = self.count + CGFloat(0.25)*/
-//        })
+        //        print("shrinkTheFish y \(self.fishView.frame.origin.y)")
+        //        let fishMovingSpeed = 60.0/view.frame.size.width
+        //        let moveDuration = (view.frame.size.width - fish.frame.origin.x) * fishMovingSpeed
+        //
+        //        let duration = 8
+        //        let newX = self.fish.frame.origin.x - 20
+        //
+        //        UIView.animate(withDuration: TimeInterval(duration), delay: 0.0, options: .curveEaseInOut, animations: {
+        //            //self.fishViewc = self.view.frame.size.width
+        //            //self.fishView.transform = CGAffineTransform( scaleX: 0.65, y: 0.65)
+        //            self.fish.transform  = CGAffineTransform( scaleX: 0.1, y: 0.1)
+        //            self.fish.frame.origin.x = self.xpos
+        //
+        //        }, completion: {_ in
+        //
+        //            /*  self.xpos = self.fish.frame.origin.x - CGFloat((50/self.count))
+        //             self.scaleValue = self.scaleValue - 0.1
+        //             self.shrinkTheFish(fish: self.fish)
+        //             self.count = self.count + CGFloat(0.25)*/
+        //        })
     }
-
+    
     func growTheFish(fish : UIView) {
-//        let fishMovingSpeed = 100.0/view.frame.size.width
-//        let duration = (view.frame.size.width - fishView.frame.origin.x) * fishMovingSpeed
-//        let newX = self.fish.frame.origin.x - 20
-//        UIView.animate(withDuration: TimeInterval(2), delay: 0.0, options: .curveEaseInOut, animations: {
-//            //self.fishView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-//            self.fish.transform = .identity
-//            self.fish.frame.origin.x = newX
-//            self
-//            //self.fishView.frame.origin.x = self.view.frame.size.width
-//        }, completion: {_ in
-//            //self.fishView.frame.origin.x = -self.fishView.frame.size.width
-//            self.shrinkTheFish(fish: self.fish)
-//        })
+        //        let fishMovingSpeed = 100.0/view.frame.size.width
+        //        let duration = (view.frame.size.width - fishView.frame.origin.x) * fishMovingSpeed
+        //        let newX = self.fish.frame.origin.x - 20
+        //        UIView.animate(withDuration: TimeInterval(2), delay: 0.0, options: .curveEaseInOut, animations: {
+        //            //self.fishView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        //            self.fish.transform = .identity
+        //            self.fish.frame.origin.x = newX
+        //            self
+        //            //self.fishView.frame.origin.x = self.view.frame.size.width
+        //        }, completion: {_ in
+        //            //self.fishView.frame.origin.x = -self.fishView.frame.size.width
+        //            self.shrinkTheFish(fish: self.fish)
+        //        })
     }
-
+    
     func animateFish() {
         // create and add blue-fish.png image to screen
         //        let fish = UIImageView()
@@ -260,17 +262,17 @@ class HitMovingObjectViewController: UIViewController {
     
     func getRandomPosition() -> CGPoint {
         let imageWidth = self.imageWidth
-
+        
         // Find the width and height of the enclosing view
         let viewWidth = self.view.frame.width
         let viewHeight = self.view.frame.height
-
+        
         let topbarHeight : CGFloat = 0
         // Compute width and height of the area to contain the button's center
         // Subtract the navigation height for y position
         let xwidth = viewWidth - imageWidth
         let yheight = viewHeight - imageWidth - topbarHeight
-
+        
         // Generate a random x and y offset
         // add the navigation height for offset
         let xoffset = CGFloat(arc4random_uniform(UInt32(xwidth)))
@@ -350,38 +352,38 @@ extension UIView {
             self.alpha = 1.0 // Instead of a specific instance of, say, birdTypeLabel, we simply set [thisInstance] (ie, self)'s alpha
         }, completion: nil)
     }
-
+    
     func fadeOut() {
         UIView.animate(withDuration: 1.0, delay: 0.0, options: UIView.AnimationOptions.curveEaseOut, animations: {
             self.alpha = 0.0
         }, completion: nil)
     }
-
+    
     func setAnchorPoint(_ point: CGPoint) {
         var newPoint = CGPoint(x: bounds.size.width * point.x, y: bounds.size.height * point.y)
         var oldPoint = CGPoint(x: bounds.size.width * layer.anchorPoint.x, y: bounds.size.height * layer.anchorPoint.y);
-
+        
         newPoint = newPoint.applying(transform)
         oldPoint = oldPoint.applying(transform)
-
+        
         var position = layer.position
-
+        
         position.x -= oldPoint.x
         position.x += newPoint.x
-
+        
         position.y -= oldPoint.y
         position.y += newPoint.y
-
+        
         layer.position = position
         layer.anchorPoint = point
     }
-
+    
     var showToastTag :Int {return 999}
-
+    
     //Generic Show toast
     func showToast(message : String, duration:TimeInterval) {
         let toastLabel = UILabel(frame: CGRect(x:0, y:self.frame.size.height - 100, width: (self.frame.size.width)-60, height:64))
-
+        
         toastLabel.backgroundColor = UIColor.gray
         toastLabel.textColor = UIColor.black
         toastLabel.numberOfLines = 0
@@ -397,14 +399,14 @@ extension UIView {
         toastLabel.layer.cornerRadius = 10;
         toastLabel.clipsToBounds  =  true
         self.addSubview(toastLabel)
-
+        
         UIView.animate(withDuration: duration, delay: 0.1, options: .curveEaseOut, animations: {
             toastLabel.alpha = 0.95
         }, completion: {(isCompleted) in
             toastLabel.removeFromSuperview()
         })
     }
-
+    
     //Generic Hide toast
     func hideToast() {
         if let view = self.viewWithTag(self.showToastTag) {
@@ -415,12 +417,12 @@ extension UIView {
 
 // MARK: - Image Scaling.
 extension UIImage {
-
+    
     /// Represents a scaling mode
     enum ScalingMode {
         case aspectFill
         case aspectFit
-
+        
         /// Calculates the aspect ratio between two sizes
         ///
         /// - parameters:
@@ -431,7 +433,7 @@ extension UIImage {
         func aspectRatio(between size: CGSize, and otherSize: CGSize) -> CGFloat {
             let aspectWidth  = size.width/otherSize.width
             let aspectHeight = size.height/otherSize.height
-
+            
             switch self {
             case .aspectFill:
                 return max(aspectWidth, aspectHeight)
@@ -440,7 +442,7 @@ extension UIImage {
             }
         }
     }
-
+    
     /// Scales an image to fit within a bounds with a size. Also keeps the aspect ratio.
     /// - parameter:
     ///     - newSize:     the size of the bounds the image must fit within.
@@ -449,23 +451,23 @@ extension UIImage {
     /// - returns: a new scaled image.
     func scaled(to newSize: CGSize, scalingMode: UIImage.ScalingMode = .aspectFit) -> UIImage {
         let aspectRatio = scalingMode.aspectRatio(between: newSize, and: size)
-
+        
         /* Build the rectangle representing the area to be drawn */
         var scaledImageRect = CGRect.zero
-
+        
         scaledImageRect.size.width  = size.width * aspectRatio
         scaledImageRect.size.height = size.height * aspectRatio
         scaledImageRect.origin.x    = (newSize.width - size.width * aspectRatio) / 2.0
         scaledImageRect.origin.y    = (newSize.height - size.height * aspectRatio) / 2.0
-
+        
         /* Draw and retrieve the scaled image */
         UIGraphicsBeginImageContext(newSize)
-
+        
         draw(in: scaledImageRect)
         let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
-
+        
         UIGraphicsEndImageContext()
-
+        
         return scaledImage!
     }
 }

@@ -6,10 +6,11 @@
 //  Copyright © 2018 Eyes123Train. All rights reserved.
 //
 
+
 import UIKit
 
 class ContrastTestViewController: UIViewController {
-
+    
     @IBOutlet weak var stack1Btn1: UIButton!
     @IBOutlet weak var stack1Btn2: UIButton!
     @IBOutlet weak var stack1Btn3: UIButton!
@@ -33,14 +34,14 @@ class ContrastTestViewController: UIViewController {
     var contrastBtnTagId: Int = 0
     
     var Instructions: String = "\r\n\r\nIn this test we test how you distinguish contrast in the colors.\r\n\r\nKeep the device at a suggested distance of 16 inches from your eyes. You should choose the square box whose color contrasts in the picture.\r\n\r\n"
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let backButton = UIBarButtonItem()
         backButton.title = "Back"
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
-
+        
         AlertFunctions.showAlert(title: "Color Contrast Test", message: Instructions)
         addButtonsToList()
         
@@ -54,7 +55,7 @@ class ContrastTestViewController: UIViewController {
         // Go back to the previous ViewController
         self.navigationController?.popViewController(animated: true)
     }
-
+    
     func addButtonsToList() {
         contrastColorButtons.append(stack1Btn1)
         contrastColorButtons.append(stack1Btn2)
@@ -68,15 +69,15 @@ class ContrastTestViewController: UIViewController {
     }
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
     @IBAction func buttonClicked(_ sender: UIButton) {
         if contrastBtnTagId == sender.tag {
             contrastSuccessCount += 1
@@ -105,7 +106,7 @@ class ContrastTestViewController: UIViewController {
         }
         contrastTestCount += 1
     }
-
+    
     func displayVisionTestResults() {
         performSegue(withIdentifier: "visionResults", sender: self)
     }
@@ -116,7 +117,7 @@ class ContrastTestViewController: UIViewController {
             vc?.acuityTestResult = self.acuityTestResult
             vc?.vision2020Result = self.vision2020Result
             vc?.colorContrastResult = "\(contrastSuccessCount) of \(contrastTestCount)"
-            vc?.colorBlindnessResult = self.colorBlindnessResult
+            //vc?.colorBlindnessResult = self.colorBlindnessResult
         }
     }
 }
@@ -128,7 +129,7 @@ extension UIColor {
                        blue: .random(in: 0...1),
                        alpha: 1.0)
     }
-
+    
     /**
      Create a lighter color
      */

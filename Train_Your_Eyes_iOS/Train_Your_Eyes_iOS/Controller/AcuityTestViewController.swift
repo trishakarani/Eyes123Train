@@ -21,8 +21,8 @@ class AcuityTestViewController: UIViewController {
     @IBOutlet weak var optionsBtn3: RoundButton!
     @IBOutlet weak var optionsBtn4: RoundButton!
     
-    var colorBlindnessResult: String = ""
-    var colorContrastResult: String = ""
+//    var colorBlindnessResult: String = ""
+//    var colorContrastResult: String = ""
     
     var acuitySuccessCount: Int = 0
     var acuityTestCount: Int = 0
@@ -47,16 +47,6 @@ class AcuityTestViewController: UIViewController {
         //self.navigationController?.replaceCurrentViewController(with: self, animated: false)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     @IBAction func optionsButtonClicked(_ sender: UIButton) {
         
@@ -67,8 +57,8 @@ class AcuityTestViewController: UIViewController {
             }
         }
         
-        if acuityTestCount > 10 {
-            moveToColorBlindnessTest()
+        if acuityTestCount > 3 {
+            moveToColorContrastTest()
         }
         
         setupAcuityTest()
@@ -89,7 +79,7 @@ class AcuityTestViewController: UIViewController {
         characterLabel.text = inputValues.alphValue
         characterLabel.textColor = .white
         characterLabel.backgroundColor = .darkGray
-        characterLabel.font = UIFont(name: "Verdana", size: CGFloat(inputValues.fontSize))
+//        characterLabel.font = UIFont(name: "Verdana", size: CGFloat(inputValues.fontSize))
         
         correctedVision = inputValues.correctedVision
         correctChoiceIdx = Int.random(in: 0..<4)
@@ -122,15 +112,22 @@ class AcuityTestViewController: UIViewController {
         }
     }
 
-    func moveToColorBlindnessTest() {
-        performSegue(withIdentifier: "gotoBlindnessTest", sender: self)
+//    func moveToColorBlindnessTest() {
+//        performSegue(withIdentifier: "gotoBlindnessTest", sender: self)
+//    }
+    
+    func moveToColorContrastTest() {
+        performSegue(withIdentifier: "contrastTest", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is VisionCheckViewController {
-            let vc = segue.destination as? VisionCheckViewController
+        if segue.destination is ContrastTestViewController  {
+            let vc = segue.destination as? ContrastTestViewController
             vc?.acuityTestResult = "\(acuitySuccessCount) of \(acuityTestCount)"
             vc?.vision2020Result = correctedVision
         }
     }
 }
+
+
+

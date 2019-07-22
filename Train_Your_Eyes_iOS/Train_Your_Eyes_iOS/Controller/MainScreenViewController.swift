@@ -7,38 +7,27 @@
 //
 
 import UIKit
+import ResearchKit
 
-class MainScreenViewController: UITableViewController {
+class MainScreenViewController: UICollectionViewController {
 
-    let mainPageArray = ["Hit Moving Object", "Moving Eye Exercise", "OptoKinetic", "Vision Check"]
-    let imageArray = ["hitMark", "lazyEye", "optoKinetic", "visionCheck"]
+    let frontLabelArray = ["Line Dancers", "Follow Me", "Targets", "Check It Out"]
+    let frontImageArray = [UIImage(named: "optokineticBlankCircle"),  UIImage(named:"movingBallBlankCircle"), UIImage(named:"hitTargetBlankCircle"), UIImage(named: "visionCheckBlankCircle")]
     var tablefontSize: Int = 22
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var layout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+        layout.minimumInteritemSpacing = 5
+        layout.itemSize = CGSize( width: (self.collectionView.frame.size.width - 20)/2, height: self.collectionView.frame.size.height/4)
 
-        self.navigationController?.navigationBar.titleTextAttributes =
-            [NSAttributedString.Key.foregroundColor: UIColor.red,
-             NSAttributedString.Key.font: UIFont(name: "Verdana", size: 22)!]
+//        self.navigationController?.navigationBar.titleTextAttributes =
+//            [NSAttributedString.Key.foregroundColor: UIColor.red,
+//             NSAttributedString.Key.font: UIFont(name: "Verdana", size: 22)!]
 
         print("frame=\(self.view.frame) , width=\(self.view.frame.width), height=\(self.view.frame.height)")
-        if self.view.frame.height > 720 {
-            self.tableView?.rowHeight = 140.0
-            if self.view.frame.width > 400 {
-                tablefontSize = 22
-            }
-            else {
-                tablefontSize = 20
-            }
-        }
-        else if self.view.frame.height > 660 {
-            self.tableView?.rowHeight = 130.0
-            tablefontSize = 22
-        }
-        else if self.view.frame.height > 560 {
-            self.tableView?.rowHeight = 110.0
-            tablefontSize = 18
-        }
         
         self.navigationItem.setHidesBackButton(true,  animated:true)
 
@@ -48,42 +37,37 @@ class MainScreenViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
-    // MARK: - Table view data source
-
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return mainPageArray.count
+    
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return frontImageArray.count
     }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MainMenuCell", for: indexPath) as! MainScreenTableViewCell
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "frontCell", for: indexPath) as! MainScreenCollectionViewCell
         
-        cell.accessoryType = .none
-        cell.menuImage?.image = UIImage(named: imageArray[indexPath.row])
-        cell.menuName?.font = UIFont(name:"Verdana", size:CGFloat(tablefontSize))
-        cell.menuName?.text = mainPageArray[indexPath.row]
+        cell.frontLabel.text = frontLabelArray[indexPath.item]
+        cell.frontImage.image = frontImageArray[indexPath.item]
+        
+        
         
         return cell
     }
-
-    //MARK: - Table view Delegate Methods
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch indexPath.row {
         case 0:
-            performSegue(withIdentifier: "gotoHitMovingObject", sender: self)
+            performSegue(withIdentifier: "gotoOptoKinetic", sender: self)
         case 1:
             performSegue(withIdentifier: "gotoMovingBall", sender: self)
         case 2:
-            performSegue(withIdentifier: "gotoOptoKinetic", sender: self)
+            performSegue(withIdentifier: "gotoHitMovingObject", sender: self)
         case 3:
             performSegue(withIdentifier: "gotoVisionCheck", sender: self)
+        
+//        case 4:
+//            performSegue(withIdentifier: "gotoLandoltCAcuity", sender: self)
+//        case 5:
+//            performSegue(withIdentifier: "gotoLandoltCContrast", sender: self)
         default:
             performSegue(withIdentifier: "gotoOptoKinetic", sender: self)
         }

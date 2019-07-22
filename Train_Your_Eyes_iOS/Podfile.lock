@@ -1,16 +1,20 @@
 PODS:
   - NewPopMenu (2.1.2)
+  - ResearchKit (1.5.2)
 
 DEPENDENCIES:
   - NewPopMenu (~> 2.0)
+  - ResearchKit (~> 1.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - NewPopMenu
+    - ResearchKit
 
 SPEC CHECKSUMS:
   NewPopMenu: c6129e08e8192f6257ceb5f9a4357e1b59c6e2e7
+  ResearchKit: a5770681dd61afddd3d1f24d232b9abf00cba454
 
-PODFILE CHECKSUM: bcc75faf1797ebcd684ff217fa8b0a663b3b571f
+PODFILE CHECKSUM: 316a4eda33ff4d0eaf1bacb6fc2d37b9c5b94d99
 
 COCOAPODS: 1.7.4

@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class MainScreenTableViewCell: UITableViewCell {
 
     @IBOutlet weak var menuImage: UIImageView!

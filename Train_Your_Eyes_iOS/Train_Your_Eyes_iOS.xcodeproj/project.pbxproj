@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,7 +19,6 @@
 		2C2CB0A92186E7BA00D7F77E /* MovingBallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2CB0A82186E7BA00D7F77E /* MovingBallViewController.swift */; };
 		2C2CB0AD2186F42B00D7F77E /* HitMovingObjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2CB0AC2186F42B00D7F77E /* HitMovingObjectViewController.swift */; };
 		2C3EC83C2188427D004AD3FF /* MainScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3EC83B2188427D004AD3FF /* MainScreenTableViewCell.swift */; };
-		2C4D2C1E217BD540004C0367 /* VisionCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D2C1D217BD540004C0367 /* VisionCheckViewController.swift */; };
 		2C5EEFF821A72D3D00483A93 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2C5EEFF721A72D3D00483A93 /* Settings.bundle */; };
 		2C67BDBD2192C89C00E880FB /* UserDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C67BDBB2192C89C00E880FB /* UserDataModel.xcdatamodeld */; };
 		2C6AA6BA21B486CD001F88D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C6AA6B921B486CD001F88D3 /* Assets.xcassets */; };
@@ -30,6 +29,10 @@
 		2CF2F29921A7F5130020713A /* AcuityTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF2F29821A7F5130020713A /* AcuityTestViewController.swift */; };
 		2CF2F29B21A9026E0020713A /* AcuityTestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF2F29A21A9026E0020713A /* AcuityTestData.swift */; };
 		333BE004A31B2B4C19401D03 /* libPods-Train_Your_Eyes_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D60004916E3ED2F83014AAF /* libPods-Train_Your_Eyes_iOS.a */; };
+		683F52B622E39B6D00224CFF /* LandoltCContrastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683F52B522E39B6D00224CFF /* LandoltCContrastViewController.swift */; };
+		683F52B822E39B8200224CFF /* LandoltCAcuityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683F52B722E39B8200224CFF /* LandoltCAcuityViewController.swift */; };
+		683F52BC22E40B1400224CFF /* MainScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683F52BB22E40B1400224CFF /* MainScreenCollectionViewCell.swift */; };
+		68B615CC22E59F8C0031331B /* TrainYourEyesConsentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B615CB22E59F8C0031331B /* TrainYourEyesConsentTask.swift */; };
 		CD1EE193F842A7F56F62F6B3 /* libPods-Train_Your_Eyes_iOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A44E1CE213DFE161D5051816 /* libPods-Train_Your_Eyes_iOSTests.a */; };
 		F6CF3B117A005D2F67467715 /* libPods-Train_Your_Eyes_iOSUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E84F5AD2C7CE3708FFBB12 /* libPods-Train_Your_Eyes_iOSUITests.a */; };
 /* End PBXBuildFile section */
@@ -50,6 +53,19 @@
 			remoteInfo = Train_Your_Eyes_iOS;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		682E6AF222E27BC9006260C7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0D60004916E3ED2F83014AAF /* libPods-Train_Your_Eyes_iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Train_Your_Eyes_iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,7 +90,6 @@
 		2C2CB0A82186E7BA00D7F77E /* MovingBallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingBallViewController.swift; sourceTree = "<group>"; };
 		2C2CB0AC2186F42B00D7F77E /* HitMovingObjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitMovingObjectViewController.swift; sourceTree = "<group>"; };
 		2C3EC83B2188427D004AD3FF /* MainScreenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenTableViewCell.swift; sourceTree = "<group>"; };
-		2C4D2C1D217BD540004C0367 /* VisionCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionCheckViewController.swift; sourceTree = "<group>"; };
 		2C5EEFF721A72D3D00483A93 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		2C67BDBC2192C89C00E880FB /* UserDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserDataModel.xcdatamodel; sourceTree = "<group>"; };
 		2C6AA6B921B486CD001F88D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,6 +101,10 @@
 		2CF2F29A21A9026E0020713A /* AcuityTestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcuityTestData.swift; sourceTree = "<group>"; };
 		488F38336C938C82231AB733 /* Pods-Train_Your_Eyes_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Train_Your_Eyes_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Train_Your_Eyes_iOS/Pods-Train_Your_Eyes_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		4DB704BD5270DA93C6FEFC84 /* Pods-Train_Your_Eyes_iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Train_Your_Eyes_iOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Train_Your_Eyes_iOSUITests/Pods-Train_Your_Eyes_iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		683F52B522E39B6D00224CFF /* LandoltCContrastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandoltCContrastViewController.swift; sourceTree = "<group>"; };
+		683F52B722E39B8200224CFF /* LandoltCAcuityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandoltCAcuityViewController.swift; sourceTree = "<group>"; };
+		683F52BB22E40B1400224CFF /* MainScreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCollectionViewCell.swift; sourceTree = "<group>"; };
+		68B615CB22E59F8C0031331B /* TrainYourEyesConsentTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainYourEyesConsentTask.swift; sourceTree = "<group>"; };
 		9E059006F52E4603BFD887A2 /* Pods-Train_Your_Eyes_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Train_Your_Eyes_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Train_Your_Eyes_iOS/Pods-Train_Your_Eyes_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		A44E1CE213DFE161D5051816 /* libPods-Train_Your_Eyes_iOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Train_Your_Eyes_iOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6E84F5AD2C7CE3708FFBB12 /* libPods-Train_Your_Eyes_iOSUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Train_Your_Eyes_iOSUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,14 +218,17 @@
 			children = (
 				2C09BE2121745B01006C2A93 /* ViewController.swift */,
 				2C2CB0A42186CF8700D7F77E /* MainScreenViewController.swift */,
+				683F52BB22E40B1400224CFF /* MainScreenCollectionViewCell.swift */,
 				2C3EC83B2188427D004AD3FF /* MainScreenTableViewCell.swift */,
 				2C2CB0A62186E7A800D7F77E /* OptokineticViewController.swift */,
 				2C2CB0A82186E7BA00D7F77E /* MovingBallViewController.swift */,
 				2C2CB0AC2186F42B00D7F77E /* HitMovingObjectViewController.swift */,
 				2CF2F29821A7F5130020713A /* AcuityTestViewController.swift */,
-				2C4D2C1D217BD540004C0367 /* VisionCheckViewController.swift */,
 				2CF2F29421A79F7E0020713A /* ContrastTestViewController.swift */,
 				2CAA5DCA21A3E5E800E769A8 /* VisionTestResultsViewController.swift */,
+				683F52B722E39B8200224CFF /* LandoltCAcuityViewController.swift */,
+				683F52B522E39B6D00224CFF /* LandoltCContrastViewController.swift */,
+				68B615CB22E59F8C0031331B /* TrainYourEyesConsentTask.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -254,6 +276,8 @@
 				2C09BE1921745B01006C2A93 /* Frameworks */,
 				2C09BE1A21745B01006C2A93 /* Resources */,
 				2C063CFA21AE7049008272DF /* ShellScript */,
+				682E6AF222E27BC9006260C7 /* Embed Frameworks */,
+				D32DDC40D8545E8C2BCB11DF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -435,6 +459,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D32DDC40D8545E8C2BCB11DF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Train_Your_Eyes_iOS/Pods-Train_Your_Eyes_iOS-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Train_Your_Eyes_iOS/Pods-Train_Your_Eyes_iOS-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Train_Your_Eyes_iOS/Pods-Train_Your_Eyes_iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		EFD2A5A3B02B4143DB94D308 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -471,12 +512,15 @@
 				2C67BDBD2192C89C00E880FB /* UserDataModel.xcdatamodeld in Sources */,
 				2CAA5DC721A39F3900E769A8 /* AlertFunctions.swift in Sources */,
 				2C2CB0A92186E7BA00D7F77E /* MovingBallViewController.swift in Sources */,
+				683F52B622E39B6D00224CFF /* LandoltCContrastViewController.swift in Sources */,
 				2CF2F29B21A9026E0020713A /* AcuityTestData.swift in Sources */,
 				2CF2F29921A7F5130020713A /* AcuityTestViewController.swift in Sources */,
 				2CAA5DC921A3CCCA00E769A8 /* RoundButton.swift in Sources */,
+				683F52BC22E40B1400224CFF /* MainScreenCollectionViewCell.swift in Sources */,
 				2C2CB0A52186CF8700D7F77E /* MainScreenViewController.swift in Sources */,
-				2C4D2C1E217BD540004C0367 /* VisionCheckViewController.swift in Sources */,
 				2C3EC83C2188427D004AD3FF /* MainScreenTableViewCell.swift in Sources */,
+				683F52B822E39B8200224CFF /* LandoltCAcuityViewController.swift in Sources */,
+				68B615CC22E59F8C0031331B /* TrainYourEyesConsentTask.swift in Sources */,
 				2C2CB0A72186E7A800D7F77E /* OptokineticViewController.swift in Sources */,
 				2CF2F29521A79F7E0020713A /* ContrastTestViewController.swift in Sources */,
 				2C09BE2021745B01006C2A93 /* AppDelegate.swift in Sources */,
@@ -656,12 +700,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9E059006F52E4603BFD887A2 /* Pods-Train_Your_Eyes_iOS.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YS5R96N32B;
 				INFOPLIST_FILE = Train_Your_Eyes_iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -678,12 +723,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 488F38336C938C82231AB733 /* Pods-Train_Your_Eyes_iOS.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YS5R96N32B;
 				INFOPLIST_FILE = Train_Your_Eyes_iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

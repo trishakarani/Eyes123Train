@@ -9,8 +9,9 @@
 import UIKit
 import PopMenu
 
-class OptokineticViewController: UIViewController {
 
+class OptokineticViewController: UIViewController {
+    
     @IBOutlet weak var colorButton: UIBarButtonItem!
     var optoKColorStatus : Bool = false
     var bottomButtonArray: [UIButton] = [UIButton]()
@@ -35,27 +36,66 @@ class OptokineticViewController: UIViewController {
     var optoPrevDirection = OptoDirections.none
     var optoCurrDirection = OptoDirections.right
     var optoMenuActions = [PopMenuDefaultAction]()
-
+    
     var Instructions: String = "\r\n\r\nFocus your eyes by looking at the strips of lines moving on the screen. \r\nWatching this for 5 minutes in a day helps improve vision.\r\n\r\n"
-   
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.titleTextAttributes =
-            [NSAttributedString.Key.foregroundColor: UIColor.red,
-             NSAttributedString.Key.font: UIFont(name: "Verdana", size: 22)!]
+        //        self.navigationController?.navigationBar.titleTextAttributes =
+        //            [NSAttributedString.Key.foregroundColor: UIColor.red,
+        //             NSAttributedString.Key.font: UIFont(name: "Verdana", size: 22)!]
+        
+        navigationController?.hidesBarsOnTap = true
         
         let backButton = UIBarButtonItem()
         backButton.title = "Back"
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         
         settingChanged()
-        AlertFunctions.showAlert(title: "OptoKinetic Exercise", message: Instructions)
+        //AlertFunctions.showAlert(title: "OptoKinetic Exercise", message: Instructions)
         
         setupView()
     }
     
+    override var prefersStatusBarHidden: Bool {
+        return navigationController?.isNavigationBarHidden == true
+    }
+    
+    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
+        return UIStatusBarAnimation.slide
+    }
+    
+
+
+//other way to do tap for nav bar
+//        let gesture = UITapGestureRecognizer(target: self, action: #selector(OptokineticViewController.toggle))
+//        view.isUserInteractionEnabled = true
+//        view.addGestureRecognizer(gesture)
+//
+//        let backButton = UIBarButtonItem()
+//        backButton.title = "Back"
+//        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+//
+//        settingChanged()
+//        AlertFunctions.showAlert(title: "OptoKinetic Exercise", message: Instructions)
+//
+//        setupView()
+//    }
+//
+//    @objc func toggle() {
+//        navigationController?.setNavigationBarHidden(navigationController?.isNavigationBarHidden == false, animated: true)
+//    }
+//
+//    override var prefersStatusBarHidden: Bool {
+//        return navigationController?.isNavigationBarHidden == true
+//    }
+//
+//    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
+//        return UIStatusBarAnimation.slide
+//    }
+//
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         NotificationCenter.default.addObserver(self, selector: #selector(OptokineticViewController.settingChanged), name: UserDefaults.didChangeNotification, object: nil)
@@ -91,7 +131,7 @@ class OptokineticViewController: UIViewController {
      */
     
     func presentMenu() {
-       let menuViewController = PopMenuViewController(actions: optoMenuActions)
+        let menuViewController = PopMenuViewController(actions: optoMenuActions)
         menuViewController.delegate = self
         present(menuViewController, animated: true, completion: nil)
     }
@@ -154,7 +194,7 @@ class OptokineticViewController: UIViewController {
             self.view.addSubview(rightButton)
         }
     }
-
+    
     func setupTopBottomButtons(btnCount: Int) {
         for _ in 0..<btnCount {
             let yDelayValue = Int(self.view.frame.height)
@@ -584,4 +624,4 @@ extension OptokineticViewController: PopMenuViewControllerDelegate {
             eyeExerciseMotionManualControl()
         }
     }
-} 
+}
