@@ -38,14 +38,14 @@ class HitMovingObjectViewController: UIViewController {
     @IBOutlet var screenView: UIView!
     var bkgdView : UIImageView!
     
-    var Instructions: String = "\r\n\r\nHit the flashing object. \r\n\r\nIf the accuracy of the flashing object recognition is above 90%, the game would automatically move to next level. \r\n Enjoy the Game ...\r\n\r\n"
+//    var Instructions: String = "\r\n\r\nHit the flashing object. \r\n\r\nIf the accuracy of the flashing object recognition is above 90%, the game would automatically move to next level. \r\n Enjoy the Game ...\r\n\r\n"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         addBackButton()
         
-        showAlert(title: "Hit Flashing Object", message: Instructions)
+//        showAlert(title: "Hit Flashing Object", message: Instructions)
         
         //self.view.backgroundColor = UIColor.white
         

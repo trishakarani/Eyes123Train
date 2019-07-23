@@ -1,19 +1,18 @@
 //
-//  MovingBallViewController.swift
+//  OptokineticViewController.swift
 //  Train_Your_Eyes_iOS
 //
 //  Created by Trisha Karani on 10/29/18.
-//  Copyright © 2018 TrainYourEyes101. All rights reserved.
+//  Copyright © 2018 Eyes123Train. All rights reserved.
 //
 
 import UIKit
 import PopMenu
 
 
-class MovingBallViewController: UIViewController {
-
-    @IBOutlet weak var colorButton: UIBarButtonItem!
+class OptokineticViewController: UIViewController {
     
+    @IBOutlet weak var colorButton: UIBarButtonItem!
     var optoKColorStatus : Bool = false
     var bottomButtonArray: [UIButton] = [UIButton]()
     var topButtonArray: [UIButton] = [UIButton]()
@@ -26,12 +25,10 @@ class MovingBallViewController: UIViewController {
     var timerAnimationValue: Int = 0
     var timerActionCtr : Int = 0
     var isPortraitMode : Bool = true
-    var squareView = UIView()
-    var squareViewAnimationId: Int = 1
     var movingBarSpeed: Int = 23
     var animationDurationPortrait: Double = 2
     var animationDurationLandscape: Double = 4
-
+    
     enum OptoDirections {
         case none, right, left, top, bottom
     }
@@ -40,25 +37,66 @@ class MovingBallViewController: UIViewController {
     var optoCurrDirection = OptoDirections.right
     var optoMenuActions = [PopMenuDefaultAction]()
     
-    var Instructions: String = "\r\n\r\nFocus your eye on the moving ball. \r\nDoing this exercise for 5 minutes in a day helps improve focus.\r\n\r\n"
-
+//    var Instructions: String = "\r\n\r\nFocus your eyes by looking at the strips of lines moving on the screen. \r\nWatching this for 5 minutes in a day helps improve vision.\r\n\r\n"
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.navigationController?.navigationBar.titleTextAttributes =
-//            [NSAttributedString.Key.foregroundColor: UIColor.red,
-//             NSAttributedString.Key.font: UIFont(name: "Verdana", size: 22)!]
-
+        //        self.navigationController?.navigationBar.titleTextAttributes =
+        //            [NSAttributedString.Key.foregroundColor: UIColor.red,
+        //             NSAttributedString.Key.font: UIFont(name: "Verdana", size: 22)!]
+        
+        navigationController?.hidesBarsOnTap = true
+        
         let backButton = UIBarButtonItem()
         backButton.title = "Back"
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
-
-        AlertFunctions.showAlert(title: "Moving Ball Exercise", message: Instructions)
+        
         settingChanged()
+        //AlertFunctions.showAlert(title: "OptoKinetic Exercise", message: Instructions)
         
         setupView()
+        self.navigationController?.replaceCurrentViewController(with: self, animated: false)
     }
     
+    override var prefersStatusBarHidden: Bool {
+        return navigationController?.isNavigationBarHidden == true
+    }
+    
+    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
+        return UIStatusBarAnimation.slide
+    }
+    
+
+
+//other way to do tap for nav bar
+//        let gesture = UITapGestureRecognizer(target: self, action: #selector(OptokineticViewController.toggle))
+//        view.isUserInteractionEnabled = true
+//        view.addGestureRecognizer(gesture)
+//
+//        let backButton = UIBarButtonItem()
+//        backButton.title = "Back"
+//        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+//
+//        settingChanged()
+//        AlertFunctions.showAlert(title: "OptoKinetic Exercise", message: Instructions)
+//
+//        setupView()
+//    }
+//
+//    @objc func toggle() {
+//        navigationController?.setNavigationBarHidden(navigationController?.isNavigationBarHidden == false, animated: true)
+//    }
+//
+//    override var prefersStatusBarHidden: Bool {
+//        return navigationController?.isNavigationBarHidden == true
+//    }
+//
+//    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
+//        return UIStatusBarAnimation.slide
+//    }
+//
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         NotificationCenter.default.addObserver(self, selector: #selector(OptokineticViewController.settingChanged), name: UserDefaults.didChangeNotification, object: nil)
@@ -72,8 +110,8 @@ class MovingBallViewController: UIViewController {
         else if (movingBarSpeed > 30) {
             movingBarSpeed = 30
         }
- //       animationDurationPortrait = Double((Int(self.view.frame.width) + 100) / movingBarSpeed)
-//       animationDurationLandscape = Double((Int (self.view.frame.height) + 100) / movingBarSpeed)
+        //        animationDurationPortrait = Double((Int(self.view.frame.width) + 100) / movingBarSpeed)
+        //        animationDurationLandscape = Double((Int (self.view.frame.height) + 100) / movingBarSpeed)
     }
     
     @objc func buttonAction(sender: UIButton!) {
@@ -82,7 +120,16 @@ class MovingBallViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         timer.invalidate()
     }
-   
+    
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
     
     func presentMenu() {
         let menuViewController = PopMenuViewController(actions: optoMenuActions)
@@ -92,6 +139,12 @@ class MovingBallViewController: UIViewController {
     
     @IBAction func colorButtonPressed(_ sender: UIBarButtonItem) {
         presentMenu()
+    }
+    
+    func setupManualView() {
+        leftRightBtnCount = 30
+        topBottomBtnCount = 45
+        eyeExerciseMotionManualControl()
     }
     
     func setupView() {
@@ -109,7 +162,6 @@ class MovingBallViewController: UIViewController {
             isPortraitMode = true
         }
         eyeExerciseMotionManualControl()
-        animateMovingBall()
     }
     
     func setupPortraitModeView() {
@@ -143,7 +195,7 @@ class MovingBallViewController: UIViewController {
             self.view.addSubview(rightButton)
         }
     }
-
+    
     func setupTopBottomButtons(btnCount: Int) {
         for _ in 0..<btnCount {
             let yDelayValue = Int(self.view.frame.height)
@@ -157,7 +209,7 @@ class MovingBallViewController: UIViewController {
             self.view.addSubview(topButton)
         }
     }
-
+    
     func clearView() {
         for subUIView in self.view.subviews as [UIView] {
             subUIView.removeFromSuperview()
@@ -193,7 +245,10 @@ class MovingBallViewController: UIViewController {
         button.backgroundColor = UIColor.black
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
-        
+        // create one per button or view
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideOrShowNavBar))
+        //this would be your button
+        button.addGestureRecognizer(tapGestureRecognizer)
         return button
     }
     
@@ -203,7 +258,10 @@ class MovingBallViewController: UIViewController {
         button.backgroundColor = UIColor.black
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
-        
+        // create one per button or view
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideOrShowNavBar))
+        //this would be your button
+        button.addGestureRecognizer(tapGestureRecognizer)
         return button
     }
     
@@ -211,7 +269,10 @@ class MovingBallViewController: UIViewController {
         let square = UIView()
         square.frame = CGRect(x: Int(self.view.frame.width), y: Int(self.view.frame.height), width: 25, height: Int(self.view.frame.height))
         square.backgroundColor = UIColor.black
-        
+        // create one per button or view
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideOrShowNavBar))
+        //this would be your button
+        square.addGestureRecognizer(tapGestureRecognizer)
         return square
     }
     
@@ -236,11 +297,9 @@ class MovingBallViewController: UIViewController {
             angularViewArray[btnIdx].backgroundColor = btnColor
         }
         colorButton.tintColor = optoKColorStatus ? UIColor.black : UIColor.red
-        squareView.backgroundColor = optoKColorStatus ? UIColor.black : UIColor.red
     }
     
     @objc func timerAction() {
-        print("Timer Action \(timerActionCtr)")
         eyeExerciseMotion()
     }
     
@@ -309,7 +368,7 @@ class MovingBallViewController: UIViewController {
         }
         optoPrevDirection = optoCurrDirection
     }
-
+    
     func eyeExerciseMotion() {
         switch timerActionCtr {
         case 0:
@@ -394,7 +453,7 @@ class MovingBallViewController: UIViewController {
             }
         }
     }
-
+    
     func animateButtonsBottomOneAtTime(rptCount: Int) {
         var duration: Double = animationDurationLandscape
         for btnIdx in 0..<topBottomBtnCount {
@@ -422,7 +481,7 @@ class MovingBallViewController: UIViewController {
             }
         }
     }
-
+    
     // MARK: - Animation Left and Right
     func moveToLeft(view: UIView) {
         view.center.x = (0 - view.center.x - 50)
@@ -436,6 +495,14 @@ class MovingBallViewController: UIViewController {
     }
     func startAtLeft(view: UIView) {
         view.center.x = -50
+    }
+    
+    @objc func hideOrShowNavBar(sender:UIGestureRecognizer) {
+        if navigationController?.isNavigationBarHidden == true {
+            navigationController?.isNavigationBarHidden = false
+        } else {
+            navigationController?.isNavigationBarHidden = true 
+        }
     }
     
     func animateButtonsRightOneAtTime(rptCount: Int) {
@@ -466,7 +533,7 @@ class MovingBallViewController: UIViewController {
         }
         timerAnimationValue = 86
     }
-
+    
     func animateButtonsLeftOneAtTime(rptCount: Int) {
         var duration: Double = 5
         for btnIdx in 0..<leftRightBtnCount {
@@ -493,7 +560,7 @@ class MovingBallViewController: UIViewController {
         }
         timerAnimationValue = 86
     }
-
+    
     // MARK: - Animate Motion 45 degree
     func move45DegTop(view: UIView) {
         view.center.y = (0 - view.center.y - 50)
@@ -531,117 +598,6 @@ class MovingBallViewController: UIViewController {
         timerAnimationValue = 134
     }
     
-    //MARK: Animate moving ball in the frame
-    func animateMovingBall() {
-        squareView.frame = CGRect(x: 55, y: 300, width: 20, height: 20)
-        squareView.backgroundColor = UIColor.red
-        
-        // add the square to the screen
-        self.view.addSubview(squareView)
-        
-        // now create a bezier path that defines our curve
-        let sinePath = createSineWaveAnimationPath(startX: 20, startY: 20)
-        let sineAnim = CAKeyframeAnimation(keyPath: "position")
-        sineAnim.path = sinePath.cgPath
-        sineAnim.rotationMode = CAAnimationRotationMode.rotateAuto
-        sineAnim.repeatCount = 2
-        sineAnim.delegate = self
-        sineAnim.duration = 60.0
-
-        // we add the animation to the squares 'layer' property
-        squareView.layer.add(sineAnim, forKey: "animate position along path")
-    }
-    
-    func circlePathWithCenter(center: CGPoint, radius: CGFloat) -> UIBezierPath {
-        let circlePath = UIBezierPath()
-        circlePath.addArc(withCenter: center, radius: radius, startAngle: -CGFloat(Double.pi), endAngle: -CGFloat(Double.pi/2), clockwise: true)
-        circlePath.addArc(withCenter: center, radius: radius, startAngle: -CGFloat(Double.pi/2), endAngle: 0, clockwise: true)
-        circlePath.addArc(withCenter: center, radius: radius, startAngle: 0, endAngle: CGFloat(Double.pi/2), clockwise: true)
-        circlePath.addArc(withCenter: center, radius: radius, startAngle: CGFloat(Double.pi/2), endAngle: CGFloat(Double.pi), clockwise: true)
-        circlePath.close()
-
-        return circlePath
-    }
-
-
-    func createRectangleAnimationPath(startX: Int, startY: Int) -> UIBezierPath {
-        let path = UIBezierPath()
-        
-        let endX = Int(self.view.frame.width) - startX
-        let topY = 100
-        let bottomY = Int(self.view.frame.height) - topY
-        
-        path.move(to: CGPoint(x: startX, y: startY))
-        
-        path.addLine(to: CGPoint(x: startX, y: topY))
-        path.addLine(to: CGPoint(x: (endX-startX)/2, y: topY))
-        path.addLine(to: CGPoint(x: endX, y: topY))
-        path.addLine(to: CGPoint(x: endX, y: (bottomY - topY)/2))
-        path.addLine(to: CGPoint(x: startX, y: (bottomY - topY)/2))
-        path.addLine(to: CGPoint(x: endX, y: bottomY))
-        path.addLine(to: CGPoint(x: (endX-startX)/2, y: bottomY))
-        path.addLine(to: CGPoint(x: startX, y: bottomY))
-        path.addLine(to: CGPoint(x: (endX-startX)/2, y: (bottomY-topY)/2))
-        path.addLine(to: CGPoint(x: endX, y: topY))
-        path.addLine(to: CGPoint(x: endX, y: (bottomY-topY)/2))
-        path.addLine(to: CGPoint(x: endX, y: bottomY))
-        path.addLine(to: CGPoint(x: (endX-startX)/2, y: (bottomY-topY)/2))
-        path.addLine(to: CGPoint(x: startX, y: topY))
-        path.addLine(to: CGPoint(x: startX, y: (bottomY-topY)/2))
-        path.addLine(to: CGPoint(x: startX, y: bottomY))
-        path.addLine(to: CGPoint(x: startX, y: startY))
-        path.addLine(to: CGPoint(x: endX, y: startY))
-
-        return path
-    }
-    
-    func createCircleAnimationPath(startX: Int, startY: Int) -> UIBezierPath {
-        return UIBezierPath(ovalIn: circleFrame(startX: startX, startY: startY))
-    }
-    func circleFrame(startX: Int, startY: Int) -> CGRect {
-        let circleRadius = (Int(self.view.frame.width) - (2 * startX)) / 2
-        let circleFrame = CGRect(x: startX, y: startY, width: 2 * circleRadius, height: 2 * circleRadius)
-        return circleFrame
-    }
-    
-    func createSineWaveAnimationPath(startX: Int, startY: Int) -> UIBezierPath {
-        let path = UIBezierPath()
-
-        let graphWidth: CGFloat = 0.8   // Graph is 80% of the width of the view
-        let amplitude: CGFloat = 0.3   // Amplitude of sine wave is 30% of view height
-        
-        let width: Double = Double(self.view.frame.width) - Double(2 * startX)
-        let height: Double = Double(self.view.frame.height) - Double(2 * startY)
-        let originX = width * (1 - Double(graphWidth)) / 2
-        let origin = CGPoint(x: originX, y: Double(height) * 0.50)
-        path.move(to: origin)
-        
-        for angle in stride(from: 5.0, through: 360.0, by: 5.0) {
-            let x = origin.x + CGFloat(angle/360.0) * CGFloat(width) * graphWidth
-            let y = origin.y - CGFloat(sin(angle/180.0 * Double.pi)) * CGFloat(height) * amplitude
-            path.addLine(to: CGPoint(x: x, y: y))
-        }
-        let endX = origin.x + CGFloat(width) * graphWidth
-        for angle in stride(from: 5.0, through: 360.0, by: 5.0) {
-            let x = endX - CGFloat(angle/360.0) * CGFloat(width) * graphWidth
-            let y = origin.y - CGFloat(sin(angle/180.0 * Double.pi)) * CGFloat(height) * amplitude
-            path.addLine(to: CGPoint(x: x, y: y))
-        }
-        
-        for angle in stride(from: 5.0, through: 360.0, by: 5.0) {
-            let x = origin.x + CGFloat(angle/360.0) * CGFloat(width) * graphWidth
-            let y = origin.y + CGFloat(sin(angle/180.0 * Double.pi)) * CGFloat(height) * amplitude
-            path.addLine(to: CGPoint(x: x, y: y))
-        }
-        for angle in stride(from: 5.0, through: 360.0, by: 5.0) {
-            let x = endX - CGFloat(angle/360.0) * CGFloat(width) * graphWidth
-            let y = origin.y + CGFloat(sin(angle/180.0 * Double.pi)) * CGFloat(height) * amplitude
-            path.addLine(to: CGPoint(x: x, y: y))
-        }
-        
-        return path
-    }
-
     func stopAnimations() {
         switch optoPrevDirection {
         case .none:
@@ -673,48 +629,7 @@ class MovingBallViewController: UIViewController {
     }
 }
 
-extension MovingBallViewController: CAAnimationDelegate {
-    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-        switch squareViewAnimationId {
-        case 0:
-            let sinePath = createSineWaveAnimationPath(startX: 20, startY: 20)
-            let sineAnim = CAKeyframeAnimation(keyPath: "position")
-            sineAnim.path = sinePath.cgPath
-            sineAnim.rotationMode = CAAnimationRotationMode.rotateAuto
-            sineAnim.repeatCount = 2
-            sineAnim.delegate = self
-            sineAnim.duration = 60.0
-            squareView.layer.add(sineAnim, forKey: "animate position along path")
-            squareViewAnimationId += 1
-        case 1:
-            let endPoint = CGPoint(x: 50, y: 200)
-            let rectAnim = CAKeyframeAnimation(keyPath: "position")
-            let rectPath = createRectangleAnimationPath(startX: Int(endPoint.x), startY: Int(endPoint.y))
-            rectAnim.path = rectPath.cgPath
-            rectAnim.rotationMode = CAAnimationRotationMode.rotateAuto
-            rectAnim.repeatCount = 2
-            rectAnim.delegate = self
-            rectAnim.duration = 60.0
-            squareView.layer.add(rectAnim, forKey: "animate position along path")
-            squareViewAnimationId += 1
-        case 2:
-            let circleAnim = CAKeyframeAnimation(keyPath: "position")
-            let endPoint = CGPoint(x: 50, y: 200)
-            let circlePath = createCircleAnimationPath(startX: Int(endPoint.x), startY: Int(endPoint.y))
-            circleAnim.path = circlePath.cgPath
-            circleAnim.rotationMode = CAAnimationRotationMode.rotateAuto
-            circleAnim.repeatCount = 2
-            circleAnim.delegate = self
-            circleAnim.duration = 20.0
-            squareView.layer.add(circleAnim, forKey: "animate position along path")
-            squareViewAnimationId = 0
-        default:
-            squareViewAnimationId = 0
-        }
-    }
-}
-
-extension MovingBallViewController: PopMenuViewControllerDelegate {
+extension OptokineticViewController: PopMenuViewControllerDelegate {
     
     func popMenuDidSelectItem(_ popMenuViewController: PopMenuViewController, at index: Int) {
         if index == 0 {
@@ -727,4 +642,6 @@ extension MovingBallViewController: PopMenuViewControllerDelegate {
             eyeExerciseMotionManualControl()
         }
     }
+    
 }
+

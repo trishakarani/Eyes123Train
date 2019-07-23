@@ -11,8 +11,8 @@ import ResearchKit
 
 class MainScreenViewController: UICollectionViewController {
 
-    let frontLabelArray = ["Line Dancers", "Follow Me", "Targets", "Check It Out"]
-    let frontImageArray = [UIImage(named: "optokineticBlankCircle"),  UIImage(named:"movingBallBlankCircle"), UIImage(named:"hitTargetBlankCircle"), UIImage(named: "visionCheckBlankCircle")]
+    let frontLabelArray = ["Line Dancers", "Follow Me", "Targets", "Find Me", "Check It Out", "Eye Q"]
+    let frontImageArray = [UIImage(named: "optokineticBlankCircle"),  UIImage(named:"movingBallBlankCircle"), UIImage(named:"hitTargetBlankCircle"), UIImage(named: "ContrastBlankCircle"),UIImage(named: "visionCheckBlankCircle"), UIImage(named: "AppIcon")]
     var tablefontSize: Int = 22
     
     override func viewDidLoad() {
@@ -56,18 +56,25 @@ class MainScreenViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch indexPath.row {
         case 0:
-            performSegue(withIdentifier: "gotoOptoKinetic", sender: self)
+            performSegue(withIdentifier: "gotoOKNInstruct", sender: self)
+            //performSegue(withIdentifier: "gotoOptoKinetic", sender: self)
+            
         case 1:
-            performSegue(withIdentifier: "gotoMovingBall", sender: self)
+            performSegue(withIdentifier: "gotoMovingBallInstruct", sender: self)
+            
         case 2:
-            performSegue(withIdentifier: "gotoHitMovingObject", sender: self)
+            performSegue(withIdentifier: "gotoHitObjectInstruct", sender: self)
         case 3:
-            performSegue(withIdentifier: "gotoVisionCheck", sender: self)
-        
-//        case 4:
-//            performSegue(withIdentifier: "gotoLandoltCAcuity", sender: self)
-//        case 5:
-//            performSegue(withIdentifier: "gotoLandoltCContrast", sender: self)
+            performSegue(withIdentifier: "gotoAcuityInstruct", sender: self)
+            //performSegue(withIdentifier: "gotoVisionCheck", sender: self)
+            
+        case 4:
+            performSegue(withIdentifier: "gotoContrastInstruct", sender: self)
+            //performSegue(withIdentifier: "contrastTest", sender: self)
+            
+        case 5:
+            return
+
         default:
             performSegue(withIdentifier: "gotoOptoKinetic", sender: self)
         }

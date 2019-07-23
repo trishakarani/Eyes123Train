@@ -29,9 +29,15 @@
 		2CF2F29921A7F5130020713A /* AcuityTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF2F29821A7F5130020713A /* AcuityTestViewController.swift */; };
 		2CF2F29B21A9026E0020713A /* AcuityTestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF2F29A21A9026E0020713A /* AcuityTestData.swift */; };
 		333BE004A31B2B4C19401D03 /* libPods-Train_Your_Eyes_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D60004916E3ED2F83014AAF /* libPods-Train_Your_Eyes_iOS.a */; };
+		6815A79422E7469200A2BE52 /* OKNInstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6815A79322E7469200A2BE52 /* OKNInstructionsViewController.swift */; };
+		6815A79622E76B2400A2BE52 /* MovingBallInstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6815A79522E76B2400A2BE52 /* MovingBallInstructionsViewController.swift */; };
+		683EF82722E7748600C27735 /* HitObjectInstructViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683EF82622E7748600C27735 /* HitObjectInstructViewController.swift */; };
+		683EF82D22E782DF00C27735 /* ContrastInstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683EF82C22E782DF00C27735 /* ContrastInstructionsViewController.swift */; };
+		683EF82F22E782F700C27735 /* AcuityInstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683EF82E22E782F700C27735 /* AcuityInstructionsViewController.swift */; };
 		683F52B622E39B6D00224CFF /* LandoltCContrastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683F52B522E39B6D00224CFF /* LandoltCContrastViewController.swift */; };
 		683F52B822E39B8200224CFF /* LandoltCAcuityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683F52B722E39B8200224CFF /* LandoltCAcuityViewController.swift */; };
 		683F52BC22E40B1400224CFF /* MainScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683F52BB22E40B1400224CFF /* MainScreenCollectionViewCell.swift */; };
+		68AC167D22E6BC5E009280E8 /* AcuityTestResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AC167C22E6BC5E009280E8 /* AcuityTestResultViewController.swift */; };
 		68B615CC22E59F8C0031331B /* TrainYourEyesConsentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B615CB22E59F8C0031331B /* TrainYourEyesConsentTask.swift */; };
 		CD1EE193F842A7F56F62F6B3 /* libPods-Train_Your_Eyes_iOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A44E1CE213DFE161D5051816 /* libPods-Train_Your_Eyes_iOSTests.a */; };
 		F6CF3B117A005D2F67467715 /* libPods-Train_Your_Eyes_iOSUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E84F5AD2C7CE3708FFBB12 /* libPods-Train_Your_Eyes_iOSUITests.a */; };
@@ -85,25 +91,31 @@
 		2C09BE3F21745B02006C2A93 /* Train_Your_Eyes_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Train_Your_Eyes_iOSUITests.swift; sourceTree = "<group>"; };
 		2C09BE4121745B02006C2A93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C23572721A2032A00412F60 /* ColorBlindData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorBlindData.swift; sourceTree = "<group>"; };
-		2C2CB0A42186CF8700D7F77E /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		2C2CB0A42186CF8700D7F77E /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainScreenViewController.swift; path = ../MainScreenViewController.swift; sourceTree = "<group>"; };
 		2C2CB0A62186E7A800D7F77E /* OptokineticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptokineticViewController.swift; sourceTree = "<group>"; };
 		2C2CB0A82186E7BA00D7F77E /* MovingBallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingBallViewController.swift; sourceTree = "<group>"; };
 		2C2CB0AC2186F42B00D7F77E /* HitMovingObjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitMovingObjectViewController.swift; sourceTree = "<group>"; };
-		2C3EC83B2188427D004AD3FF /* MainScreenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenTableViewCell.swift; sourceTree = "<group>"; };
+		2C3EC83B2188427D004AD3FF /* MainScreenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainScreenTableViewCell.swift; path = ../MainScreenTableViewCell.swift; sourceTree = "<group>"; };
 		2C5EEFF721A72D3D00483A93 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		2C67BDBC2192C89C00E880FB /* UserDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserDataModel.xcdatamodel; sourceTree = "<group>"; };
 		2C6AA6B921B486CD001F88D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CAA5DC621A39F3900E769A8 /* AlertFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertFunctions.swift; sourceTree = "<group>"; };
 		2CAA5DC821A3CCCA00E769A8 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
-		2CAA5DCA21A3E5E800E769A8 /* VisionTestResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionTestResultsViewController.swift; sourceTree = "<group>"; };
-		2CF2F29421A79F7E0020713A /* ContrastTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContrastTestViewController.swift; sourceTree = "<group>"; };
-		2CF2F29821A7F5130020713A /* AcuityTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcuityTestViewController.swift; sourceTree = "<group>"; };
+		2CAA5DCA21A3E5E800E769A8 /* VisionTestResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VisionTestResultsViewController.swift; path = ../VisionTestResultsViewController.swift; sourceTree = "<group>"; };
+		2CF2F29421A79F7E0020713A /* ContrastTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContrastTestViewController.swift; path = ../ContrastTestViewController.swift; sourceTree = "<group>"; };
+		2CF2F29821A7F5130020713A /* AcuityTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AcuityTestViewController.swift; path = ../AcuityTestViewController.swift; sourceTree = "<group>"; };
 		2CF2F29A21A9026E0020713A /* AcuityTestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcuityTestData.swift; sourceTree = "<group>"; };
 		488F38336C938C82231AB733 /* Pods-Train_Your_Eyes_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Train_Your_Eyes_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Train_Your_Eyes_iOS/Pods-Train_Your_Eyes_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		4DB704BD5270DA93C6FEFC84 /* Pods-Train_Your_Eyes_iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Train_Your_Eyes_iOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Train_Your_Eyes_iOSUITests/Pods-Train_Your_Eyes_iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
-		683F52B522E39B6D00224CFF /* LandoltCContrastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandoltCContrastViewController.swift; sourceTree = "<group>"; };
-		683F52B722E39B8200224CFF /* LandoltCAcuityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandoltCAcuityViewController.swift; sourceTree = "<group>"; };
-		683F52BB22E40B1400224CFF /* MainScreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCollectionViewCell.swift; sourceTree = "<group>"; };
+		6815A79322E7469200A2BE52 /* OKNInstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OKNInstructionsViewController.swift; sourceTree = "<group>"; };
+		6815A79522E76B2400A2BE52 /* MovingBallInstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingBallInstructionsViewController.swift; sourceTree = "<group>"; };
+		683EF82622E7748600C27735 /* HitObjectInstructViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitObjectInstructViewController.swift; sourceTree = "<group>"; };
+		683EF82C22E782DF00C27735 /* ContrastInstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContrastInstructionsViewController.swift; sourceTree = "<group>"; };
+		683EF82E22E782F700C27735 /* AcuityInstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcuityInstructionsViewController.swift; sourceTree = "<group>"; };
+		683F52B522E39B6D00224CFF /* LandoltCContrastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LandoltCContrastViewController.swift; path = ../LandoltCContrastViewController.swift; sourceTree = "<group>"; };
+		683F52B722E39B8200224CFF /* LandoltCAcuityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LandoltCAcuityViewController.swift; path = ../LandoltCAcuityViewController.swift; sourceTree = "<group>"; };
+		683F52BB22E40B1400224CFF /* MainScreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainScreenCollectionViewCell.swift; path = ../MainScreenCollectionViewCell.swift; sourceTree = "<group>"; };
+		68AC167C22E6BC5E009280E8 /* AcuityTestResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcuityTestResultViewController.swift; sourceTree = "<group>"; };
 		68B615CB22E59F8C0031331B /* TrainYourEyesConsentTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainYourEyesConsentTask.swift; sourceTree = "<group>"; };
 		9E059006F52E4603BFD887A2 /* Pods-Train_Your_Eyes_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Train_Your_Eyes_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Train_Your_Eyes_iOS/Pods-Train_Your_Eyes_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		A44E1CE213DFE161D5051816 /* libPods-Train_Your_Eyes_iOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Train_Your_Eyes_iOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -217,18 +229,14 @@
 			isa = PBXGroup;
 			children = (
 				2C09BE2121745B01006C2A93 /* ViewController.swift */,
-				2C2CB0A42186CF8700D7F77E /* MainScreenViewController.swift */,
-				683F52BB22E40B1400224CFF /* MainScreenCollectionViewCell.swift */,
-				2C3EC83B2188427D004AD3FF /* MainScreenTableViewCell.swift */,
-				2C2CB0A62186E7A800D7F77E /* OptokineticViewController.swift */,
-				2C2CB0A82186E7BA00D7F77E /* MovingBallViewController.swift */,
-				2C2CB0AC2186F42B00D7F77E /* HitMovingObjectViewController.swift */,
-				2CF2F29821A7F5130020713A /* AcuityTestViewController.swift */,
-				2CF2F29421A79F7E0020713A /* ContrastTestViewController.swift */,
-				2CAA5DCA21A3E5E800E769A8 /* VisionTestResultsViewController.swift */,
-				683F52B722E39B8200224CFF /* LandoltCAcuityViewController.swift */,
-				683F52B522E39B6D00224CFF /* LandoltCContrastViewController.swift */,
 				68B615CB22E59F8C0031331B /* TrainYourEyesConsentTask.swift */,
+				6814E47422E711ED00C39724 /* Main Screen */,
+				683EF82B22E7798F00C27735 /* Optokinetic Exercise */,
+				683EF82922E7797300C27735 /* Moving Ball Exercise */,
+				683EF82822E7795900C27735 /* Target Game */,
+				6814E47322E711B200C39724 /* Color Contrast Test */,
+				6814E46F22E7114300C39724 /* Acuity Test  */,
+				6814E47122E7118300C39724 /* ResearchKit Activities */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -239,6 +247,72 @@
 				2C67BDBB2192C89C00E880FB /* UserDataModel.xcdatamodeld */,
 			);
 			path = "Data Model";
+			sourceTree = "<group>";
+		};
+		6814E46F22E7114300C39724 /* Acuity Test  */ = {
+			isa = PBXGroup;
+			children = (
+				2CF2F29821A7F5130020713A /* AcuityTestViewController.swift */,
+				683EF82E22E782F700C27735 /* AcuityInstructionsViewController.swift */,
+				68AC167C22E6BC5E009280E8 /* AcuityTestResultViewController.swift */,
+			);
+			path = "Acuity Test ";
+			sourceTree = "<group>";
+		};
+		6814E47122E7118300C39724 /* ResearchKit Activities */ = {
+			isa = PBXGroup;
+			children = (
+				683F52B522E39B6D00224CFF /* LandoltCContrastViewController.swift */,
+				683F52B722E39B8200224CFF /* LandoltCAcuityViewController.swift */,
+			);
+			path = "ResearchKit Activities";
+			sourceTree = "<group>";
+		};
+		6814E47322E711B200C39724 /* Color Contrast Test */ = {
+			isa = PBXGroup;
+			children = (
+				2CF2F29421A79F7E0020713A /* ContrastTestViewController.swift */,
+				2CAA5DCA21A3E5E800E769A8 /* VisionTestResultsViewController.swift */,
+				683EF82C22E782DF00C27735 /* ContrastInstructionsViewController.swift */,
+			);
+			path = "Color Contrast Test";
+			sourceTree = "<group>";
+		};
+		6814E47422E711ED00C39724 /* Main Screen */ = {
+			isa = PBXGroup;
+			children = (
+				2C3EC83B2188427D004AD3FF /* MainScreenTableViewCell.swift */,
+				683F52BB22E40B1400224CFF /* MainScreenCollectionViewCell.swift */,
+				2C2CB0A42186CF8700D7F77E /* MainScreenViewController.swift */,
+			);
+			path = "Main Screen";
+			sourceTree = "<group>";
+		};
+		683EF82822E7795900C27735 /* Target Game */ = {
+			isa = PBXGroup;
+			children = (
+				683EF82622E7748600C27735 /* HitObjectInstructViewController.swift */,
+				2C2CB0AC2186F42B00D7F77E /* HitMovingObjectViewController.swift */,
+			);
+			path = "Target Game";
+			sourceTree = "<group>";
+		};
+		683EF82922E7797300C27735 /* Moving Ball Exercise */ = {
+			isa = PBXGroup;
+			children = (
+				6815A79522E76B2400A2BE52 /* MovingBallInstructionsViewController.swift */,
+				2C2CB0A82186E7BA00D7F77E /* MovingBallViewController.swift */,
+			);
+			path = "Moving Ball Exercise";
+			sourceTree = "<group>";
+		};
+		683EF82B22E7798F00C27735 /* Optokinetic Exercise */ = {
+			isa = PBXGroup;
+			children = (
+				6815A79322E7469200A2BE52 /* OKNInstructionsViewController.swift */,
+				2C2CB0A62186E7A800D7F77E /* OptokineticViewController.swift */,
+			);
+			path = "Optokinetic Exercise";
 			sourceTree = "<group>";
 		};
 		841C2400C013F8420B80BDB3 /* Pods */ = {
@@ -511,9 +585,12 @@
 				2C2CB0AD2186F42B00D7F77E /* HitMovingObjectViewController.swift in Sources */,
 				2C67BDBD2192C89C00E880FB /* UserDataModel.xcdatamodeld in Sources */,
 				2CAA5DC721A39F3900E769A8 /* AlertFunctions.swift in Sources */,
+				6815A79422E7469200A2BE52 /* OKNInstructionsViewController.swift in Sources */,
 				2C2CB0A92186E7BA00D7F77E /* MovingBallViewController.swift in Sources */,
+				683EF82F22E782F700C27735 /* AcuityInstructionsViewController.swift in Sources */,
 				683F52B622E39B6D00224CFF /* LandoltCContrastViewController.swift in Sources */,
 				2CF2F29B21A9026E0020713A /* AcuityTestData.swift in Sources */,
+				6815A79622E76B2400A2BE52 /* MovingBallInstructionsViewController.swift in Sources */,
 				2CF2F29921A7F5130020713A /* AcuityTestViewController.swift in Sources */,
 				2CAA5DC921A3CCCA00E769A8 /* RoundButton.swift in Sources */,
 				683F52BC22E40B1400224CFF /* MainScreenCollectionViewCell.swift in Sources */,
@@ -521,8 +598,11 @@
 				2C3EC83C2188427D004AD3FF /* MainScreenTableViewCell.swift in Sources */,
 				683F52B822E39B8200224CFF /* LandoltCAcuityViewController.swift in Sources */,
 				68B615CC22E59F8C0031331B /* TrainYourEyesConsentTask.swift in Sources */,
+				68AC167D22E6BC5E009280E8 /* AcuityTestResultViewController.swift in Sources */,
 				2C2CB0A72186E7A800D7F77E /* OptokineticViewController.swift in Sources */,
 				2CF2F29521A79F7E0020713A /* ContrastTestViewController.swift in Sources */,
+				683EF82D22E782DF00C27735 /* ContrastInstructionsViewController.swift in Sources */,
+				683EF82722E7748600C27735 /* HitObjectInstructViewController.swift in Sources */,
 				2C09BE2021745B01006C2A93 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

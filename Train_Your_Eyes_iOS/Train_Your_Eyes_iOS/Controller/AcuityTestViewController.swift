@@ -8,7 +8,7 @@
 
 import UIKit
 
-var Instructions: String = "\r\n\r\nIn this test we test how well you see alphabets of different sizes and shapes. \r\n\r\nKeep the device at a suggested distance of 16 inches from your eyes. Choose the option box whose shape match with the one in the picture.\r\n\r\n"
+//var Instructions: String = "\r\n\r\nIn this test we test how well you see alphabets of different sizes and shapes. \r\n\r\nKeep the device at a suggested distance of 16 inches from your eyes. Choose the option box whose shape match with the one in the picture.\r\n\r\n"
 
 class AcuityTestViewController: UIViewController {
 
@@ -41,7 +41,7 @@ class AcuityTestViewController: UIViewController {
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         
         setupAcuityTest()
-        AlertFunctions.showAlert(title: "Acuity Test", message: Instructions)
+//        AlertFunctions.showAlert(title: "Acuity Test", message: Instructions)
         
         //not necessary
         //self.navigationController?.replaceCurrentViewController(with: self, animated: false)
@@ -112,17 +112,13 @@ class AcuityTestViewController: UIViewController {
         }
     }
 
-//    func moveToColorBlindnessTest() {
-//        performSegue(withIdentifier: "gotoBlindnessTest", sender: self)
-//    }
-    
     func moveToColorContrastTest() {
-        performSegue(withIdentifier: "contrastTest", sender: self)
+        performSegue(withIdentifier: "acuityResults", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is ContrastTestViewController  {
-            let vc = segue.destination as? ContrastTestViewController
+        if segue.destination is AcuityTestResultsViewController  {
+            let vc = segue.destination as? AcuityTestResultsViewController
             vc?.acuityTestResult = "\(acuitySuccessCount) of \(acuityTestCount)"
             vc?.vision2020Result = correctedVision
         }

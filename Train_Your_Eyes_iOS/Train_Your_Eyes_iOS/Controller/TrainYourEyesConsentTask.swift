@@ -28,7 +28,7 @@ public var TrainYourEyesConsentTask: ORKOrderedTask {
     let consentSections: [ORKConsentSection] = sectionTypes.map { contentSectionType in
         let consentSection = ORKConsentSection(type: contentSectionType)
         consentSection.summary = "Eye Q - Train Your Eyes"
-        consentSection.content = "This app focuses on eye and brain training exercises. Data is collected for app improvement purposes only."
+        consentSection.content = "This app focuses on eye and brain training exercises."
         return consentSection
     }
     

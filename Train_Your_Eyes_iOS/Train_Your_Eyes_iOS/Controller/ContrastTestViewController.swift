@@ -33,7 +33,7 @@ class ContrastTestViewController: UIViewController {
     var contrastTestCount: Int = 0
     var contrastBtnTagId: Int = 0
     
-    var Instructions: String = "\r\n\r\nIn this test we test how you distinguish contrast in the colors.\r\n\r\nKeep the device at a suggested distance of 16 inches from your eyes. You should choose the square box whose color contrasts in the picture.\r\n\r\n"
+//    var Instructions: String = "\r\n\r\nIn this test we test how you distinguish contrast in the colors.\r\n\r\nKeep the device at a suggested distance of 16 inches from your eyes. You should choose the square box whose color contrasts in the picture.\r\n\r\n"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +42,7 @@ class ContrastTestViewController: UIViewController {
         backButton.title = "Back"
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         
-        AlertFunctions.showAlert(title: "Color Contrast Test", message: Instructions)
+//        AlertFunctions.showAlert(title: "Color Contrast Test", message: Instructions)
         addButtonsToList()
         
         setupContrastColorButtons()
@@ -114,8 +114,8 @@ class ContrastTestViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is VisionTestResultsViewController {
             let vc = segue.destination as? VisionTestResultsViewController
-            vc?.acuityTestResult = self.acuityTestResult
-            vc?.vision2020Result = self.vision2020Result
+//            vc?.acuityTestResult = self.acuityTestResult
+//            vc?.vision2020Result = self.vision2020Result
             vc?.colorContrastResult = "\(contrastSuccessCount) of \(contrastTestCount)"
             //vc?.colorBlindnessResult = self.colorBlindnessResult
         }
