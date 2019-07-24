@@ -12,6 +12,7 @@ class ContrastInstructionsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Find Me Instructions"
 
         // Do any additional setup after loading the view.
     }
@@ -21,4 +22,13 @@ class ContrastInstructionsViewController: UIViewController {
     }
     
     
+}
+
+extension UINavigationController {
+    /*func replaceCurrentViewController(with viewController: UIViewController, animated: Bool) {
+     let indexToRemove = viewControllers.count - 1
+     if indexToRemove >= 0 {
+     viewControllers.remove(at: indexToRemove)
+     }
+     }*/
 }

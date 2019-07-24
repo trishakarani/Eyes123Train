@@ -12,13 +12,23 @@ class AcuityInstructionsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Check It Out Instructions"
 
         // Do any additional setup after loading the view.
     }
     
     @IBAction func InstructToAcuity(_ sender: Any) {
-        performSegue(withIdentifier: "goInstructToAcuity", sender: self)
+        performSegue(withIdentifier: "goFromInstructToAcuity", sender: self)
     }
     
 
+}
+
+extension UINavigationController {
+    /*func replaceCurrentViewController(with viewController: UIViewController, animated: Bool) {
+     let indexToRemove = viewControllers.count - 1
+     if indexToRemove >= 0 {
+     viewControllers.remove(at: indexToRemove)
+     }
+     }*/
 }

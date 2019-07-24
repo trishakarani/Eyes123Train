@@ -13,12 +13,15 @@ class HitObjectInstructViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
          self.navigationController?.replaceCurrentViewController(with: self, animated: false)
-        // Do any additional setup after loading the view.
+        title = "Hit Target Instructions"
+        
+        let backButton = UIBarButtonItem()
+        backButton.title = "Back"
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
     }
     
     @IBAction func InstructToHitObject(_ sender: Any) {
         performSegue(withIdentifier: "goInstructToHitObject", sender: self)
     }
     
-
 }

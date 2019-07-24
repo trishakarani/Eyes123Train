@@ -44,6 +44,7 @@ class MovingBallViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Follow Me"
         
 //        self.navigationController?.navigationBar.titleTextAttributes =
 //            [NSAttributedString.Key.foregroundColor: UIColor.red,

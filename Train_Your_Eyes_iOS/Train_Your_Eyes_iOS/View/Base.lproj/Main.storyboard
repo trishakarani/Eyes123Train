@@ -76,11 +76,13 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="colorButton" destination="1va-zv-Brb" id="PI4-ek-HPQ"/>
+                        <segue destination="Wzw-5L-XqZ" kind="unwind" identifier="backToMain" unwindAction="backFromUnwindWithSegue:" id="Khr-ln-V2E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mvy-l5-0NG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Wzw-5L-XqZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2754" y="-1228"/>
+            <point key="canvasLocation" x="3067" y="-1228"/>
         </scene>
         <!--eye Q-->
         <scene sceneID="FkR-zT-lzq">
@@ -134,17 +136,17 @@
                         <segue destination="yvH-KP-BrI" kind="show" identifier="gotoHitMovingObject" id="u98-zs-YJX"/>
                         <segue destination="sDJ-Ad-epN" kind="show" identifier="gotoVisionCheck" id="clA-b8-Akd"/>
                         <segue destination="yJc-QZ-E5J" kind="show" identifier="contrastTest" id="2C0-Ur-Jlq"/>
-                        <segue destination="R2M-AI-L8d" kind="show" identifier="gotoOKNInstruct" id="Cc4-F0-FvJ"/>
                         <segue destination="I4x-5W-ji8" kind="show" identifier="gotoOptoKinetic" id="lL3-BY-gdc"/>
                         <segue destination="Rhm-TX-Ekg" kind="show" identifier="gotoHitObjectInstruct" id="k5i-9x-Qg7"/>
-                        <segue destination="an0-Jg-nCc" kind="show" identifier="gotoAcuityInstructions" id="ZPb-Wr-rc6"/>
+                        <segue destination="an0-Jg-nCc" kind="show" identifier="gotoAcuityInstruct" id="ZPb-Wr-rc6"/>
                         <segue destination="AUh-df-3Ez" kind="show" identifier="gotoMovingBallInstruct" id="mqU-Jm-Pn1"/>
                         <segue destination="YKa-GU-2U0" kind="show" identifier="gotoContrastInstruct" id="5uB-oa-ND8"/>
+                        <segue destination="R2M-AI-L8d" kind="show" identifier="gotoOKNInstruct" id="gnu-AL-ELv"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3DG-0v-kmS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="17" y="122"/>
+            <point key="canvasLocation" x="161" y="115"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YEX-Ii-w32">
@@ -169,25 +171,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9E-RF-8DF">
-                                <rect key="frame" x="20" y="225" width="374" height="158"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9E-RF-8DF">
+                                <rect key="frame" x="20" y="194" width="374" height="125.5"/>
                                 <string key="text">Line Dancers tests your eye-brain connection. Using the theory of Optokinetic Nystagmus, this test generates a natural reflex as your eyes track the lines on the screen. </string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ek-3z-iYp">
-                                <rect key="frame" x="20" y="438" width="374" height="116"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ek-3z-iYp">
+                                <rect key="frame" x="15" y="394" width="384" height="100.5"/>
                                 <string key="text">Instructions: Keep both of your eyes open and try to track one black line until it reaches the end of the screen, and then pick a new black line to track. </string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYS-98-Tvc">
-                                <rect key="frame" x="130" y="647" width="155" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYS-98-Tvc">
+                                <rect key="frame" x="0.0" y="594" width="414" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Let's Begin!"/>
                                 <connections>
                                     <action selector="InstructToOKN:" destination="R2M-AI-L8d" eventType="touchUpInside" id="Ben-vi-kzk"/>
@@ -195,15 +195,31 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="a9E-RF-8DF" firstAttribute="top" secondItem="iS9-44-bCo" secondAttribute="top" constant="150" id="Lld-G7-1sz"/>
+                            <constraint firstItem="JYS-98-Tvc" firstAttribute="top" secondItem="iS9-44-bCo" secondAttribute="top" constant="550" id="Nha-ah-Py1"/>
+                            <constraint firstItem="JYS-98-Tvc" firstAttribute="centerX" secondItem="2rp-ag-tCf" secondAttribute="centerX" id="PBv-2i-le0"/>
+                            <constraint firstItem="a9E-RF-8DF" firstAttribute="leading" secondItem="iS9-44-bCo" secondAttribute="leading" constant="20" id="RdY-9o-1mj"/>
+                            <constraint firstItem="8ek-3z-iYp" firstAttribute="leading" secondItem="iS9-44-bCo" secondAttribute="leading" constant="15" id="Tx6-xt-YGr"/>
+                            <constraint firstItem="8ek-3z-iYp" firstAttribute="top" secondItem="iS9-44-bCo" secondAttribute="top" constant="350" id="XYU-6T-e1x"/>
+                            <constraint firstItem="JYS-98-Tvc" firstAttribute="trailing" secondItem="iS9-44-bCo" secondAttribute="trailing" id="brK-Zh-eiS"/>
+                            <constraint firstItem="iS9-44-bCo" firstAttribute="trailing" secondItem="a9E-RF-8DF" secondAttribute="trailing" constant="20" id="gtH-I7-WCe"/>
+                            <constraint firstItem="JYS-98-Tvc" firstAttribute="leading" secondItem="2rp-ag-tCf" secondAttribute="leading" id="qPi-nW-RxA"/>
+                            <constraint firstItem="iS9-44-bCo" firstAttribute="trailing" secondItem="8ek-3z-iYp" secondAttribute="trailing" constant="15" id="uYl-a1-HhB"/>
+                            <constraint firstItem="8ek-3z-iYp" firstAttribute="centerX" secondItem="2rp-ag-tCf" secondAttribute="centerX" id="yq0-jW-FQn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="iS9-44-bCo"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Line Dancers Instructions" leftItemsSupplementBackButton="YES" id="8vS-3l-3wx">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="fx9-73-W1T"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="I4x-5W-ji8" kind="show" identifier="goInstructToOKN" id="I9w-qR-H0f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MjG-dT-95e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1234.7826086956522" y="-1202.0089285714284"/>
+            <point key="canvasLocation" x="1492.753623188406" y="-1228.125"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Uqg-Ih-JCa">
@@ -218,7 +234,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BH4-Go-1Ij" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2381" y="-1228"/>
+            <point key="canvasLocation" x="3289.8550724637685" y="-1228.125"/>
         </scene>
         <!--Acuity Results-->
         <scene sceneID="NOP-3G-yPa">
@@ -229,56 +245,57 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20/20 Score : " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfp-Np-52N">
-                                <rect key="frame" x="15" y="238" width="221" height="33"/>
+                                <rect key="frame" x="15" y="194" width="221" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="221" id="NB0-mo-2YH"/>
                                     <constraint firstAttribute="height" constant="33" id="paQ-Nv-D9h"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acuity Test Results: " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yq-6G-iKq">
-                                <rect key="frame" x="15" y="291" width="221" height="33"/>
+                                <rect key="frame" x="15" y="247" width="221" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="DJr-zA-ujC"/>
                                     <constraint firstAttribute="width" constant="221" id="a9p-b8-oyU"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Note: For a diagnosis, seek professional medical advice from your physician or health care provider." textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Njl-UA-F9Z">
                                 <rect key="frame" x="15" y="510" width="345" height="75"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ATF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKK-DM-x9q">
-                                <rect key="frame" x="242" y="291" width="157" height="33"/>
+                                <rect key="frame" x="242" y="247" width="157" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="vH9-wN-xe0"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VA-20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RHT-tO-0Pk">
-                                <rect key="frame" x="242" y="238" width="157" height="33"/>
+                                <rect key="frame" x="242" y="194" width="157" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="7kE-Lb-WEb"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qpa-zG-oug" customClass="RoundButton" customModule="Train_Your_Eyes_iOS" customModuleProvider="target">
-                                <rect key="frame" x="137" y="409" width="140" height="50"/>
+                                <rect key="frame" x="137" y="365" width="140" height="50"/>
                                 <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="YAO-az-7Uf"/>
                                     <constraint firstAttribute="height" constant="50" id="vIW-1T-gre"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="tintColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="DONE">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -334,27 +351,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Follow Me tests your eye-brain connection as well as your eye muscles." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WzK-XH-pwL">
-                                <rect key="frame" x="61" y="199" width="315" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Follow Me tests your eye-brain connection as well as your eye muscles." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WzK-XH-pwL">
+                                <rect key="frame" x="20" y="194" width="374" height="91"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Instructions: Track the moving ball with your eyes. " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kN5-LO-aCn">
-                                <rect key="frame" x="61" y="381" width="315" height="98"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Instructions: Track the moving ball with your eyes. " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kN5-LO-aCn">
+                                <rect key="frame" x="20" y="394" width="374" height="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Yr-6e-FRL">
-                                <rect key="frame" x="167" y="595" width="80" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Yr-6e-FRL">
+                                <rect key="frame" x="0.0" y="544.5" width="414" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Let's Begin!"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4Yr-6e-FRL" firstAttribute="leading" secondItem="rIl-Un-hKF" secondAttribute="leading" id="C6c-oM-pR0"/>
+                            <constraint firstItem="rIl-Un-hKF" firstAttribute="trailing" secondItem="kN5-LO-aCn" secondAttribute="trailing" constant="20" id="L0D-UP-Fcs"/>
+                            <constraint firstItem="kN5-LO-aCn" firstAttribute="leading" secondItem="rIl-Un-hKF" secondAttribute="leading" constant="20" id="S3j-Qa-kSh"/>
+                            <constraint firstItem="kN5-LO-aCn" firstAttribute="top" secondItem="267-Oy-2J2" secondAttribute="topMargin" constant="350" id="UEE-gK-UjQ"/>
+                            <constraint firstItem="rIl-Un-hKF" firstAttribute="trailing" secondItem="WzK-XH-pwL" secondAttribute="trailing" constant="20" id="WtP-eH-2mO"/>
+                            <constraint firstItem="WzK-XH-pwL" firstAttribute="top" secondItem="rIl-Un-hKF" secondAttribute="top" constant="150" id="ZQa-6b-l7d"/>
+                            <constraint firstItem="4Yr-6e-FRL" firstAttribute="trailing" secondItem="rIl-Un-hKF" secondAttribute="trailing" id="sCs-iR-if7"/>
+                            <constraint firstItem="WzK-XH-pwL" firstAttribute="leading" secondItem="rIl-Un-hKF" secondAttribute="leading" constant="20" id="vRW-JE-UDs"/>
+                            <constraint firstItem="4Yr-6e-FRL" firstAttribute="top" secondItem="kN5-LO-aCn" secondAttribute="bottom" constant="100" id="ze9-Rc-jPu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="rIl-Un-hKF"/>
                     </view>
                 </viewController>
@@ -400,7 +426,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yhr-pb-YGU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2380" y="-493"/>
+            <point key="canvasLocation" x="2293" y="-496"/>
         </scene>
         <!--Color Contrast Test-->
         <scene sceneID="2uO-xR-rhP">
@@ -556,7 +582,7 @@
                                     <constraint firstAttribute="height" constant="33" id="4QA-Df-MBu"/>
                                     <constraint firstAttribute="width" constant="221" id="hBT-Sz-a2G"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -567,7 +593,7 @@
                                     <constraint firstAttribute="width" constant="140" id="2sT-Jq-3qx"/>
                                     <constraint firstAttribute="height" constant="50" id="EYn-Qv-OKK"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="DONE">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -586,13 +612,13 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="njG-fw-U1w"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note: For a diagnosis, seek professional medical advice from your physician or health care provider." textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="3" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1FS-GT-WfI">
-                                <rect key="frame" x="13" y="495" width="388" height="36.5"/>
-                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="15"/>
+                                <rect key="frame" x="13" y="495" width="388" height="69.5"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -631,38 +657,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKt-Zp-3OC">
-                                <rect key="frame" x="89" y="203" width="261" height="121"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKt-Zp-3OC">
+                                <rect key="frame" x="20" y="194" width="374" height="100.5"/>
                                 <string key="text">Target tests your cerebellum, part of your brain, and your eye. The red, blue, and green colors stimulate the cone cells in your retina. </string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7yo-yM-d97">
-                                <rect key="frame" x="167" y="561" width="80" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7yo-yM-d97">
+                                <rect key="frame" x="0.0" y="569.5" width="414" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Let's Begin!"/>
                                 <connections>
-                                    <action selector="InstructToHitObject:" destination="Rhm-TX-Ekg" eventType="touchUpInside" id="gG5-cj-8u0"/>
-                                    <action selector="goInstructToHitObject:" destination="Rhm-TX-Ekg" eventType="touchUpInside" id="kam-BU-dAx"/>
-                                    <action selector="goInstructToMovingBall:" destination="Rhm-TX-Ekg" eventType="touchUpInside" id="5vk-tp-DCw"/>
+                                    <action selector="InstructToHitObject:" destination="Rhm-TX-Ekg" eventType="touchUpInside" id="ZLn-lQ-mJa"/>
+                                    <segue destination="yvH-KP-BrI" kind="show" identifier="goInstructToHitObject" id="DRC-NP-Md3"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Instructions: Open both of your eyes and tap the dots as they appear on the screen. " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xYQ-XZ-AGT">
-                                <rect key="frame" x="89" y="369" width="261" height="121"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions: Open both of your eyes and tap the dots as they appear on the screen. " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xYQ-XZ-AGT">
+                                <rect key="frame" x="20" y="394" width="374" height="75.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7yo-yM-d97" firstAttribute="trailing" secondItem="UAD-rQ-JwX" secondAttribute="trailing" id="Ieg-UL-BR0"/>
+                            <constraint firstItem="bKt-Zp-3OC" firstAttribute="top" secondItem="UAD-rQ-JwX" secondAttribute="top" constant="150" id="TU0-Os-uTU"/>
+                            <constraint firstItem="7yo-yM-d97" firstAttribute="top" secondItem="xYQ-XZ-AGT" secondAttribute="bottom" constant="100" id="TaW-PU-UCu"/>
+                            <constraint firstItem="UAD-rQ-JwX" firstAttribute="trailing" secondItem="xYQ-XZ-AGT" secondAttribute="trailing" constant="20" id="WE0-bJ-dwa"/>
+                            <constraint firstItem="7yo-yM-d97" firstAttribute="leading" secondItem="UAD-rQ-JwX" secondAttribute="leading" id="Yci-UO-mNF"/>
+                            <constraint firstItem="UAD-rQ-JwX" firstAttribute="trailing" secondItem="bKt-Zp-3OC" secondAttribute="trailing" constant="20" id="dDo-MD-kAA"/>
+                            <constraint firstItem="bKt-Zp-3OC" firstAttribute="leading" secondItem="UAD-rQ-JwX" secondAttribute="leading" constant="20" id="euB-LQ-rtj"/>
+                            <constraint firstItem="xYQ-XZ-AGT" firstAttribute="top" secondItem="UAD-rQ-JwX" secondAttribute="top" constant="350" id="xHT-rk-NLo"/>
+                            <constraint firstItem="xYQ-XZ-AGT" firstAttribute="leading" secondItem="UAD-rQ-JwX" secondAttribute="leading" constant="20" id="xLs-Zr-5jk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="UAD-rQ-JwX"/>
                     </view>
-                    <connections>
-                        <segue destination="yvH-KP-BrI" kind="show" identifier="goInstructToHitObject" id="Spe-8Y-VB5"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5hK-qK-Ju8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -712,24 +743,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9b-vM-egA">
-                                <rect key="frame" x="20" y="235" width="374" height="145"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9b-vM-egA">
+                                <rect key="frame" x="20" y="244" width="374" height="91"/>
                                 <string key="text">Find Me tests the function of your cone cells, which give you color vision. In addition, as the contrast is darker or harder to see, the test challenges your rod cells that mediate vision in darkness. </string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Instructions: Keep both of your eyes open and select the box that has a lighter or darker color from the rest.  " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zs5-Xa-VSz">
-                                <rect key="frame" x="20" y="453" width="374" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions: Keep both of your eyes open and select the box that has a lighter or darker color from the rest.  " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zs5-Xa-VSz">
+                                <rect key="frame" x="15" y="444" width="384" height="75.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJX-3g-wfF">
-                                <rect key="frame" x="167" y="615" width="80" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJX-3g-wfF">
+                                <rect key="frame" x="0.0" y="619.5" width="414" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Let's Begin!"/>
                                 <connections>
                                     <action selector="InstructToContrast:" destination="YKa-GU-2U0" eventType="touchUpInside" id="vCI-L0-uN8"/>
@@ -737,6 +766,17 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zs5-Xa-VSz" firstAttribute="leading" secondItem="2NA-G1-mVr" secondAttribute="leading" constant="15" id="4sX-GO-O8c"/>
+                            <constraint firstItem="IJX-3g-wfF" firstAttribute="top" secondItem="zs5-Xa-VSz" secondAttribute="bottom" constant="100" id="9uv-TZ-ivb"/>
+                            <constraint firstItem="IJX-3g-wfF" firstAttribute="leading" secondItem="2NA-G1-mVr" secondAttribute="leading" id="Bla-80-ZAu"/>
+                            <constraint firstItem="T9b-vM-egA" firstAttribute="top" secondItem="2NA-G1-mVr" secondAttribute="top" constant="200" id="Doz-uo-ckw"/>
+                            <constraint firstItem="T9b-vM-egA" firstAttribute="leading" secondItem="2NA-G1-mVr" secondAttribute="leading" constant="20" id="EQw-XJ-dHW"/>
+                            <constraint firstItem="2NA-G1-mVr" firstAttribute="trailing" secondItem="T9b-vM-egA" secondAttribute="trailing" constant="20" id="H19-P1-wEs"/>
+                            <constraint firstItem="IJX-3g-wfF" firstAttribute="trailing" secondItem="2NA-G1-mVr" secondAttribute="trailing" id="JKJ-Xu-Mq7"/>
+                            <constraint firstItem="zs5-Xa-VSz" firstAttribute="top" secondItem="2NA-G1-mVr" secondAttribute="top" constant="400" id="ND4-Pj-WIL"/>
+                            <constraint firstItem="2NA-G1-mVr" firstAttribute="trailing" secondItem="zs5-Xa-VSz" secondAttribute="trailing" constant="15" id="NZr-vF-PZx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2NA-G1-mVr"/>
                     </view>
                     <connections>
@@ -943,37 +983,44 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2OQ-xr-igH">
-                                <rect key="frame" x="61" y="385" width="292" height="126"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2OQ-xr-igH">
+                                <rect key="frame" x="15" y="394" width="384" height="128"/>
                                 <string key="text">Instructions: Choose the letter that you see on screen. You can complete this test with both of your eyes open or test one at a time. We recommend that you complete this test once a month. </string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBW-Sw-X9t">
-                                <rect key="frame" x="167" y="608" width="80" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBW-Sw-X9t">
+                                <rect key="frame" x="0.0" y="594.5" width="414" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Let's Begin!"/>
                                 <connections>
-                                    <action selector="InstructToAcuity:" destination="an0-Jg-nCc" eventType="touchUpInside" id="Ekk-JC-ocn"/>
+                                    <action selector="InstructToAcuity:" destination="an0-Jg-nCc" eventType="touchUpInside" id="aap-ui-ysS"/>
+                                    <segue destination="sDJ-Ad-epN" kind="show" identifier="goFromInstructToAcuity" id="vgR-fs-q8T"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jMZ-w5-7AD">
-                                <rect key="frame" x="61" y="205" width="292" height="116"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jMZ-w5-7AD">
+                                <rect key="frame" x="15" y="194" width="384" height="100.5"/>
                                 <string key="text">Check It Out is your eye check-up. The smallest letters will challenge the cone area of the retina or fovea, which gives you the best visual acuity. </string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uBW-Sw-X9t" firstAttribute="top" secondItem="2OQ-xr-igH" secondAttribute="bottom" constant="100" id="1XU-hR-IUl"/>
+                            <constraint firstItem="jMZ-w5-7AD" firstAttribute="top" secondItem="gYU-ew-DvT" secondAttribute="top" constant="150" id="902-C9-Ayw"/>
+                            <constraint firstItem="2OQ-xr-igH" firstAttribute="top" secondItem="gYU-ew-DvT" secondAttribute="top" constant="350" id="D1j-u4-WvC"/>
+                            <constraint firstItem="2OQ-xr-igH" firstAttribute="leading" secondItem="gYU-ew-DvT" secondAttribute="leading" constant="20" id="HoL-28-vHT"/>
+                            <constraint firstItem="gYU-ew-DvT" firstAttribute="trailing" secondItem="jMZ-w5-7AD" secondAttribute="trailing" constant="15" id="Htm-vi-9pt"/>
+                            <constraint firstItem="uBW-Sw-X9t" firstAttribute="trailing" secondItem="gYU-ew-DvT" secondAttribute="trailing" id="RtK-kR-bOh"/>
+                            <constraint firstItem="gYU-ew-DvT" firstAttribute="trailing" secondItem="2OQ-xr-igH" secondAttribute="trailing" constant="20" id="eSU-7O-36U"/>
+                            <constraint firstItem="uBW-Sw-X9t" firstAttribute="leading" secondItem="gYU-ew-DvT" secondAttribute="leading" id="koc-Gj-ISL"/>
+                            <constraint firstItem="jMZ-w5-7AD" firstAttribute="leading" secondItem="gYU-ew-DvT" secondAttribute="leading" constant="15" id="ug7-II-28s"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gYU-ew-DvT"/>
                     </view>
-                    <connections>
-                        <segue destination="sDJ-Ad-epN" kind="show" identifier="goInstructToAcuity" id="vPW-po-Ugc"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OMw-Ta-6jI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1013,7 +1060,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mnn-b1-thv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-110" y="122"/>
+            <point key="canvasLocation" x="-151" y="98"/>
         </scene>
         <!--Moving Ball Instructions View Controller-->
         <scene sceneID="6yI-C4-J6g">
@@ -1023,23 +1070,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Follow Me tests your eye-brain connection as well as your eye muscles." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6di-hb-VvC">
-                                <rect key="frame" x="61" y="199" width="315" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Follow Me tests your eye-brain connection as well as your eye muscles." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6di-hb-VvC">
+                                <rect key="frame" x="20" y="194" width="374" height="50.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Instructions: Track the moving ball with your eyes. " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKO-Fg-l7G">
-                                <rect key="frame" x="61" y="381" width="315" height="98"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions: Track the moving ball with your eyes. " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKO-Fg-l7G">
+                                <rect key="frame" x="20" y="394" width="374" height="50.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6h-IB-5DE">
-                                <rect key="frame" x="167" y="595" width="80" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6h-IB-5DE">
+                                <rect key="frame" x="0.0" y="544.5" width="414" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Let's Begin!"/>
                                 <connections>
                                     <action selector="InstructToMovingBall:" destination="AUh-df-3Ez" eventType="touchUpInside" id="F0y-Gg-z2t"/>
@@ -1047,6 +1092,17 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="D6h-IB-5DE" firstAttribute="leading" secondItem="Jjr-1E-L3V" secondAttribute="leading" id="4Qq-6X-ECh"/>
+                            <constraint firstItem="D6h-IB-5DE" firstAttribute="trailing" secondItem="Jjr-1E-L3V" secondAttribute="trailing" id="7Vt-dZ-5iy"/>
+                            <constraint firstItem="D6h-IB-5DE" firstAttribute="top" secondItem="mKO-Fg-l7G" secondAttribute="bottom" constant="100" id="HvN-W8-Vcq"/>
+                            <constraint firstItem="mKO-Fg-l7G" firstAttribute="leading" secondItem="Jjr-1E-L3V" secondAttribute="leading" constant="20" id="NVD-gA-4Cl"/>
+                            <constraint firstItem="mKO-Fg-l7G" firstAttribute="top" secondItem="Jjr-1E-L3V" secondAttribute="top" constant="350" id="SIN-rx-4MH"/>
+                            <constraint firstItem="6di-hb-VvC" firstAttribute="top" secondItem="Jjr-1E-L3V" secondAttribute="top" constant="150" id="aIe-8h-a9P"/>
+                            <constraint firstItem="Jjr-1E-L3V" firstAttribute="trailing" secondItem="mKO-Fg-l7G" secondAttribute="trailing" constant="20" id="bHr-AS-qxZ"/>
+                            <constraint firstItem="6di-hb-VvC" firstAttribute="leading" secondItem="Jjr-1E-L3V" secondAttribute="leading" constant="20" id="h1s-Lm-qIu"/>
+                            <constraint firstItem="Jjr-1E-L3V" firstAttribute="trailing" secondItem="6di-hb-VvC" secondAttribute="trailing" constant="20" id="xSv-fi-0mb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Jjr-1E-L3V"/>
                     </view>
                     <connections>
@@ -1062,12 +1118,12 @@
         <image name="menu" width="30" height="17.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="vPW-po-Ugc"/>
-        <segue reference="kWY-MG-k06"/>
-        <segue reference="2C0-Ur-Jlq"/>
-        <segue reference="Spe-8Y-VB5"/>
+        <segue reference="vgR-fs-q8T"/>
+        <segue reference="yPR-Wd-OrN"/>
+        <segue reference="F2b-tE-Lr7"/>
+        <segue reference="DRC-NP-Md3"/>
         <segue reference="GUK-Q2-R3p"/>
-        <segue reference="lL3-BY-gdc"/>
-        <segue reference="4gG-Uy-yYk"/>
+        <segue reference="I9w-qR-H0f"/>
+        <segue reference="H1e-PO-lTf"/>
     </inferredMetricsTieBreakers>
 </document>

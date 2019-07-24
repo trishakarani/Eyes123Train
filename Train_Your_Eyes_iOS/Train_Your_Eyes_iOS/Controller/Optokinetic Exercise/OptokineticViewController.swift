@@ -42,33 +42,38 @@ class OptokineticViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = "Line Dancers"
+
         //        self.navigationController?.navigationBar.titleTextAttributes =
         //            [NSAttributedString.Key.foregroundColor: UIColor.red,
         //             NSAttributedString.Key.font: UIFont(name: "Verdana", size: 22)!]
         
-        navigationController?.hidesBarsOnTap = true
-        
-        let backButton = UIBarButtonItem()
-        backButton.title = "Back"
-        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        //navigationController?.hidesBarsOnTap = true
+
+//        let backButton = UIBarButtonItem()
+//        backButton.title = "Back"
+//        //self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+//
+//        self.navigationItem.leftBarButtonItem = backButton
         
         settingChanged()
         //AlertFunctions.showAlert(title: "OptoKinetic Exercise", message: Instructions)
         
         setupView()
+        let backButton = UIBarButtonItem()
+        backButton.title = "Back"
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         self.navigationController?.replaceCurrentViewController(with: self, animated: false)
     }
     
-    override var prefersStatusBarHidden: Bool {
+    /*override var prefersStatusBarHidden: Bool {
         return navigationController?.isNavigationBarHidden == true
     }
     
     override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
         return UIStatusBarAnimation.slide
     }
-    
-
+    */
 
 //other way to do tap for nav bar
 //        let gesture = UITapGestureRecognizer(target: self, action: #selector(OptokineticViewController.toggle))
@@ -645,3 +650,11 @@ extension OptokineticViewController: PopMenuViewControllerDelegate {
     
 }
 
+extension UINavigationController {
+    /*func replaceCurrentViewController(with viewController: UIViewController, animated: Bool) {
+        let indexToRemove = viewControllers.count - 1
+        if indexToRemove >= 0 {
+            viewControllers.remove(at: indexToRemove)
+        }
+    }*/
+}

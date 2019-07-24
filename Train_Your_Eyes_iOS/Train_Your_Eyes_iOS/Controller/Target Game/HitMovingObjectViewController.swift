@@ -43,6 +43,7 @@ class HitMovingObjectViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Target"
         addBackButton()
         
 //        showAlert(title: "Hit Flashing Object", message: Instructions)
@@ -55,7 +56,7 @@ class HitMovingObjectViewController: UIViewController {
     }
     
     @objc func backAction() {
-        countdownTimer.invalidate()
+        //countdownTimer.invalidate()
         // Go back to the previous ViewController
         self.navigationController?.popViewController(animated: true)
     }
@@ -122,7 +123,7 @@ class HitMovingObjectViewController: UIViewController {
     }
     
     func changeFish() {
-        countdownTimer.invalidate()
+       // countdownTimer.invalidate()
         if totalDisplayedCount > MAX_HITS_LEVEL_RETRIES {
             removeFish()
             let successPercent = (successHitsCount * 100) / totalDisplayedCount
@@ -162,7 +163,7 @@ class HitMovingObjectViewController: UIViewController {
             successHitsCount += 1
             updateScore()
         }
-        countdownTimer.invalidate()
+       // countdownTimer.invalidate()
         removeFish()
         changeFish()
     }

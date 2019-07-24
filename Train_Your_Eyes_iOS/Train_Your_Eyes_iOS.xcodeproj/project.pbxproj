@@ -252,8 +252,8 @@
 		6814E46F22E7114300C39724 /* Acuity Test  */ = {
 			isa = PBXGroup;
 			children = (
-				2CF2F29821A7F5130020713A /* AcuityTestViewController.swift */,
 				683EF82E22E782F700C27735 /* AcuityInstructionsViewController.swift */,
+				2CF2F29821A7F5130020713A /* AcuityTestViewController.swift */,
 				68AC167C22E6BC5E009280E8 /* AcuityTestResultViewController.swift */,
 			);
 			path = "Acuity Test ";

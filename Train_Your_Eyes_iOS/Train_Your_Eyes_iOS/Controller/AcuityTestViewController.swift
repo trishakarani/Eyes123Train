@@ -57,8 +57,8 @@ class AcuityTestViewController: UIViewController {
             }
         }
         
-        if acuityTestCount > 3 {
-            moveToColorContrastTest()
+        if acuityTestCount > 10 {
+            moveToAcuityResults()
         }
         
         setupAcuityTest()
@@ -112,7 +112,7 @@ class AcuityTestViewController: UIViewController {
         }
     }
 
-    func moveToColorContrastTest() {
+    func moveToAcuityResults() {
         performSegue(withIdentifier: "acuityResults", sender: self)
     }
     

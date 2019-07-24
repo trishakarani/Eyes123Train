@@ -11,8 +11,14 @@ import ResearchKit
 
 class MainScreenViewController: UICollectionViewController {
 
-    let frontLabelArray = ["Line Dancers", "Follow Me", "Targets", "Find Me", "Check It Out", "Eye Q"]
-    let frontImageArray = [UIImage(named: "optokineticBlankCircle"),  UIImage(named:"movingBallBlankCircle"), UIImage(named:"hitTargetBlankCircle"), UIImage(named: "ContrastBlankCircle"),UIImage(named: "visionCheckBlankCircle"), UIImage(named: "AppIcon")]
+    let frontLabelArray = ["Line Dancers", "Follow Me", "Targets", "Find Me","Check It Out", "Eye Q"]
+    let frontImageArray = [
+        UIImage(named: "optokineticBlankCircle"),
+        UIImage(named:"movingBallBlankCircle"),
+        UIImage(named:"hitTargetBlankCircle"),
+        UIImage(named: "ContrastBlankCircle"),
+        UIImage(named: "visionCheckBlankCircle"),
+        UIImage(named: "iconimage")]
     var tablefontSize: Int = 22
     
     override func viewDidLoad() {
@@ -56,20 +62,50 @@ class MainScreenViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch indexPath.row {
         case 0:
-            performSegue(withIdentifier: "gotoOKNInstruct", sender: self)
-            //performSegue(withIdentifier: "gotoOptoKinetic", sender: self)
+            if UserDefaults.standard.bool(forKey: "InstrOKN") {
+                //performSegue(withIdentifier: "gotoOptoKinetic", sender: self)
+                performSegue(withIdentifier: "gotoOKNInstruct", sender: self)
+            }
+            else {
+                performSegue(withIdentifier: "gotoOKNInstruct", sender: self)
+                UserDefaults.standard.set(true, forKey: "InstrOKN")
+            }
             
         case 1:
-            performSegue(withIdentifier: "gotoMovingBallInstruct", sender: self)
+            if UserDefaults.standard.bool(forKey: "InstrMovingBall") {
+                //performSegue(withIdentifier: "goInstructToMovingBall", sender: self)
+                performSegue(withIdentifier: "gotoMovingBallInstruct", sender: self)
+            }
+            else {
+                performSegue(withIdentifier: "gotoMovingBallInstruct", sender: self)
+                UserDefaults.standard.set(true, forKey: "InstrMovingBall")
+            }
             
         case 2:
-            performSegue(withIdentifier: "gotoHitObjectInstruct", sender: self)
+            if UserDefaults.standard.bool(forKey: "InstrHitObject") {
+                performSegue(withIdentifier: "gotoHitObjectInstruct", sender: self)
+            }
+            else {
+                performSegue(withIdentifier: "gotoHitObjectInstruct", sender: self)
+                UserDefaults.standard.set(true, forKey: "InstrHitObject")
+            }
         case 3:
-            performSegue(withIdentifier: "gotoAcuityInstruct", sender: self)
-            //performSegue(withIdentifier: "gotoVisionCheck", sender: self)
+            if UserDefaults.standard.bool(forKey: "InstrContrast") {
+                performSegue(withIdentifier: "gotoContrastInstruct", sender: self)
+            }
+            else {
+                performSegue(withIdentifier: "gotoContrastInstruct", sender: self)
+                UserDefaults.standard.set(true, forKey: "InstrContrast")
+            }
             
         case 4:
-            performSegue(withIdentifier: "gotoContrastInstruct", sender: self)
+            if UserDefaults.standard.bool(forKey: "InstrAcuity") {
+                performSegue(withIdentifier: "gotoAcuityInstruct", sender: self)
+            }
+            else {
+                performSegue(withIdentifier: "gotoAcuityInstruct", sender: self)
+                UserDefaults.standard.set(true, forKey: "InstrAcuity")
+            }
             //performSegue(withIdentifier: "contrastTest", sender: self)
             
         case 5:
@@ -125,4 +161,8 @@ class MainScreenViewController: UICollectionViewController {
     }
     */
 
+    @IBAction func backFromUnwind(segue: UIStoryboardSegue) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
